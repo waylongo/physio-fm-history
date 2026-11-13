@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>生理基础模型 · 思想年谱（2019–2026）</title>
+<meta name="description" content="从苹果 ICLR 2024 可穿戴生物信号基础模型出发，按时间梳理生理信号基础模型、生理参数基础模型、生理世界模型与健康 Agent 的思想演化，聚焦苹果、谷歌、三星、Oura、WHOOP、OPPO、华为等公司以及学术界的公开进展。">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="wrap">
+    <div class="kicker">PHYSIOLOGICAL FOUNDATION MODELS · A CHRONOLOGY OF IDEAS</div>
+    <h1>生理基础模型 · 思想年谱</h1>
+    <p class="subtitle">从苹果 ICLR 2024 出发：信号表征 → 参数与行为 → 生理动力学 → 能行动的 Agent（截至 2026 年 11 月）</p>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="intro">
+    <div>
+      <p class="stats" id="stats"></p>
+      <p><strong>起点。</strong>苹果《Large-scale Training of Foundation Models for Wearable Biosignals》（ICLR 2024，预印本 2023 年 12 月）第一次在消费级手表采集的大规模 PPG/ECG 上做自监督预训练，把“同一个人的两段信号”当作正样本。问题由此从“这段波形里有没有某种病”变成“能否先学到一个人的通用生理表征”。起点之前的“前奏”只收录这条思想链直接依赖的源头。</p>
+      <details class="more">
+        <summary>四条纲的关系，以及怎么读</summary>
+        <p><strong>四条纲</strong>不是四个孤立的赛道，而是一条逐层上移的链：信号模型给出表征，参数模型把表征放到分钟、小时、周的尺度上，世界模型在这个尺度上推演“如果……会怎样”，Agent 再把推演变成建议和行动。2026 年最清楚的变化是，这几层开始真正接起来。</p>
+        <p><strong>四个视图。</strong>“年谱”按时间排列全部条目，悬停看问题、做法、意义与承接关系，点击打开原文；“脉络”把条目串成若干条思想线，每条写明问题、做法、改变、解锁与未决；“公司”按“数据资产 → 模型 → 产品”对照各家路径；“问题”把整段历史压缩成五个核心问题在各时期的答案。</p>
+        <p><strong>可信度。</strong>条目的事实（标题、机构、日期、数字）均来自一手页面；“意义”、关系线、脉络与公司判断属于编者解读，文中“官方称”“论文称”标出原作者自述。</p>
+      </details>
+    </div>
+    <div>
+      <ul class="legend-tracks" id="legendTracks"></ul>
+      <div class="legend-marks">
+        <span><i class="lm-paper"></i>论文 / 预印本</span>
+        <span><i class="lm-open"></i>开源模型 / 数据</span>
+        <span><i class="lm-product"></i>产品发布</span>
+        <span><i class="lm-announce"></i>宣布 / 收购 / 在建</span>
+      </div>
+      <div class="legend-rels" id="legendRels"></div>
+    </div>
+  </div>
+</div>
+
+<nav class="controls" id="views" aria-label="视图与筛选">
+  <div class="wrap">
+    <div class="views" role="tablist" aria-label="视图">
+      <button type="button" role="tab" data-view="chrono" aria-selected="true">年谱</button>
+      <button type="button" role="tab" data-view="threads" aria-selected="false">脉络</button>
+      <button type="button" role="tab" data-view="companies" aria-selected="false">公司</button>
+      <button type="button" role="tab" data-view="questions" aria-selected="false">问题</button>
+      <button type="button" class="ftoggle" id="fToggle" aria-expanded="false" aria-controls="filters">筛选</button>
+    </div>
+    <div class="filters" id="filters">
+      <div class="cgroup" id="fTracks"><span class="lab">纲</span></div>
+      <div class="cgroup" id="fOrgs"><span class="lab">机构</span></div>
+      <div class="cgroup" id="fTypes"><span class="lab">类型</span></div>
+      <div class="cgroup"><span class="lab">脉络</span><select class="thread" id="fThread" aria-label="高亮一条脉络"><option value="">全部（不高亮）</option></select></div>
+      <label class="toggle"><input type="checkbox" id="fPrelude" checked> 显示前奏</label>
+      <button class="reset" id="fReset" type="button">重置</button>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap">
+  <div id="v-chrono">
+    <div class="thread-note" id="threadNote" aria-live="polite"></div>
+    <div class="chrono" id="chrono">
+      <div class="lane-heads" id="laneHeads"></div>
+      <div class="canvas" id="canvas"><svg class="edges" id="edges" aria-hidden="true"></svg></div>
+      <div class="list" id="list"></div>
+    </div>
+  </div>
+  <div id="v-threads" class="view" hidden></div>
+  <div id="v-companies" class="view" hidden></div>
+  <div id="v-questions" class="view" hidden></div>
+
+  <section class="essay" id="essay">
+    <h2>主叙事：中心问题如何一代代改写</h2>
+    <div class="body" id="essayBody"></div>
+  </section>
+
+  <section class="sources" id="sources">
+    <h2>全部来源 <span id="srcCount"></span></h2>
+    <p class="note">每个条目的标题、机构、日期与主张都来自打开过的一手页面（论文、会议录、公司博客、新闻稿、监管文件或产品页），核对日期为 2026-11-13（北京时间）。日期优先取首次公开日期，预印本、会议录用和产品上线分别标注。收录标准、未收录条目及原因、不确定项见仓库中的 RESEARCH.md。</p>
+    <input type="search" id="srcFilter" class="srcfilter" placeholder="按标题、机构、年份筛选来源……" aria-label="筛选来源">
+    <h3 class="srch" id="srcMainH">年谱条目</h3>
+    <ul class="srclist" id="srcList"></ul>
+    <div id="srcExtraWrap">
+      <h3 class="srch" id="srcExtraH">相关但未上年谱</h3>
+      <p class="note">这些工作都已打开一手来源核实存在，但没有放上年谱；每项注明原因。</p>
+      <ul class="srclist extra" id="srcExtra"></ul>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">数据与展示分离：条目在 <code>data/entries.json</code>，纲、时期、脉络、公司、问题与机构在 <code>data/meta.json</code>。纯静态页面，无构建步骤。关系线与判断为编者解读。</div>
+</footer>
+
+<div class="card" id="card" role="tooltip"></div>
+<script src="js/app.js"></script>
+</body>
+</html>

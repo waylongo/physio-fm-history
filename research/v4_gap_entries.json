@@ -1,0 +1,514 @@
+[
+ {
+  "id": "google-health-app",
+  "date": "2026-05-07",
+  "dateLabel": "发布 2026-05-07；Coach 正式版 2026-05-19 起推送",
+  "track": "agent",
+  "org": "google",
+  "type": "product",
+  "title": "Google Health app、Google Health Coach（正式版）与 Fitbit Air",
+  "short": "Fitbit 应用升级为 Google Health；Gemini 教练结束预览",
+  "url": "https://blog.google/products-and-platforms/products/google-health/google-health-fitbit/",
+  "sources": [
+   {
+    "label": "Google Health Coach 正式版",
+    "url": "https://blog.google/products-and-platforms/products/google-health/google-health-coach/"
+   }
+  ],
+  "q": "可穿戴、Health Connect、Apple Health 和病历数据分散在不同入口，个人健康教练又一直停在预览阶段。",
+  "how": "Fitbit 应用改名升级为 Google Health app，把可穿戴、Health Connect、Apple Health 和美国病历汇到一处；基于 Gemini 的 Google Health Coach 5 月 19 日起结束预览，纳入 Google Health Premium（每月 9.99 美元，Google AI Pro/Ultra 附赠），同时推出为教练设计的无屏手环 Fitbit Air（99 美元）。",
+  "shift": "谷歌的 Agent 线从“Fitbit 里的实验功能”变成整个健康入口的主界面：品牌从 Fitbit 换成 Google Health，硬件反过来按“教练需要什么数据”来设计（博客原话：designed with the Google Health Coach in mind）。",
+  "links": [
+   {
+    "from": "fitbit-coach",
+    "type": "继承",
+    "note": "2025-10 公开预览转为全球正式版"
+   },
+   {
+    "from": "fitbit-2026",
+    "type": "继承",
+    "note": "3 月的病历链接与睡眠更新并入新应用"
+   },
+   {
+    "from": "pha",
+    "type": "落地",
+    "note": "PHA 多智能体研究的产品化延续（编者解读，博客未点名 PHA）"
+   }
+  ]
+ },
+ {
+  "id": "google-health-guardian",
+  "date": "2026-08-12",
+  "dateLabel": "Pixel Watch 5 发布 2026-08-12；2026-10-12 扩展到 Fitbit Air / Edge",
+  "track": "param",
+  "org": "google",
+  "type": "product",
+  "title": "Health Guardian：血压趋势、胰岛素抵抗趋势、睡眠呼吸质量趋势（Pixel Watch 5）",
+  "short": "Health Guardian：谷歌把健康基础模型做成月度趋势功能",
+  "url": "https://blog.google/products-and-platforms/devices/pixel/pixel-watch-5/",
+  "sources": [
+   {
+    "label": "Google Health 帮助中心：Health Guardian",
+    "url": "https://support.google.com/googlehealth/answer/18538590?hl=en"
+   },
+   {
+    "label": "2026-10-12 扩展到 Fitbit Air/Edge",
+    "url": "https://blog.google/products-and-platforms/products/google-health/fitbit-google-health-updates/"
+   }
+  ],
+  "q": "手表能否在没有袖带、没有抽血的情况下，长期提示血压、代谢和睡眠呼吸的变化？",
+  "how": "官方称这三项月度趋势“基于在数十亿分钟用户授权传感器数据上训练的健康基础模型（Health Foundation Models），并对照金标准临床测量验证”，佩戴约一个月后给出首份报告；同时新增呼吸急症检测（PPG、加速度、气压计加端侧 AI，先在欧洲上线）。这些功能以月度趋势而非诊断的形式呈现。",
+  "shift": "谷歌第一次在产品文案里直接说功能“建在健康基础模型上”：参数层表征（LSM → SensorFM）和胰岛素抵抗研究从论文走进月度报告；和苹果高血压通知相比，谷歌选择“趋势 + 一般健康”而不是“通知 + 医疗器械许可”。",
+  "links": [
+   {
+    "from": "sensorfm",
+    "type": "落地",
+    "note": "官方称基于健康基础模型；未点名具体是哪个模型，对应关系为编者解读"
+   },
+   {
+    "from": "ir-wearme",
+    "type": "落地",
+    "note": "胰岛素抵抗研究线进入产品"
+   },
+   {
+    "from": "apple-htn",
+    "type": "并行",
+    "note": "同为腕上高血压提示，监管路径不同"
+   },
+   {
+    "from": "google-lop",
+    "type": "继承",
+    "note": "同属 Health Guardian 安全功能系列"
+   }
+  ]
+ },
+ {
+  "id": "google-htn-nature",
+  "date": "2026-11-05",
+  "dateLabel": "Nature 2026-11-05；谷歌研究博客同日",
+  "track": "signal",
+  "org": "google",
+  "type": "paper",
+  "title": "Opportunistically Detecting Signs of Hypertension on a Consumer Smartwatch（AI-PPG-ACC-HTN）",
+  "short": "AI-PPG-ACC-HTN：免校准腕表高血压筛查（Nature）",
+  "url": "https://www.nature.com/articles/s41586-026-11336-3",
+  "sources": [
+   {
+    "label": "谷歌研究博客",
+    "url": "https://research.google/blog/detecting-signs-of-hypertension-using-wearable-sensors/"
+   }
+  ],
+  "q": "无袖带手表大多只追踪相对变化、需要定期用袖带校准，能否不校准就识别持续性高血压状态？",
+  "how": "先用自监督对比学习在 2,109 名参与者、492,347 小时的 PPG 与加速度（含 BCG）波形上训练编码器，同一人的 15 秒片段相互拉近；再把多日嵌入平均成个人表征，加身高做逻辑回归。在 5 个美国中心、196 人的前瞻研究中以 24 小时动态血压为金标准：初筛灵敏度 65.8%、特异度 90.0%、PPV 80.6%，诊室初测灵敏度为 55.3%。",
+  "shift": "苹果 2023 年“以人为锚”的自监督配方，在谷歌这里以 Nature 论文和金标准前瞻验证的形式用到高血压上；博客说这项研究“帮助形成了 Google Health 应用里 Health Guardian 的血压趋势功能”，同时强调它本身是探索性研究，不代表现有或将来的产品能力。",
+  "links": [
+   {
+    "from": "apple-iclr24",
+    "type": "继承",
+    "note": "同一受试者片段做正样本的对比预训练"
+   },
+   {
+    "from": "apple-htn",
+    "type": "并行",
+    "note": "同一问题，苹果走 FDA 许可的通知，谷歌走研究 + 一般健康趋势"
+   },
+   {
+    "from": "google-health-guardian",
+    "type": "奠基",
+    "note": "博客称该研究为血压趋势功能提供了依据"
+   }
+  ]
+ },
+ {
+  "id": "glucofm",
+  "date": "2026-08-26",
+  "dateLabel": "谷歌研究博客 2026-08-26",
+  "track": "world",
+  "org": "google",
+  "type": "paper",
+  "title": "GlucoFM: Foundation model for continuous glucose monitoring",
+  "short": "GlucoFM：双流 CGM 基础模型，分开慢趋势与短时波动",
+  "url": "https://research.google/blog/glucofm-foundation-model-for-continuous-glucose-monitoring/",
+  "sources": [],
+  "q": "CGMformer、GluFormer、CGM-JEPA 都把血糖当单一数据流，但血糖其实是“慢基线 + 餐后、运动等短时偏离”。",
+  "how": "把每天对齐到 24 小时、5 分钟网格并保留缺失掩码；双流编码器把低频状态与残差事件分开；在潜空间做掩码上下文预测和逐小时动态预测（不重建原始读数）。在 109,066 小时 CGM（477 个参与者/记录）上预训练，在 4 个队列 7 项任务（糖尿病风险、胰岛素抵抗、β 细胞功能等）上平均 PR-AUC 比同语料预训练的最佳 GluFormer 变体高 5.8 个百分点，餐后 2 小时血糖轨迹预测误差最低。",
+  "shift": "血糖模型从“预测下一个读数”（GluFormer）转向 JEPA 式潜空间预测加显式多时间尺度结构；和谷歌的胰岛素抵抗线、Health Guardian 的胰岛素抵抗趋势构成同一条代谢路线。",
+  "links": [
+   {
+    "from": "gluformer",
+    "type": "转向",
+    "note": "从自回归 token 预测转为双流潜空间预测，并直接对比"
+   },
+   {
+    "from": "cgm-lsm",
+    "type": "并行",
+    "note": "同为 CGM 基础模型"
+   },
+   {
+    "from": "ir-wearme",
+    "type": "并行",
+    "note": "谷歌代谢健康线（胰岛素抵抗）"
+   }
+  ]
+ },
+ {
+  "id": "fda-wellness-2026",
+  "date": "2026-01-06",
+  "dateLabel": "FDA 修订指南 2026-01-06",
+  "track": "param",
+  "org": "fda",
+  "type": "announce",
+  "title": "FDA：General Wellness: Policy for Low Risk Devices（2026 修订版）",
+  "short": "FDA 修订一般健康指南：无创可穿戴的血压估计可归入一般健康",
+  "url": "https://www.fda.gov/media/90652/download",
+  "sources": [
+   {
+    "label": "Covington 解读",
+    "url": "https://www.cov.com/en/news-and-insights/insights/2026/01/fda-issues-revised-guidance-on-general-wellness-products"
+   },
+   {
+    "label": "FDA 对 WHOOP 的不执法函（2026-06-17）",
+    "url": "https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/whoop-inc-709755-06172026"
+   }
+  ],
+  "q": "2025 年中 FDA 还认为“测量或估计血压”的产品就是医疗器械（WHOOP 因此收到警告信），参数层功能该走哪条监管路径？",
+  "how": "修订版把重点放在传感器类可穿戴上：无创产品在严格的一般健康用途下估计或输出血压等生理参数，可以归入一般健康；但数值需要经过验证，不能声称临床等效，不能针对具体疾病提示或引导临床处置。2026-06-17 FDA 据此致函 WHOOP，对修改后的 Blood Pressure Insights 不再执法。",
+  "shift": "这是参数层产品形态的外部条件。2026 年 Google Health Guardian 的“血压趋势”、Oura 的 Blood Pressure Signals、WHOOP 的血压洞察都选择了“趋势 + 一般健康”的表述（三者与指南的因果关系为编者解读）。",
+  "links": [
+   {
+    "from": "whoop-5",
+    "type": "转向",
+    "note": "2025 年对 WHOOP 血压洞察的警告信在 2026 年转为不执法"
+   },
+   {
+    "from": "apple-htn",
+    "type": "并行",
+    "note": "苹果走 FDA 许可路径，与一般健康路径并存"
+   }
+  ]
+ },
+ {
+  "id": "oura-health-radar",
+  "date": "2026-05-28",
+  "dateLabel": "发布 2026-05-28（随 Oura Ring 5）；2026-10 扩展到 30 多个市场",
+  "track": "param",
+  "org": "oura",
+  "type": "product",
+  "title": "Oura Health Radar：Blood Pressure Signals 与 Nighttime Breathing",
+  "short": "Health Radar：Oura 把夜间 PPG 做成血压与呼吸趋势",
+  "url": "https://ouraring.com/blog/introducing-health-radar/",
+  "sources": [
+   {
+    "label": "WIRED：Oura Ring 5",
+    "url": "https://www.wired.com/story/oura-ring-5/"
+   }
+  ],
+  "q": "戒指只在夜里信号最干净，能否从夜间数据里提前看出心血管负荷和睡眠呼吸的问题？",
+  "how": "在 Symptom Radar 基础上新增两项：Blood Pressure Signals 用 30 天的夜间 PPG 识别可能提示心血管负荷的模式（不显示收缩压/舒张压数值），附夜间血压下降（dipping）趋势和袖带读数录入；Nighttime Breathing 给出 30 天滚动的睡眠呼吸紊乱视图，并与 Resmed 合作导流。同时在 Oura Labs 中测试 Counsel Health 医生问诊接入 Oura Advisor。",
+  "shift": "Oura 的路线从“读数 + Advisor 对话”推进到“背景监测 → 提示 → Advisor → 真人医生”的闭环；5 月的 Counsel 试点在 11 月变成收购。",
+  "links": [
+   {
+    "from": "oura-aha-fm",
+    "type": "并行",
+    "note": "同为 Oura 心血管方向；官方未说明 Health Radar 是否使用该基础模型"
+   },
+   {
+    "from": "oura-advisor",
+    "type": "继承",
+    "note": "Advisor 成为提示后的承接入口"
+   },
+   {
+    "from": "fda-wellness-2026",
+    "type": "并行",
+    "note": "同样采用一般健康表述（编者解读）"
+   }
+  ]
+ },
+ {
+  "id": "chatgpt-health-ga",
+  "date": "2026-07-23",
+  "dateLabel": "美国全面推送 2026-07-23",
+  "track": "agent",
+  "org": "openai",
+  "type": "product",
+  "title": "Launching Health in ChatGPT（Apple Health 与病历接入，美国全量）",
+  "short": "Health in ChatGPT：从独立空间到全对话可调用",
+  "url": "https://openai.com/index/health-in-chatgpt/",
+  "sources": [
+   {
+    "label": "MacRumors 报道",
+    "url": "https://www.macrumors.com/2026/07/23/chatgpt-apple-health-integration/"
+   }
+  ],
+  "q": "1 月的 ChatGPT Health 是一个单独空间，但测试中超过 70% 的健康相关对话发生在这个空间之外。",
+  "how": "向美国 18 岁以上、Free/Go/Plus/Pro 用户推送；可连接 Apple Health、美国医院病历、One Medical、Function Health。经用户许可，任意对话都能调用这些健康上下文（@Health），连接的数据不用于训练；官方称 GPT-5.6 各模型在 HealthBench Professional 上均优于 GPT-5.5。",
+  "shift": "OpenAI 的健康 Agent 从“专门入口”变成“通用对话里的个人上下文”，可穿戴数据经 Apple Health 进入通用模型；入口之争从健康 App 扩到通用助手。",
+  "links": [
+   {
+    "from": "chatgpt-health",
+    "type": "继承",
+    "note": "1 月有限测试转为美国全量"
+   },
+   {
+    "from": "healthbench",
+    "type": "继承",
+    "note": "用 HealthBench Professional 衡量健康能力"
+   }
+  ]
+ },
+ {
+  "id": "amazon-health-ai",
+  "date": "2026-01-21",
+  "dateLabel": "One Medical 应用 2026-01-21；扩展到 Amazon 网站/App 2026-03-10",
+  "track": "agent",
+  "org": "amazon",
+  "type": "product",
+  "title": "Amazon One Medical Health AI（agentic 健康助手）",
+  "short": "Amazon Health AI：读病历、约诊、续方的 Agent",
+  "url": "https://www.aboutamazon.com/news/retail/one-medical-ai-health-assistant",
+  "sources": [
+   {
+    "label": "2026-03-10 扩展到 Amazon.com",
+    "url": "https://www.aboutamazon.com/news/retail/amazon-health-ai-agent-one-medical"
+   },
+   {
+    "label": "CNBC（Bedrock 模型）",
+    "url": "https://www.cnbc.com/2026/01/21/amazon-ai-health-care-one-medical-members.html"
+   }
+  ],
+  "q": "健康问答之外，Agent 能否直接完成就医动作：解读化验、预约、续方，并在必要时转给真人医生？",
+  "how": "基于 Amazon Bedrock 上的大模型，结合会员的病历、化验和用药，提供 24 小时解答；按临床协议识别需要升级的情况，可以直接预约 One Medical 医生（消息、视频或线下）、发起续方。3 月扩展到 Amazon 网站和 App，Prime 会员可获得免费的消息问诊额度。",
+  "shift": "亚马逊的路线是“拥有诊所与药房的 Agent”：与 ChatGPT、Claude 的“通用助手 + 数据接入”不同，它的闭环落在自有的医疗服务上。时间线上亚马逊目前只有 Chronos 一条。",
+  "links": [
+   {
+    "from": "chatgpt-health",
+    "type": "并行",
+    "note": "同月发布的健康 Agent"
+   },
+   {
+    "from": "claude-health",
+    "type": "并行",
+    "note": "同月发布的健康 Agent"
+   }
+  ]
+ },
+ {
+  "id": "mai-dxo",
+  "date": "2025-06-30",
+  "dateLabel": "博客 2025-06-30；arXiv 2025-06-27",
+  "track": "agent",
+  "org": "microsoft",
+  "type": "paper",
+  "title": "Sequential Diagnosis with Language Models（MAI-DxO / SDBench）",
+  "short": "MAI-DxO：模拟医生小组的诊断编排器",
+  "url": "https://microsoft.ai/news/the-path-to-medical-superintelligence/",
+  "sources": [
+   {
+    "label": "arXiv",
+    "url": "https://arxiv.org/abs/2506.22405"
+   }
+  ],
+  "q": "选择题式的医学评测无法反映真实诊断中“逐步问诊、开检查、权衡成本”的过程。",
+  "how": "把 304 个 NEJM 病例改造成逐步揭示信息的 SDBench；MAI-DxO 让一个模型扮演假设、选检查、唱反调、控成本、核查五个角色，经过辩论再决定问诊、开检查还是下诊断。与 o3 搭配时准确率 80%（最高准确率配置 85.5%），21 名全科医生平均 20%；诊断成本比医生低约 20%。仅为研究，未上线产品。",
+  "shift": "诊断 Agent 从单模型对话（AMIE）转向模型无关的多角色编排，并把“成本”写进评测；微软后来的 Copilot Health 也出自同一个 MAI 团队方向（编者解读）。",
+  "links": [
+   {
+    "from": "amie",
+    "type": "并行",
+    "note": "同为诊断推理 Agent，一个是单模型对话，一个是多角色编排"
+   },
+   {
+    "from": "healthbench",
+    "type": "并行",
+    "note": "同期对医疗评测方式的重做"
+   }
+  ]
+ },
+ {
+  "id": "opentslm",
+  "date": "2025-10-02",
+  "dateLabel": "arXiv 2025-10-02",
+  "track": "signal",
+  "org": "stanford",
+  "type": "open",
+  "title": "OpenTSLM: Time-Series Language Models for Reasoning over Multivariate Medical Text- and Time-Series Data",
+  "short": "OpenTSLM：把时序作为原生模态接入 LLM（开源）",
+  "url": "https://arxiv.org/abs/2510.02410",
+  "sources": [
+   {
+    "label": "GitHub",
+    "url": "https://github.com/OpenTSLM/OpenTSLM"
+   }
+  ],
+  "q": "LLM 读 ECG、睡眠、活动信号时，只能把数值序列当文本或画成图，效果很差。",
+  "how": "提出两种接法：SoftPrompt（可学习时序 token 与文本拼接）和 Flamingo 式交叉注意力；基于 Llama 和 Gemma 骨干，发布 HAR-CoT、Sleep-CoT、ECG-QA-CoT 三个思维链数据集。睡眠分期 F1 69.9%、活动识别 65.4%，微调后的纯文本模型只有 9.05% 和 52.2%；1B 参数的模型也超过 GPT-4o，并做了心脏科医生评估。斯坦福、ETH 牵头，谷歌、亚马逊研究者参与。",
+  "shift": "“传感器 + 语言”这条线出现了开源、可复现的时序语言模型家族，作为 SensorLM 一类闭源工作的开放对照。",
+  "links": [
+   {
+    "from": "sensorllm",
+    "type": "继承",
+    "note": "同为传感器对齐 LLM，扩展到 ECG、睡眠和思维链推理"
+   },
+   {
+    "from": "sensorlm",
+    "type": "并行",
+    "note": "闭源大规模版本 vs 开源可复现版本"
+   },
+   {
+    "from": "health-llm",
+    "type": "转向",
+    "note": "从把数值写成文本转为原生时序模态"
+   }
+  ]
+ },
+ {
+  "id": "sleep2vec",
+  "date": "2026-02-14",
+  "dateLabel": "arXiv 2026-02-14；ICLR 2026",
+  "track": "signal",
+  "org": "tsinghua",
+  "type": "paper",
+  "title": "sleep2vec: Unified Cross-Modal Alignment for Heterogeneous Nocturnal Biosignals",
+  "short": "sleep2vec：九种夜间模态任意子集可用的睡眠基础模型",
+  "url": "https://arxiv.org/abs/2602.13857",
+  "sources": [
+   {
+    "label": "ICLR 2026 论文集",
+    "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/bbbd6d915cb90be21c1254a82d45cedd-Abstract-Conference.html"
+   }
+  ],
+  "q": "不同设备的夜间信号组合各不相同、常有通道缺失，现有睡眠基础模型往往要求推理时用和训练时相同的通道组合。",
+  "how": "在 42,249 晚、九种模态（EEG、EOG、EMG、ECG、气流、胸腹带、SpO2，以及 IBI、呼吸节律）上做跨模态对比对齐；提出结合人口学、年龄、采集中心和历史信息给负样本加权的 DASH-InfoNCE；报告了夜间生理信号在模态数量和参数规模上的尺度律。",
+  "shift": "睡眠模型从“特定通道组合”走向“任意子集可用”，可以直接对应只有心搏和呼吸的低负担设备（床垫、手表）。作者来自清华与五季医学（Five Seasons Medical）。",
+  "links": [
+   {
+    "from": "sleepfm",
+    "type": "继承",
+    "note": "留一模态对比思路的扩展，并直接对比 SleepFM"
+   }
+  ]
+ },
+ {
+  "id": "robust-ppg-dolby",
+  "date": "2026-06-05",
+  "dateLabel": "arXiv 2026-06-05；ICML 2026",
+  "track": "signal",
+  "org": "dolby",
+  "type": "paper",
+  "title": "A robust PPG foundation model using multimodal physiological supervision",
+  "short": "用 ECG 与呼吸指标挑选对比样本的稳健 PPG 模型",
+  "url": "https://arxiv.org/abs/2606.07365",
+  "sources": [
+   {
+    "label": "ICML 2026 poster",
+    "url": "https://icml.cc/virtual/2026/poster/64846"
+   }
+  ],
+  "q": "PaPaGei 依赖干净的形态特征，Pulse-PPG 依赖闭源野外数据，含噪 PPG 要么被丢弃，要么监督不准。",
+  "how": "在 MIMIC-III 的 ICU 数据上，用同步 ECG 与呼吸提取的 HR、RMSSD、呼吸率等指标定义“生理相似度”，以 Rank-N-Contrast 拉近相似片段，保留含噪 PPG；推理时只需要 PPG。预训练受试者比 PaPaGei 少约 3 倍，15 项下游任务中 14 项更优。佐治亚理工与杜比实验室合作。",
+  "shift": "“贵模态教便宜模态”的另一种做法：不重建 ECG，而是用 ECG 和呼吸派生的指标当排序监督，换取对野外噪声的稳健性。",
+  "links": [
+   {
+    "from": "papagei",
+    "type": "转向",
+    "note": "从 PPG 形态特征监督转为多模态生理指标监督"
+   },
+   {
+    "from": "pulse-ppg",
+    "type": "并行",
+    "note": "都针对野外场景，一个靠野外数据，一个靠多模态监督"
+   },
+   {
+    "from": "xmae",
+    "type": "并行",
+    "note": "同届 ICML，同样利用 ECG 与 PPG 的关系"
+   }
+  ]
+ },
+ {
+  "id": "aether-scaling",
+  "date": "2026-10-05",
+  "dateLabel": "arXiv 2026-10-05",
+  "track": "signal",
+  "org": "unc",
+  "type": "paper",
+  "title": "Training and Scaling Compute-Optimal Physiological Waveform Foundation Models（Aether）",
+  "short": "Aether：生理波形基础模型的算力最优尺度律",
+  "url": "https://arxiv.org/abs/2610.05649",
+  "sources": [],
+  "q": "给定预训练算力和标注病人预算，模型规模、波形小时数应该怎样分配？",
+  "how": "训练 2,000 万到 21 亿参数的 Aether 模型（Gated DeltaNet 混合架构），在 MIMIC-III 多通道波形上累计预训练最多 3,630 万小时；在 8 项 MIMIC-III 临床任务上做线性探测，720M 模型全部超过现有基线；再拟合同时包含模型规模、数据量和标注病人数的尺度律。结论：算力增加 10 倍时，模型约扩大 1.2 倍、数据约增加 8.2 倍；更长的预训练可让达到同样性能所需的标注病人减少 61%。",
+  "shift": "尺度律问题从“可穿戴分钟级数据”（LSM）和 ECG 延伸到多通道临床波形，并且第一次把“标注病人数”当作显式资源坐标。数据为 ICU 数据，不是可穿戴数据。",
+  "links": [
+   {
+    "from": "lsm",
+    "type": "继承",
+    "note": "把尺度律分析迁移到原始生理波形"
+   },
+   {
+    "from": "ecg-scaling",
+    "type": "并行",
+    "note": "同期的 ECG 尺度研究"
+   }
+  ]
+ },
+ {
+  "id": "soter",
+  "date": "2026-09-15",
+  "dateLabel": "arXiv 2026-09-15",
+  "track": "world",
+  "org": "fudan",
+  "type": "open",
+  "title": "SOTER: A Generative Time-Series Foundation Model for Wearable Human Physiological Signals",
+  "short": "SOTER：面向可穿戴生理信号的连续时间生成式基础模型",
+  "url": "https://arxiv.org/abs/2609.16804",
+  "sources": [
+   {
+    "label": "Hugging Face",
+    "url": "https://huggingface.co/papers/2609.16804"
+   }
+  ],
+  "q": "通用时序基础模型的假设不符合可穿戴生理信号：多通道、不规则采样、噪声大，并且由不同频段的连续时间动力学耦合而成。",
+  "how": "组合三部分：跨通道骨干、按功率谱密度把表示路由到固定频段专家的 MoE（规则不经学习，可检查），以及支持任意时间点预测和插补的神经受控微分方程解码器。在 5 个公开数据集、2,260 亿个时间点上预训练；零样本预测 6 个数据集中 4 个 RMSE 最好，75% 缺失时插补误差在 6 个数据集上都最低。",
+  "shift": "生成式、连续时间的建模把“世界模型”纲里的预测能力推向不规则采样的原始可穿戴信号；Aether 论文已把它列为基线。作者来自复旦大学、上海创智学院、浙江大学。",
+  "links": [
+   {
+    "from": "normwear-wm",
+    "type": "并行",
+    "note": "同为生理信号的动力学/生成建模"
+   },
+   {
+    "from": "chronos",
+    "type": "转向",
+    "note": "从通用时序基础模型转为生理专用的架构"
+   }
+  ]
+ },
+ {
+  "id": "apple-speech-fm",
+  "date": "2025-11",
+  "dateLabel": "Apple ML Research 2025-11；NeurIPS 2025 TS4H workshop",
+  "track": "signal",
+  "org": "apple",
+  "type": "paper",
+  "title": "Speech Foundation Models Generalize to Time Series Tasks from Wearable Sensor Data",
+  "short": "苹果：语音基础模型的特征可直接用于可穿戴信号",
+  "url": "https://machinelearning.apple.com/research/speech-foundation",
+  "sources": [],
+  "q": "可穿戴任务的标注少，能否借用其他模态的大模型？",
+  "how": "用 HuBERT、wav2vec 2.0 的特征做简单探测，在情绪分类、心律失常检测、活动识别上超过直接在各模态数据上自监督训练的模型；其中卷积特征编码器的作用最大。",
+  "shift": "一条反向的思路：不再为每种传感器单独预训练，而是复用语音模型的时频表征（与 HeAR 用声音做健康同属“声学 ↔ 生理”交叉）。苹果在这个时期还有 Device Passport、symbolic 等工作。",
+  "links": [
+   {
+    "from": "apple-accel",
+    "type": "并行",
+    "note": "苹果跨模态迁移系列"
+   },
+   {
+    "from": "hear",
+    "type": "并行",
+    "note": "声学表征与健康信号的交叉"
+   }
+  ]
+ }
+]

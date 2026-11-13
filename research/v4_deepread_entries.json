@@ -1,0 +1,798 @@
+[
+ {
+  "id": "apple-ecg-denoise",
+  "date": "2020-11-30",
+  "dateLabel": "NeurIPS 2020 ML4MH 研讨会 · arXiv 2020-11-30",
+  "track": "signal",
+  "org": "apple",
+  "type": "paper",
+  "title": "Representing and Denoising Wearable ECG Recordings",
+  "short": "手表单导联心电的逐拍表示与结构化去噪",
+  "url": "https://arxiv.org/abs/2012.00110",
+  "q": "可穿戴单导联心电数量巨大、纵向结构丰富，但运动带来的噪声远多于临床心电，怎样把信号和噪声分开？",
+  "how": "为可穿戴心电的结构化噪声建立统计模型，设计便于分析逐拍变化的 beat-to-beat 表示，用因子分析去噪；在仿真心电上比较线性与非线性模型，再用于 Apple Heart and Movement Study 的一部分心电记录。",
+  "shift": "苹果在手表心电上较早的表征工作：先把“同一个人的大量重复心搏”当作可建模的结构，而不是只做单次分类；方法是统计模型而非深度预训练。",
+  "links": [
+   {
+    "from": "p-ahms2019",
+    "type": "奠基",
+    "note": "论文把方法用于 AHMS 的一部分心电记录"
+   },
+   {
+    "from": "p-miller2020",
+    "type": "并行",
+    "note": "同年、同一作者（Andrew C. Miller）的另一条统计建模工作（编者解读）"
+   }
+  ],
+  "era": "e0",
+  "sources": [
+   {
+    "label": "Apple ML Research",
+    "url": "https://machinelearning.apple.com/research/wearable-ecg-recordings"
+   }
+  ],
+  "prelude": true
+ },
+ {
+  "id": "apple-physiomtl",
+  "date": "2022-03-19",
+  "dateLabel": "CHIL 2022 · arXiv 2022-03-19",
+  "track": "param",
+  "org": "apple",
+  "type": "paper",
+  "title": "PhysioMTL: Personalizing Physiological Patterns using Optimal Transport Multi-Task Regression",
+  "short": "PhysioMTL：为每个人学 HRV 昼夜节律，并能做反事实",
+  "url": "https://arxiv.org/abs/2203.12595",
+  "q": "手表测得的 HRV 不规则，又受运动、压力、饮水、饮酒、睡眠等未记录因素干扰，怎样读出一个人真实的生理状态？",
+  "how": "为每个人学习个体化的 HRV 昼夜节律：在多任务学习框架里引入最优传输，把每个人的模型映射到人口学特征上；只用真实研究中 20% 的受试者训练，就能预测未见受试者，并提供一个生成急性压力源和慢性病对 HRV 节律影响的“反事实引擎”。",
+  "shift": "“个人基线”在参数层的早期统计版本，而且已经提出用模型推演“如果有某种压力源会怎样”。和 2026 年以行为为动作的世界模型问题相近，但规模、方法都不同。",
+  "links": [
+   {
+    "from": "p-ahms2019",
+    "type": "奠基",
+    "note": "两个真实数据集之一是 AHMS（另一个是公开的 MMASH）"
+   },
+   {
+    "from": "p-nazaret2022",
+    "type": "并行",
+    "note": "同年苹果的个体化生理响应模型（编者解读）"
+   },
+   {
+    "from": "apple-vitals",
+    "type": "呼应",
+    "note": "同样以“这个人平常的范围”为参照；无引用承接（编者解读）"
+   },
+   {
+    "from": "sensorwm",
+    "type": "呼应",
+    "note": "都把反事实推演作为个人生理模型的输出；无引用承接（编者解读）"
+   }
+  ],
+  "era": "e0",
+  "sources": [
+   {
+    "label": "Apple ML Research（与 CMU、UIUC、密歇根大学合作）",
+    "url": "https://machinelearning.apple.com/research/physiomtl"
+   }
+  ],
+  "orgNote": "与 CMU、UIUC、密歇根大学合作",
+  "prelude": true
+ },
+ {
+  "id": "apple-ltf",
+  "date": "2022-10-14",
+  "dateLabel": "MLHC 2022（PMLR 182）· arXiv 2022-10-14",
+  "track": "world",
+  "org": "apple",
+  "type": "paper",
+  "title": "Latent Temporal Flows for Multivariate Analysis of Wearables Data",
+  "short": "Latent Temporal Flows：AHMS 多变量时序的潜空间生成预测",
+  "url": "https://arxiv.org/abs/2210.07475",
+  "q": "可穿戴的多路生理与活动信号高度相关、维度高，逐路建模会忽略这种依赖，怎样做多步预测？",
+  "how": "假设观测序列由一个低维、随时间变化的潜变量生成：用自编码器把多路信号映射到低维潜空间，再用归一化流在潜空间估计随时间条件化的概率模型。在 AHMS 的 HRV、静息心率、步数，以及用户记录的血压和基础体温上做多步预测（图示为 20 天预测窗）；二维、三维潜表示能区分参与者的 VO2max；在多个公开多步预测基准上至少提升 10%。",
+  "shift": "苹果在 AHMS 上的一次“生成式时序”尝试：先压到潜空间、再预测演化，结构上接近后来的潜空间世界模型，但没有动作或干预变量。",
+  "links": [
+   {
+    "from": "p-ahms2019",
+    "type": "奠基",
+    "note": "论文使用 AHMS 数据（论文称 AHMS 由苹果资助，与美国心脏协会、布莱根妇女医院合作）"
+   },
+   {
+    "from": "p-nazaret2022",
+    "type": "并行",
+    "note": "同年苹果另一条可穿戴动力学工作，一个机理混合、一个纯潜空间生成（编者解读）"
+   },
+   {
+    "from": "p-timesfm",
+    "type": "呼应",
+    "note": "都做多步时序预测；LTF 面向可穿戴多变量，TimesFM 是通用零样本预测（编者解读）"
+   }
+  ],
+  "era": "e0",
+  "sources": [
+   {
+    "label": "Apple ML Research",
+    "url": "https://machinelearning.apple.com/research/latent-temporal-flows"
+   }
+  ],
+  "orgNote": "第一作者来自弗吉尼亚大学",
+  "prelude": true
+ },
+ {
+  "id": "maeeg",
+  "date": "2022-10-27",
+  "dateLabel": "NeurIPS 2022 TS4H 研讨会 · arXiv 2022-10-27",
+  "track": "signal",
+  "org": "apple",
+  "type": "paper",
+  "title": "MAEEG: Masked Auto-encoder for EEG Representation Learning",
+  "short": "MAEEG：苹果在 EEG 上的掩码重建预训练（2022）",
+  "url": "https://arxiv.org/abs/2211.02625",
+  "q": "EEG 数据集小、标签难拿，对比学习之外，“遮住一部分再重建”能否学到有用表征？",
+  "how": "用 Transformer 重建被遮住的 EEG 特征做自监督预训练；标签很少时睡眠分期准确率提高约 5%。发现输入长度和遮挡方式影响很大：遮住更大比例、更集中的片段效果更好。",
+  "shift": "在 LaBraM（2024）和 LSM（2024）之前，苹果已经在生物信号上试过 MAE 式目标，并得出“遮得多、遮得集中更好”的经验。说明苹果内部同时走着对比与掩码两条路，ICLR 2024 起点论文选的是对比。",
+  "links": [
+   {
+    "from": "labram",
+    "type": "呼应",
+    "note": "两年后 LaBraM 在大规模 EEG 上做掩码预测；LaBraM 全文未引用 MAEEG（编者解读）"
+   },
+   {
+    "from": "p-cheng2021",
+    "type": "并行",
+    "note": "同一苹果团队（Joseph Y. Cheng、Hanlin Goh、Christopher Sandino）在对比学习之外的另一种目标（编者解读）"
+   }
+  ],
+  "era": "e0",
+  "sources": [
+   {
+    "label": "Apple ML Research",
+    "url": "https://machinelearning.apple.com/research/masked-auto-encoder"
+   }
+  ],
+  "prelude": true
+ },
+ {
+  "id": "biofame",
+  "date": "2023-09-12",
+  "dateLabel": "arXiv 2023-09-12；扩展版为 ICLR 2024 TS4H 研讨会论文",
+  "track": "signal",
+  "org": "apple",
+  "type": "paper",
+  "title": "Frequency-Aware Masked Autoencoders for Multimodal Pretraining on Biosignals (bioFAME)",
+  "short": "bioFAME：在频域做掩码预训练，任意模态组合可用",
+  "url": "https://arxiv.org/abs/2309.05927",
+  "q": "多模态生物信号在预训练和推理时的任务、模态组合常常不同（缺模态、换模态），怎样让一个预训练模型扛住这种分布偏移？",
+  "how": "频率感知 Transformer 用固定大小的傅里叶算子做全局 token 混合，与输入长度和采样率无关；通道独立、共享编码器权重；在潜空间做“保频”掩码自编码，再用模态融合 Transformer 合并任意数量的模态。在 SleepEDF 上预训练，迁移到 EEG、EOG、EMG、机电等单模态任务，分类准确率平均比此前最好方法高 5.5%，并在模态缺失或替换时保持稳健。代码开源（apple/ml-famae）。",
+  "shift": "和起点论文几乎同期，苹果另一组把问题定义为“架构能否不挑模态、不挑长度”。预训练数据是公开的 SleepEDF，不是 AHMS 大规模数据；它和 2024 年的跨模态研究构成苹果“多模态生物信号架构”这一支。",
+  "links": [
+   {
+    "from": "maeeg",
+    "type": "继承",
+    "note": "苹果掩码重建路线的延续（Hanlin Goh 为两篇共同作者），改为频域、多模态（编者解读）"
+   },
+   {
+    "from": "apple-iclr24",
+    "type": "并行",
+    "note": "同一时期、同一公司：一个在大规模私有数据上做对比学习，一个在公开数据上做多模态掩码架构"
+   },
+   {
+    "from": "biot",
+    "type": "并行",
+    "note": "同年都在解决异构通道、任意模态组合的跨数据集预训练（编者解读）"
+   }
+  ],
+  "era": "e0",
+  "sources": [
+   {
+    "label": "Apple ML Research",
+    "url": "https://machinelearning.apple.com/research/frequency-aware-masked-autoencoders"
+   },
+   {
+    "label": "GitHub：apple/ml-famae",
+    "url": "https://github.com/apple/ml-famae"
+   }
+  ],
+  "prelude": true
+ },
+ {
+  "id": "apple-hybrid-cv",
+  "date": "2023-07-26",
+  "dateLabel": "arXiv 2023-07-26（SBI）；NeurIPS 2023 两个研讨会",
+  "track": "world",
+  "org": "apple",
+  "type": "paper",
+  "title": "Simulation-based Inference for Cardiovascular Models / Hybrid Model Learning for Cardiovascular Biomarkers Inference",
+  "short": "心血管模拟器 + 机器学习：从脉搏波反推生理参数",
+  "url": "https://arxiv.org/abs/2307.13918",
+  "q": "手腕等外周部位测到的脉搏波，能否反推出心脏和血管的参数？临床标签稀缺，纯物理模型又难解反问题。",
+  "how": "两篇配套工作。SBI 篇把全身一维血流动力学模拟器的反问题写成统计推断，为每次测量给出参数的后验分布，在模拟数据上比较 5 个临床生物标志物在不同测量模态下的可估计性，并用 MIMIC-III 波形讨论模拟与真实之间的差距。Hybrid 篇把脉搏波传播模拟器与数据驱动的修正模型融合，处理模拟器设定不准的问题。",
+  "shift": "苹果 2023 年后的“机理 + 学习”线由此开始：不靠大规模标签，而是用生理模拟器提供监督与可解释的参数。这条线延续到 2025 年的 PPG 混合建模和 2026 年的 PPG 光学组织推断，说明苹果并非在 2022 年后完全停止动力学/机理方向的公开工作。",
+  "links": [
+   {
+    "from": "p-miller2020",
+    "type": "继承",
+    "note": "同为机理模型与学习结合；Andrew C. Miller 是两篇共同作者（编者解读）"
+   },
+   {
+    "from": "ecg-wm",
+    "type": "呼应",
+    "note": "都用生理机理约束学习到的模型；无引用承接（编者解读）"
+   }
+  ],
+  "era": "e0",
+  "sources": [
+   {
+    "label": "Apple ML Research：SBI",
+    "url": "https://machinelearning.apple.com/research/simulation-based-inference"
+   },
+   {
+    "label": "Apple ML Research：Hybrid Model Learning",
+    "url": "https://machinelearning.apple.com/research/hybrid-model-learning"
+   },
+   {
+    "label": "OpenReview：Hybrid Model Learning（NeurIPS 2023 DGM4H）",
+    "url": "https://openreview.net/forum?id=RP12BvHTnt"
+   }
+  ],
+  "prelude": true
+ },
+ {
+  "id": "motionprint",
+  "date": "2024-02-06",
+  "dateLabel": "arXiv 2024-02-06（苹果页面题为 MotionPrint）",
+  "track": "signal",
+  "org": "apple",
+  "type": "open",
+  "title": "MotionPrint: Ready-to-Use, Device-Agnostic, and Location-Invariant Motion Activity Models（arXiv 题为 Advancing Location-Invariant and Device-Agnostic Motion Activity Recognition on Wearable Devices）",
+  "short": "MotionPrint：一个端侧运动模型，戴在哪、什么设备都能用",
+  "url": "https://arxiv.org/abs/2402.03714",
+  "q": "手表、手机、头显戴在身上不同位置，运动信号差别很大，每个平台都要单独训练模型。",
+  "how": "系统评估运动模型跨佩戴位置的泛化，找出适合建“位置无关”模型的关键部位；公开论文称当时最大的多位置活动数据集（50 人、累计 200 小时）；端侧模型不论传感器位置，单模型帧级 F1 达 91.41%；并尝试用一个位置的数据合成另一个位置的数据。",
+  "shift": "“设备与佩戴位置异构”是可穿戴基础模型绕不开的问题；苹果在 2024 年先用数据集和端侧模型处理，2026 年的 Device Passport 改从预训练模型的通道嵌入解决。",
+  "links": [
+   {
+    "from": "apple-passport",
+    "type": "呼应",
+    "note": "同一问题（设备/布局异构）两年后的预训练版本；Device Passport 正文未见引用（编者解读）"
+   },
+   {
+    "from": "oxford-ssl",
+    "type": "并行",
+    "note": "都在加速度上追求跨设备、跨数据集泛化；一个靠监督加多位置数据，一个靠大规模自监督（编者解读）"
+   }
+  ],
+  "era": "e1",
+  "sources": [
+   {
+    "label": "Apple ML Research",
+    "url": "https://machinelearning.apple.com/research/motionprint"
+   }
+  ]
+ },
+ {
+  "id": "apple-xmodal",
+  "date": "2024-10-21",
+  "dateLabel": "NeurIPS 2024 AIM-FM 研讨会 · arXiv 2024-10-21",
+  "track": "signal",
+  "org": "apple",
+  "type": "paper",
+  "title": "Promoting Cross-Modal Representations to Improve Multimodal Foundation Models for Physiological Signals",
+  "short": "跨模态重建与模态丢弃：多模态生理基础模型怎么预训练",
+  "url": "https://arxiv.org/abs/2410.16424",
+  "q": "多模态生理数据人少、个体差异大、各模态对不同任务的信息量也不同，哪种预训练策略最有效？",
+  "how": "在 PhysioNet 2018（多导睡眠）数据上用多模态掩码自编码预训练，模态专属分词器；输入端随机丢弃整个模态，迫使模型跨模态重建。线性探测覆盖多种下游任务；输入端模态丢弃普遍提升性能；用对比目标预训练的晚融合模型在多项任务上更差；注意力变得更跨模态、在时间上更对齐。",
+  "shift": "给“贵模态教便宜模态”提供了机制层面的证据：跨模态重建会让表征真正融合多个模态，而晚融合的对比学习做不到这一点。这篇被 2026 年 Dolby/佐治亚理工的 PPG 论文引用。",
+  "links": [
+   {
+    "from": "biofame",
+    "type": "继承",
+    "note": "同一苹果团队（Zippi、Moin、Sandino、Pouransari、Azemi）继续研究多模态生物信号预训练（编者解读）"
+   },
+   {
+    "from": "sleepfm",
+    "type": "呼应",
+    "note": "SleepFM 用留一模态对比学习；本文在另一份睡眠数据上发现晚融合对比较弱。两者未直接比较（编者解读）"
+   },
+   {
+    "from": "csfm",
+    "type": "并行",
+    "note": "同期的多模态生理预训练"
+   }
+  ],
+  "era": "e2",
+  "sources": [
+   {
+    "label": "Apple ML Research",
+    "url": "https://machinelearning.apple.com/research/modal-representations"
+   }
+  ]
+ },
+ {
+  "id": "apple-cpep",
+  "date": "2025-09-04",
+  "dateLabel": "NeurIPS 2025 研讨会（Foundation Models for the Brain and Body）· arXiv 2025-09-04",
+  "track": "signal",
+  "org": "apple",
+  "type": "paper",
+  "title": "CPEP: Contrastive Pose-EMG Pre-training Enhances Gesture Generalization on EMG Signals",
+  "short": "CPEP：用手部姿态教肌电，实现零样本手势识别",
+  "url": "https://arxiv.org/abs/2509.04699",
+  "q": "低功耗的表面肌电适合腕上连续手势识别，但对没见过的手势、没见过的人泛化很差。",
+  "how": "用 Meta 公开的 emg2pose 数据（肌电与手部姿态同步）做对比预训练，把肌电编码器的表征对齐到姿态表征；评测时用线性探测和零样本。分布内手势分类比 emg2pose 基准模型最高提升 21%，未见手势最高提升 72%。",
+  "shift": "把“贵模态教便宜模态”用到肌电：老师是结构化的姿态，而不是更贵的生理信号。与 Meta 用数千人监督数据换泛化的路线不同，苹果走跨模态对齐与零样本。",
+  "links": [
+   {
+    "from": "meta-emg",
+    "type": "并行",
+    "note": "同一问题（腕部肌电跨人泛化）；Meta 靠大规模监督，CPEP 靠姿态对齐；所用 emg2pose 是 Meta 另一份公开数据集（编者解读）"
+   },
+   {
+    "from": "apple-accel",
+    "type": "呼应",
+    "note": "苹果跨模态蒸馏思路换到肌电与姿态（编者解读）"
+   }
+  ],
+  "era": "e3",
+  "sources": [
+   {
+    "label": "Apple ML Research",
+    "url": "https://machinelearning.apple.com/research/cpep-contrastive"
+   }
+  ]
+ },
+ {
+  "id": "apple-embridge",
+  "date": "2026-03-03",
+  "dateLabel": "ICLR 2026（苹果页面 2026-03-03）",
+  "track": "signal",
+  "org": "apple",
+  "type": "paper",
+  "title": "EMBridge: Enhancing Gesture Generalization from EMG Signals through Cross-Modal Representation Learning",
+  "short": "EMBridge：肌电与姿态的跨模态桥接（ICLR 2026）",
+  "url": "https://openreview.net/forum?id=LqrWNdceum",
+  "q": "CPEP 的直接对齐还不够，肌电和姿态之间的模态鸿沟怎样进一步缩小？",
+  "how": "在 CPEP 的基础上加入 Q-Former、掩码姿态重建损失，以及对齐两个嵌入空间相对几何的“社群感知软对比”目标；在分布内和未见手势分类上均优于所有基线。论文自称是首个从可穿戴肌电实现零样本手势分类的跨模态表征学习框架。",
+  "shift": "苹果肌电线从研讨会论文进入主会；“软对比、对齐相对几何”与 RelCon 的相对对比思路相通。",
+  "links": [
+   {
+    "from": "apple-cpep",
+    "type": "继承",
+    "note": "同一作者团队的主会版本，加入 Q-Former 与软对比"
+   },
+   {
+    "from": "apple-relcon",
+    "type": "呼应",
+    "note": "同样用相对相似度代替硬正负样本（编者解读）"
+   },
+   {
+    "from": "meta-neuralband",
+    "type": "并行",
+    "note": "同一时期肌电腕带进入量产产品，苹果仍停在研究阶段"
+   }
+  ],
+  "era": "e4",
+  "sources": [
+   {
+    "label": "Apple ML Research",
+    "url": "https://machinelearning.apple.com/research/embridge"
+   }
+  ]
+ },
+ {
+  "id": "apple-speech-fm",
+  "date": "2025-08-29",
+  "dateLabel": "arXiv 2025-08-29；NeurIPS 2025 TS4H 研讨会",
+  "track": "signal",
+  "org": "apple",
+  "type": "paper",
+  "title": "Speech Foundation Models Generalize to Time Series Tasks from Wearable Sensor Data",
+  "short": "语音基础模型的特征可直接用于可穿戴信号",
+  "url": "https://arxiv.org/abs/2509.00221",
+  "q": "可穿戴任务标注少，一定要为每种传感器单独预训练吗？",
+  "how": "从 HuBERT、wav2vec 2.0（Large）提取特征，只训练线性探测或小型 MLP，用于加速度活动识别（4 个数据集）、MIT-BIH 心律失常检测、WESAD 的 PPG 情绪分类；表现超过直接在各模态数据上自监督训练的模型，语音模型的卷积特征编码器贡献最大。",
+  "shift": "与“为每种传感器单独预训练”相反：复用语音模型的时频表征。和 HeAR 一样处在“声学 ↔ 生理”的交叉处。",
+  "links": [
+   {
+    "from": "hear",
+    "type": "呼应",
+    "note": "声学表征与健康信号的交叉（编者解读）"
+   },
+   {
+    "from": "apple-accel",
+    "type": "并行",
+    "note": "苹果同期的跨模态迁移工作"
+   }
+  ],
+  "era": "e3",
+  "sources": [
+   {
+    "label": "Apple ML Research（页面 2025-11）",
+    "url": "https://machinelearning.apple.com/research/speech-foundation"
+   }
+  ]
+ },
+ {
+  "id": "apple-llm-fusion",
+  "date": "2025-09-12",
+  "dateLabel": "NeurIPS 2025 TS4H 研讨会 · arXiv 2025-09-12",
+  "track": "agent",
+  "org": "apple",
+  "type": "paper",
+  "title": "Using LLMs for Late Multimodal Sensor Fusion for Activity Recognition",
+  "short": "让 LLM 做声音与运动传感器的晚融合",
+  "url": "https://arxiv.org/abs/2509.10729",
+  "q": "对齐的多模态训练数据少时，能否不训练共享嵌入，而让 LLM 把各模态模型的输出合起来？",
+  "how": "从 Ego4D 整理 12 类日常活动数据；音频模型和 IMU 模型各自输出文字（描述、标签、预测），交给 Gemini-2.5-pro 和 DeepSeek-R1-Distill-Qwen-32B 零样本/单样本分类。单样本下 Gemini 用全部上下文的宏 F1 为 66%（随机水平 8.3%），无需任务专门训练。",
+  "shift": "LLM 不再只读汇总健康指标，而是当传感器模型之间的“融合层”。任务是活动识别而非健康，作为语言接口线的旁证。",
+  "links": [
+   {
+    "from": "sensorllm",
+    "type": "并行",
+    "note": "都让 LLM 处理运动传感器；SensorLLM 对齐表征，本文只融合文字输出（编者解读）"
+   },
+   {
+    "from": "health-llm",
+    "type": "呼应",
+    "note": "同样把传感器信息写成文字交给 LLM（编者解读）"
+   }
+  ],
+  "era": "e3",
+  "sources": [
+   {
+    "label": "Apple ML Research",
+    "url": "https://machinelearning.apple.com/research/multimodal-sensor-fusion"
+   }
+  ]
+ },
+ {
+  "id": "apple-ppg-hybrid",
+  "date": "2025-11-18",
+  "dateLabel": "ML4H 2025 · arXiv 2025-11-18",
+  "track": "world",
+  "org": "apple",
+  "type": "paper",
+  "title": "Hybrid Modeling of Photoplethysmography for Non-Invasive Monitoring of Cardiovascular Parameters",
+  "short": "PPG 混合建模：用血流动力学模拟估计心输出量",
+  "url": "https://arxiv.org/abs/2511.14452",
+  "q": "每搏量、心输出量通常需要有创的动脉压波形才能测，能否只用 PPG？带标注的 PPG 又很少。",
+  "how": "两部分组合：在 33,690 段配对 PPG–动脉压数据（UCIBP）上训练条件 VAE，把 PPG 映射到动脉压波形；在 80,000 段带参数标签的模拟动脉压（OpenBF）上训练心血管参数的条件密度估计器。在未见过的 128 名 VitalDB 受试者上验证，能追踪心输出量和每搏量的波动，在监测时间变化上优于监督基线。",
+  "shift": "苹果“机理 + 学习”线进入 PPG：模拟器提供标签，真实数据只用来跨越 PPG 与动脉压之间的差距。这条线还包括 2025-10 的 PPG 光学组织参数推断（PPGen + 混合摊销推断）。",
+  "links": [
+   {
+    "from": "apple-hybrid-cv",
+    "type": "继承",
+    "note": "同一团队（Wehenkel、Behrmann、Miller、Sapiro）的心血管混合建模，从模拟研究走到 PPG"
+   },
+   {
+    "from": "anyppg",
+    "type": "并行",
+    "note": "同一时期另一种让 PPG“知道更多”的做法：AnyPPG 用 ECG 当老师，本文用模拟器当老师（编者解读）"
+   }
+  ],
+  "era": "e3",
+  "sources": [
+   {
+    "label": "Apple ML Research",
+    "url": "https://machinelearning.apple.com/research/photoplethysmography"
+   },
+   {
+    "label": "相关：Inferring Optical Tissue Properties from PPG using Hybrid Amortized Inference（arXiv 2025-10-02）",
+    "url": "https://arxiv.org/abs/2510.02073"
+   }
+  ]
+ },
+ {
+  "id": "apple-pars",
+  "date": "2025-11-14",
+  "dateLabel": "NeurIPS 2025 研讨会（Foundation Models for the Brain and Body）· arXiv 2025-11-14",
+  "track": "signal",
+  "org": "apple",
+  "type": "paper",
+  "title": "Learning the Relative Composition of EEG Signals Using Pairwise Relative Shift Pretraining (PARS)",
+  "short": "PARS：预测两段 EEG 的相对时移来预训练",
+  "url": "https://arxiv.org/abs/2511.11940",
+  "q": "EEG 自监督以掩码重建为主，只抓局部模式，长程依赖学得不够。",
+  "how": "随机取两段 EEG 窗口，预测它们之间的相对时间偏移；在多项 EEG 解码任务的少标签和迁移设置下，优于现有预训练策略。前作是 2024 年的“位置预测预训练”睡眠分期论文（标注数据可少约 800 名受试者）。",
+  "shift": "苹果在 EEG 上从 MAEEG 的掩码重建转向“位置/时序关系预测”，给预训练目标脉络补上一种不重建也不对比的做法。",
+  "links": [
+   {
+    "from": "maeeg",
+    "type": "转向",
+    "note": "同一团队（Hanlin Goh、Christopher Sandino），从掩码重建转到相对位置预测"
+   },
+   {
+    "from": "cbramod",
+    "type": "并行",
+    "note": "同期的 EEG 预训练路线（编者解读）"
+   }
+  ],
+  "era": "e3",
+  "sources": [
+   {
+    "label": "Apple ML Research",
+    "url": "https://machinelearning.apple.com/research/relative-composition-eeg"
+   },
+   {
+    "label": "前作：Label-Efficient Sleep Staging Using Transformers Pre-trained with Position Prediction（IEEE AIMHC 2024，arXiv 2024-03-29）",
+    "url": "https://arxiv.org/abs/2404.15308"
+   }
+  ]
+ },
+ {
+  "id": "sleepfounder",
+  "date": "2025-09-09",
+  "dateLabel": "medRxiv v1 2025-09-09（v3 2026-08-03）",
+  "track": "signal",
+  "org": "pku",
+  "type": "paper",
+  "title": "A Zero-Burden Sleep Foundation Model Built on Cardiorespiratory Signals（SleepFounder；v1 题为 A Low-Burden Sleep Foundation Model Built on Respiratory and Heartbeat Signals from 780,000+ Hours…）",
+  "short": "SleepFounder：只用心肺信号的“零负担”睡眠基础模型",
+  "url": "https://www.medrxiv.org/content/10.1101/2025.09.06.25335216v3",
+  "q": "多导睡眠图是金标准但不适合居家长期监测，只用心搏和呼吸这类可无感采集的信号够不够？",
+  "how": "只用心肺信号预训练；v3 的数据为中美 34 个队列、超过 140 万小时（v1 为 78 万小时以上）。在 21 个数据集—任务组合中 19 个优于基线；外部数据集平均五分类睡眠分期 κ 0.651，中重度阻塞性睡眠呼吸暂停 AUROC 0.912；在三个外部队列中，172 种疾病表型 AUROC 超过 0.75。用自研枕下 BCG 设备做多中心外部验证：κ 0.621，中重度 OSA AUROC 0.949。",
+  "shift": "与 SleepFM-2“先用临床多导数据、再迁移到可穿戴”相反，一开始就只用低负担信号，并在真实 BCG 设备上验证。sleep2vec 把它作为“IBI 与呼吸”设置下的基线。",
+  "links": [
+   {
+    "from": "sleepfm",
+    "type": "分岔",
+    "note": "同一问题（睡眠基础模型），输入只保留心肺信号"
+   },
+   {
+    "from": "sleepfm2",
+    "type": "并行",
+    "note": "同年都把睡眠模型推向低负担设备，一个迁移、一个从低负担信号出发（编者解读）"
+   }
+  ],
+  "era": "e3",
+  "sources": [
+   {
+    "label": "medRxiv API（各版本日期与摘要）",
+    "url": "https://api.medrxiv.org/details/medrxiv/10.1101/2025.09.06.25335216"
+   }
+  ],
+  "orgNote": "北京大学牵头（第一作者 Guangkun Nie、共同通讯 Shenda Hong），五季医学、UCSF（共同通讯 Yue Leng）、清华等 25 个单位"
+ },
+ {
+  "id": "sleep2vec",
+  "date": "2026-02-14",
+  "dateLabel": "arXiv 2026-02-14；ICLR 2026",
+  "track": "signal",
+  "org": "fiveseasons",
+  "type": "paper",
+  "title": "sleep2vec: Unified Cross-Modal Alignment for Heterogeneous Nocturnal Biosignals",
+  "short": "sleep2vec：九种夜间模态任意子集可用的睡眠基础模型",
+  "url": "https://arxiv.org/abs/2602.13857",
+  "q": "多导睡眠仪、床旁监护和可穿戴设备采到的夜间信号组合各不相同，传感器还常常掉线，怎样用一个模型统一处理？",
+  "how": "在 5 个 NSRR 队列（SHHS、WSC、MrOS、MESA、HSP）的 42,249 晚、30,852 名受试者、九种模态（EEG、EOG、EMG、ECG、IBI、SpO2、气流、胸腹呼吸等）上做跨模态对比对齐；DASH-InfoNCE 按人口学、年龄、采集中心和历史信息给负样本加权，减少队列捷径。SHHS 全通道睡眠分期准确率 88.6%、κ 0.84（SleepFM 86.7%、0.81）；只用 IBI 与呼吸时 83.0%（SleepFM 79.7%，SleepFounder 80.9%）；在未参与训练的 APPLES 队列上同样领先。模型 63.5M–238.2M 参数，首次给出夜间生理信号随模态数量和模型规模的尺度规律。",
+  "shift": "睡眠模型从“固定通道组合”走向“任意子集可用”，直接对应只有心搏和呼吸的低负担设备；同时把“负样本里的混杂因素”显式写进对比目标。",
+  "links": [
+   {
+    "from": "sleepfm",
+    "type": "继承",
+    "note": "沿用跨模态对比对齐，并在全部通道组合上直接对比 SleepFM"
+   },
+   {
+    "from": "sleepfounder",
+    "type": "并行",
+    "note": "作者有重合（Xuesong Chen、Zengrui Jin），并作为 IBI 与呼吸设置的基线"
+   },
+   {
+    "from": "sleepfm2",
+    "type": "并行",
+    "note": "同年的大规模睡眠基础模型"
+   }
+  ],
+  "era": "e4",
+  "sources": [
+   {
+    "label": "ICLR 2026 论文集",
+    "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/bbbd6d915cb90be21c1254a82d45cedd-Abstract-Conference.html"
+   }
+  ],
+  "orgNote": "第一单位五季医学，与清华大学、睡眠呼吸障碍北京市重点实验室合作"
+ },
+ {
+  "id": "glucofm",
+  "date": "2026-05-29",
+  "dateLabel": "arXiv 2026-05-29；谷歌研究博客 2026-08-26（v2）",
+  "track": "world",
+  "org": "google",
+  "type": "paper",
+  "title": "GlucoFM: A Dual-Stream Foundation Model for Continuous Glucose Monitoring",
+  "short": "GlucoFM：双流 CGM 基础模型，分开慢趋势与短时波动",
+  "url": "https://arxiv.org/abs/2605.30865",
+  "q": "CGMformer、GluFormer、CGM-JEPA 都把血糖当单一数据流，但血糖其实是“慢基线 + 餐后、运动等短时偏离”。",
+  "how": "把每天对齐到 24 小时、5 分钟网格并保留缺失掩码；双流编码器把慢变的血糖趋势和短时偏离分开；在潜空间做掩码上下文预测和逐小时动态预测，不重建原始读数。在 477 名受试者、109,066 小时 CGM 上预训练；4 个队列、7 项表型任务（共 14 组评测）中，平均 PR-AUC 比最好的 CGM 专用基础模型高 4.1 个点（54.7 → 58.8）；博客另称比同语料训练的最佳 GluFormer 变体高 5.8 个点。餐后 2 小时血糖轨迹预测 MAE 21.88 mg/dL（最佳基线 22.90）。",
+  "shift": "血糖模型从“预测下一个读数”（GluFormer）转向 JEPA 式潜空间预测加显式的多时间尺度结构；同一团队 2026-05-01 先发表了 CGM-JEPA。",
+  "links": [
+   {
+    "from": "gluformer",
+    "type": "转向",
+    "note": "从自回归 token 预测转为双流潜空间预测，并直接对比"
+   },
+   {
+    "from": "cgm-lsm",
+    "type": "分岔",
+    "note": "同为 CGM 预训练，拆出多时间尺度结构"
+   },
+   {
+    "from": "ir-wearme",
+    "type": "并行",
+    "note": "同一谷歌代谢团队：WEAR-ME 第一作者 Metwally 是 GlucoFM 共同末位作者，另有 6 位作者重合；任务都含胰岛素抵抗"
+   }
+  ],
+  "era": "e4",
+  "sources": [
+   {
+    "label": "谷歌研究博客 2026-08-26",
+    "url": "https://research.google/blog/glucofm-foundation-model-for-continuous-glucose-monitoring/"
+   },
+   {
+    "label": "前作：CGM-JEPA（arXiv 2026-05-01）",
+    "url": "https://arxiv.org/abs/2605.00933"
+   }
+  ],
+  "orgNote": "与新南威尔士大学合作"
+ },
+ {
+  "id": "robust-ppg-dolby",
+  "date": "2026-06-05",
+  "dateLabel": "arXiv 2026-06-05；ICML 2026",
+  "track": "signal",
+  "org": "dolby",
+  "type": "paper",
+  "title": "A robust PPG foundation model using multimodal physiological supervision",
+  "short": "用 ECG 与呼吸指标挑选对比样本的稳健 PPG 模型",
+  "url": "https://arxiv.org/abs/2606.07365",
+  "q": "开源 PPG 基础模型要么依赖精选的干净 ICU 数据（难以泛化到野外），要么依赖不公开的野外数据。",
+  "how": "在 MIMIC-III 波形匹配子集中选取清醒、未麻醉的 4,998 名患者，约 2,000 万段 10 秒 PPG（约 5.6 万小时），保留含噪片段；用同步 ECG 与呼吸提取 HR、RMSSD、呼吸率等指标定义生理距离，以 Rank-N-Contrast 损失按距离排序拉近 PPG 嵌入；1D ResNet-26 编码器，推理时只需 PPG。预训练受试者约为 PaPaGei 的三分之一，在 15 项下游任务中 14 项优于 PaPaGei-S/P、Pulse-PPG 等基线。",
+  "shift": "“贵模态教便宜模态”的另一种做法：不重建 ECG，而是用 ECG 和呼吸派生的生理指标当排序监督，换取对野外噪声的稳健。",
+  "links": [
+   {
+    "from": "papagei",
+    "type": "转向",
+    "note": "从 PPG 形态特征监督转为多模态生理指标监督，并沿用 PaPaGei 的骨干与增强做对比"
+   },
+   {
+    "from": "pulse-ppg",
+    "type": "分岔",
+    "note": "同样针对野外场景，一个靠闭源野外数据，一个靠公开 ICU 数据加多模态监督"
+   },
+   {
+    "from": "anyppg",
+    "type": "并行",
+    "note": "同为 ECG 参与训练、推理只用 PPG"
+   },
+   {
+    "from": "xmae",
+    "type": "并行",
+    "note": "同期 ECG 指导 PPG 的预训练"
+   }
+  ],
+  "era": "e4",
+  "sources": [
+   {
+    "label": "ICML 2026 poster",
+    "url": "https://icml.cc/virtual/2026/poster/64846"
+   }
+  ],
+  "orgNote": "与佐治亚理工、TReNDS 中心合作"
+ },
+ {
+  "id": "soter",
+  "date": "2026-09-15",
+  "dateLabel": "arXiv 2026-09-15",
+  "track": "world",
+  "org": "fudan",
+  "type": "open",
+  "title": "SOTER: A Generative Time-Series Foundation Model for Wearable Human Physiological Signals",
+  "short": "SOTER：频段专家 + 神经 CDE 的连续时间生理生成模型",
+  "url": "https://arxiv.org/abs/2609.16804",
+  "q": "通用时序基础模型的假设不符合生理信号：多通道、不规则采样、噪声大，由不同频段的连续时间动力学耦合而成。",
+  "how": "三部分：建模通道间依赖的骨干；按功率谱密度把表示路由到固定频段专家的 MoE（规则不经学习，可检查）；支持任意时间点预测和插补的神经受控微分方程（CDE）解码器。共 49.79M 参数、每步激活 20.29M。在 MIMIC-III 波形、Sleep-EDF、PTB-XL、WESAD、Chapman-ECG 五个公开数据集约 2,260 亿个时间点上预训练。零样本预测 6 个数据集中 4 个 RMSE、5 个 MAE 最好；线性探测分类平均宏 AUROC 最高；75% 缺失时插补误差在 6 个数据集上都最低。代码开源。",
+  "shift": "架构要素与 MIRA 相近（频率专家 + 连续时间外推），改为不经学习的 PSD 路由和神经 CDE，并直接对比 MIRA、NormWear 与通用时序模型。标题说“可穿戴”，但预训练数据以临床波形为主。Aether 把它列为基线。",
+  "links": [
+   {
+    "from": "mira",
+    "type": "继承",
+    "note": "同为频率专家加连续时间解码的医疗时序模型，改为固定 PSD 路由与神经 CDE，并直接对比（编者解读）"
+   },
+   {
+    "from": "normwear-wm",
+    "type": "并行",
+    "note": "同年生理信号的动力学/生成建模"
+   },
+   {
+    "from": "chronos",
+    "type": "转向",
+    "note": "从通用时序基础模型转为生理专用架构"
+   }
+  ],
+  "era": "e4",
+  "sources": [
+   {
+    "label": "GitHub：SII-fkchen/SOTER",
+    "url": "https://github.com/SII-fkchen/SOTER"
+   },
+   {
+    "label": "Hugging Face Papers",
+    "url": "https://huggingface.co/papers/2609.16804"
+   }
+  ],
+  "orgNote": "与上海创智学院、浙江大学、华中科技大学合作"
+ },
+ {
+  "id": "aether-scaling",
+  "date": "2026-10-05",
+  "dateLabel": "arXiv 2026-10-05",
+  "track": "signal",
+  "org": "unc",
+  "type": "paper",
+  "title": "Training and Scaling Compute-Optimal Physiological Waveform Foundation Models（Aether）",
+  "short": "Aether：生理波形基础模型的算力最优尺度律",
+  "url": "https://arxiv.org/abs/2610.05649",
+  "q": "给定预训练算力和标注病人预算，模型规模和波形小时数应该怎样分配？",
+  "how": "在 MIMIC-III 波形（398,204 小时，125 Hz、62 通道）上用掩码重建训练一百多个 2,000 万到 21 亿参数的模型（双向 Gated DeltaNet 与全注意力 3:1 混合），通过重复数据把预训练量推到最多 3,630 万“波形小时”；在 8 项 MIMIC-III 临床任务上线性探测，720M 模型全部超过 TimesFM、Chronos-Bolt、MOMENT、SOTER、NormWear 1/2 等基线。拟合包含模型规模、预训练小时和标注病人数的尺度律：算力增加 10 倍时，模型约扩大 1.2 倍、数据约增加 8.2 倍；720M 模型把预训练从 12 万小时延长到 3,630 万小时，达到同样误差所需的标注病人减少 61%。",
+  "shift": "尺度律问题从可穿戴分钟级数据（LSM）和心电延伸到多通道临床波形，并第一次把“标注病人数”作为显式资源。数据是 ICU 数据，不是可穿戴数据；3,630 万小时含重复。",
+  "links": [
+   {
+    "from": "lsm",
+    "type": "继承",
+    "note": "论文引用 LSM 的尺度律分析，迁移到原始生理波形"
+   },
+   {
+    "from": "ecg-scaling",
+    "type": "并行",
+    "note": "同期的心电尺度研究"
+   },
+   {
+    "from": "soter",
+    "type": "检验",
+    "note": "SOTER 是被比较的基线之一"
+   },
+   {
+    "from": "normwear-wm",
+    "type": "检验",
+    "note": "NormWear 1/2 是被比较的基线"
+   }
+  ],
+  "era": "e4",
+  "sources": [],
+  "orgNote": "与 Foci Labs 合作"
+ },
+ {
+  "id": "opentslm",
+  "date": "2025-10-02",
+  "dateLabel": "arXiv 2025-10-02",
+  "track": "signal",
+  "org": "stanford",
+  "type": "open",
+  "title": "OpenTSLM: Time-Series Language Models for Reasoning over Multivariate Medical Text- and Time-Series Data",
+  "short": "OpenTSLM：把时序作为原生模态接入 LLM（开源）",
+  "url": "https://arxiv.org/abs/2510.02410",
+  "q": "LLM 读 ECG、睡眠、活动信号时，只能把数值当文本或画成图，效果很差。",
+  "how": "两种接法：SoftPrompt（可学习的时序 token 与文本拼接）和 Flamingo 式交叉注意力；发布 HAR-CoT、Sleep-CoT、ECG-QA-CoT 三个思维链数据集。睡眠分期 F1 69.9、活动识别 65.4，微调后的纯文本模型只有 9.05 和 52.2；1B 参数的模型也超过 GPT-4o（15.47 和 2.95）。Flamingo 版显存稳定（ECG-QA 上约 40 GB，SoftPrompt 约 110 GB）。临床医生评估了 ECG-QA 上的推理。代码、数据、模型全部开源。",
+  "shift": "“传感器 + 语言”这条线出现了开源、可复现的时序语言模型，作为 SensorLM 一类闭源工作的开放对照。",
+  "links": [
+   {
+    "from": "sensorllm",
+    "type": "继承",
+    "note": "同为传感器对齐 LLM，扩展到 ECG、睡眠和思维链推理"
+   },
+   {
+    "from": "sensorlm",
+    "type": "并行",
+    "note": "同期的传感器—语言模型，一个开源、一个闭源"
+   }
+  ],
+  "era": "e3",
+  "sources": [
+   {
+    "label": "GitHub",
+    "url": "https://github.com/OpenTSLM/OpenTSLM"
+   }
+  ],
+  "orgNote": "斯坦福、ETH 等合作"
+ }
+]

@@ -1,0 +1,3284 @@
+{
+ "updated": "2026-11-13",
+ "entries": [
+  {
+   "id": "p-hannun2019",
+   "date": "2019-01-07",
+   "dateLabel": "Nature Medicine 2019-01",
+   "track": "signal",
+   "org": "irhythm",
+   "type": "paper",
+   "title": "Cardiologist-level arrhythmia detection and classification in ambulatory electrocardiograms using a deep neural network",
+   "short": "单导联动态心电的心律失常分类",
+   "url": "https://doi.org/10.1038/s41591-018-0268-3",
+   "q": "可穿戴/动态心电能否由深度网络读到心内科医生的水平？",
+   "how": "用 iRhythm 授权的 53,549 名患者、91,232 段单导联动态心电，训练端到端深度网络分类 12 类心律。",
+   "shift": "确立了“一个任务、一套标注、一个模型”的范式。它的成功也暴露了瓶颈：每个新任务都需要昂贵的专家标注。",
+   "links": [],
+   "era": "e0",
+   "prelude": true,
+   "sources": []
+  },
+  {
+   "id": "huawei-heart",
+   "date": "2019-09-02",
+   "dateLabel": "JACC 在线 2019-09-02（刊期 2019-11）",
+   "track": "signal",
+   "org": "huawei",
+   "orgNote": "与解放军总医院等合作",
+   "type": "paper",
+   "title": "Mobile Photoplethysmographic Technology to Detect Atrial Fibrillation (Huawei Heart Study)",
+   "short": "华为心脏研究：手环/手表 PPG 房颤筛查",
+   "url": "https://doi.org/10.1016/j.jacc.2019.08.019",
+   "sources": [
+    {
+     "label": "PubMed",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/31487545/"
+    }
+   ],
+   "q": "国产可穿戴设备的 PPG，能否在中国人群规模上筛查房颤？",
+   "how": "187,912 名使用华为/荣耀 PPG 设备的参与者；对疑似房颤者随访确诊。论文报告 PPG 信号的阳性预测值为 91.6%，随访的 262 人中 227 人确诊。",
+   "shift": "与 Apple Heart Study 同年发表，说明中国厂商同样有人群规模的远程研究能力。华为后来把“研究 App + 医院合作”做成长期平台，这是它最主要的数据资产（编者解读）。",
+   "links": [],
+   "era": "e0",
+   "prelude": true
+  },
+  {
+   "id": "p-ahms2019",
+   "date": "2019-09-10",
+   "dateLabel": "研究启动 2019-09",
+   "track": "param",
+   "org": "apple",
+   "orgNote": "与布莱根妇女医院、美国心脏协会合作",
+   "type": "cohort",
+   "title": "Apple Heart and Movement Study（Apple Research App 三项研究之一）",
+   "short": "Apple Heart and Movement Study 启动",
+   "url": "https://www.apple.com/newsroom/2019/09/apple-announces-three-groundbreaking-health-studies/",
+   "q": "心率与步速、爬楼等活动信号，和心脏健康之间有什么关系？",
+   "how": "通过 Research App 开展的大型纵向研究，持续收集参与者手表与手机的心脏和运动数据。",
+   "shift": "它本身不是模型，但后来苹果的 PPG/ECG、加速度和行为基础模型都在这个队列上训练。先有长期、知情同意的数据，才有后面的基础模型。",
+   "links": [],
+   "era": "e0",
+   "prelude": true,
+   "sources": []
+  },
+  {
+   "id": "fitbit-acq",
+   "date": "2019-11-01",
+   "dateLabel": "宣布 2019-11-01；完成 2021-01-14",
+   "track": "param",
+   "org": "google",
+   "type": "announce",
+   "title": "Google to acquire Fitbit（2021-01-14 完成）",
+   "short": "谷歌收购 Fitbit：买下数据入口",
+   "url": "https://blog.google/products/hardware/agreement-with-fitbit/",
+   "sources": [
+    {
+     "label": "2021-01-14 完成收购",
+     "url": "https://blog.google/products/devices-services/fitbit-acquisition/"
+    }
+   ],
+   "q": "谷歌要做可穿戴健康，缺的是设备、用户和长期数据。",
+   "how": "2019-11 宣布收购 Fitbit，2021-01-14 完成。",
+   "shift": "它本身不是模型。但谷歌博客写明，LSM 的数据来自佩戴 Fitbit Sense 2 或 Pixel Watch 2 并同意用于研发的用户，SensorFM 覆盖 20 多款 Fitbit 与 Pixel Watch 设备；Fitbit App 也成了健康教练的落地入口。谷歌的数据资产靠收购获得，苹果的靠自建研究队列，路径不同（编者解读）。",
+   "links": [],
+   "era": "e0",
+   "prelude": true
+  },
+  {
+   "id": "p-ahs2019",
+   "date": "2019-11-14",
+   "dateLabel": "NEJM 2019-11",
+   "track": "signal",
+   "org": "apple",
+   "orgNote": "与斯坦福合作",
+   "type": "paper",
+   "title": "Large-Scale Assessment of a Smartwatch to Identify Atrial Fibrillation (Apple Heart Study)",
+   "short": "Apple Heart Study：手表房颤提醒",
+   "url": "https://doi.org/10.1056/NEJMoa1901183",
+   "q": "手表光学传感器的不规则脉搏提醒，在日常使用中能否识别房颤？",
+   "how": "8 个月招募 419,297 人；收到提醒者寄送心电贴片复核，并评估阳性预测值。",
+   "shift": "证明了消费级手表 PPG 可以在人群规模上做健康筛查，也说明苹果已经具备开展大型远程研究的能力，这是后来预训练数据的来源。",
+   "links": [
+    {
+     "from": "huawei-heart",
+     "type": "并行",
+     "note": "同年、同一问题：消费级 PPG 的人群级房颤筛查"
+    }
+   ],
+   "era": "e0",
+   "prelude": true,
+   "sources": []
+  },
+  {
+   "id": "clocs",
+   "date": "2020-05-27",
+   "dateLabel": "arXiv 2020-05；ICML 2021",
+   "track": "signal",
+   "org": "oxford",
+   "type": "paper",
+   "title": "CLOCS: Contrastive Learning of Cardiac Signals Across Space, Time, and Patients",
+   "short": "CLOCS：跨时间、导联与病人的心电对比学习",
+   "url": "https://arxiv.org/abs/2005.13249",
+   "q": "医院里有大量没有标注的心电，能否不靠标签先学到有用的表征？",
+   "how": "提出一族对比学习方法，让同一病人在不同时间段、不同导联上的心电表征彼此靠近；论文报告线性评估与微调均优于 BYOL、SimCLR，只用 25% 标注也能泛化。",
+   "shift": "较早把“同一个病人”当作对比学习的正样本来源，并指出学到的表征天然带有病人特异性，可用来度量病人相似度。后来“以人为锚”的思路在这里已有雏形（编者归类）。",
+   "sources": [],
+   "links": [],
+   "era": "e0",
+   "prelude": true
+  },
+  {
+   "id": "p-cheng2021",
+   "date": "2020-06-30",
+   "dateLabel": "arXiv 2020-06-30（2007.04871）",
+   "track": "signal",
+   "org": "apple",
+   "type": "paper",
+   "title": "Subject-Aware Contrastive Learning for Biosignals",
+   "short": "被试感知的生物信号对比学习",
+   "url": "https://machinelearning.apple.com/research/subject-aware-contrastive-learning",
+   "q": "EEG、ECG 数据集标签噪声大、被试少，被试间差异会拖累模型。",
+   "how": "提出被试特异的对比损失与促进被试不变性的对抗训练，并设计一组时序数据增强。",
+   "shift": "苹果内部较早地把“被试”作为对比学习的组织单位。ICLR 2024 把它反转并放大：在大规模数据上，同一参与者的两段信号互为正样本。",
+   "links": [],
+   "era": "e0",
+   "prelude": true,
+   "sources": []
+  },
+  {
+   "id": "p-miller2020",
+   "date": "2020-08-01",
+   "dateShort": "2020.08",
+   "dateLabel": "MLHC 2020（苹果页面 2020-08）",
+   "track": "world",
+   "org": "apple",
+   "type": "paper",
+   "title": "Learning Insulin-Glucose Dynamics in the Wild",
+   "short": "胰岛素–血糖动力学：机理模型 + 序列模型",
+   "url": "https://machinelearning.apple.com/research/learning-insulin-glucose-dynamics-in-the-wild",
+   "q": "1 型糖尿病的血糖预测，怎样兼顾灵活性和生理上的合理性？",
+   "how": "在已有生物医学模型中引入由序列模型驱动的时变动力学，保留胰岛素敏感性等可解释参数。",
+   "shift": "早期的“生理世界模型”思路：不是纯黑箱预测，而是让学习去调节一个有结构的动力学系统。论文发现约束更少的 LSTM 反而给不出可靠、合理的长时预测。",
+   "links": [],
+   "era": "e0",
+   "prelude": true,
+   "sources": []
+  },
+  {
+   "id": "p-spathis2021",
+   "date": "2020-11-18",
+   "dateLabel": "arXiv 2020-11；ACM CHIL 2021",
+   "track": "signal",
+   "org": "cambridge",
+   "type": "paper",
+   "title": "Self-supervised transfer learning of physiological representations from free-living wearable data",
+   "short": "用心率监督加速度：自由生活数据的自监督",
+   "url": "https://arxiv.org/abs/2011.12121",
+   "q": "自由生活中的可穿戴数据大多没有语义标签，怎样从中学到有生理意义的表征？",
+   "how": "把心率反应作为加速度数据的监督信号，在超过 28 万小时的腕部加速度与心电数据上预训练，再把窗口级嵌入聚合到用户级。",
+   "shift": "把“生理耦合关系本身就是监督”这一想法带进可穿戴领域，也是苹果 ICLR 2024 论文引用的自由生活自监督先例。",
+   "links": [],
+   "era": "e0",
+   "prelude": true,
+   "sources": []
+  },
+  {
+   "id": "oxford-ssl",
+   "date": "2022-06-06",
+   "dateLabel": "arXiv 2022-06-06；npj Digital Medicine 2024-04",
+   "track": "signal",
+   "org": "oxford",
+   "type": "open",
+   "title": "Self-supervised learning for human activity recognition using 700,000 person-days of wearable data",
+   "short": "70 万人日加速度的自监督预训练",
+   "url": "https://doi.org/10.1038/s41746-024-01062-3",
+   "q": "活动识别长期受限于小规模标注数据，跨数据集泛化差。",
+   "how": "在 UK Biobank 70 万人日无标签腕部加速度上做多任务自监督预训练，在多个外部活动识别数据集上评测，并开源预训练模型。",
+   "shift": "在加速度上较早独立证明“大规模无标签 → 跨数据集、跨设备泛化”（预印本 2022-06，早于苹果 ICLR 2024），与苹果的 PPG/ECG 工作是并行的两条腿。2026 年同一团队的 Sensori 把目标从识别动作推进到全表型疾病风险（编者解读）。",
+   "links": [],
+   "era": "e0",
+   "sources": [
+    {
+     "label": "arXiv 2206.02909",
+     "url": "https://arxiv.org/abs/2206.02909"
+    }
+   ],
+   "dateShort": "2022.06 / npj 2024",
+   "prelude": true
+  },
+  {
+   "id": "p-nazaret2022",
+   "date": "2022-12-01",
+   "dateShort": "2022.12",
+   "dateLabel": "NeurIPS 2022 TS4H workshop",
+   "track": "world",
+   "org": "apple",
+   "type": "paper",
+   "title": "Modeling Heart Rate Response to Exercise with Wearable Data",
+   "short": "运动心率响应的个体化建模",
+   "url": "https://machinelearning.apple.com/research/modeling-heart-rate",
+   "q": "能否用可穿戴数据刻画每个人的心率如何响应运动负荷？",
+   "how": "基于可穿戴运动数据，为个体建立心率对运动的响应模型（工作坊论文）。",
+   "shift": "和胰岛素–血糖工作一脉相承：建模的是“输入→生理反应”的个体动力学，而不是静态分类。这正是后来以行为为动作的世界模型所需要的形态。",
+   "links": [
+    {
+     "from": "p-miller2020",
+     "type": "继承",
+     "note": "同一作者线（Andrew C. Miller），从血糖动力学转到运动心率动力学"
+    }
+   ],
+   "era": "e0",
+   "prelude": true,
+   "sources": []
+  },
+  {
+   "id": "biot",
+   "date": "2023-05-10",
+   "dateLabel": "arXiv 2023-05（附代码与预训练模型）",
+   "track": "signal",
+   "org": "uiuc",
+   "type": "open",
+   "title": "BIOT: Cross-data Biosignal Learning in the Wild",
+   "short": "BIOT：把异构生物信号变成统一“句子”",
+   "url": "https://arxiv.org/abs/2305.10351",
+   "sources": [
+    {
+     "label": "GitHub",
+     "url": "https://github.com/ycq091044/BIOT"
+    }
+   ],
+   "q": "EEG、ECG 等生物信号的通道数、长度、缺失各不相同，能否像语言模型那样跨数据集联合预训练？",
+   "how": "把每个通道切成固定长度片段，拼成统一的“生物信号句子”，再加通道嵌入与相对位置嵌入；在 EEG、ECG 与活动传感数据上评测，并公开代码与预训练模型。",
+   "shift": "给出“先统一分词，再跨数据集预训练”的配方。EEG 大模型沿着这条路走下去；它要解决的通道异构问题，后来在可穿戴设备的跨布局迁移中再次出现（编者解读）。",
+   "links": [],
+   "era": "e0",
+   "prelude": true
+  },
+  {
+   "id": "google-fewshot",
+   "date": "2023-05-24",
+   "dateLabel": "arXiv 2023-05",
+   "track": "agent",
+   "org": "google",
+   "type": "paper",
+   "title": "Large Language Models are Few-Shot Health Learners",
+   "short": "LLM 是少样本健康学习者",
+   "url": "https://arxiv.org/abs/2305.15525",
+   "q": "通用 LLM 只读文本，能否直接读心率、步数这类数值序列做健康推断？",
+   "how": "对 LLM 做少样本微调，让它直接接收可穿戴与医疗传感器的生理和行为时序；在心脏信号分析、活动识别、能量消耗计算、压力与心理量表估计等任务上评测。",
+   "shift": "最早把“让语言模型直接读传感器数值”作为研究问题提出，是谷歌“语言 × 可穿戴”研究线的起点。半年后的 Health-LLM（McDuff 同为作者）把它系统化（编者解读）。",
+   "sources": [],
+   "links": [],
+   "era": "e0",
+   "prelude": true
+  },
+  {
+   "id": "apple-hybrid-cv",
+   "date": "2023-07-26",
+   "dateLabel": "arXiv 2023-07-26（SBI）；NeurIPS 2023 两个研讨会",
+   "track": "world",
+   "org": "apple",
+   "type": "paper",
+   "title": "Simulation-based Inference for Cardiovascular Models / Hybrid Model Learning for Cardiovascular Biomarkers Inference",
+   "short": "心血管模拟器 + 机器学习：从脉搏波反推生理参数",
+   "url": "https://arxiv.org/abs/2307.13918",
+   "q": "手腕等外周部位测到的脉搏波，能否反推出心脏和血管的参数？临床标签稀缺，纯物理模型又难解反问题。",
+   "how": "两篇配套工作。SBI 篇把全身一维血流动力学模拟器的反问题写成统计推断，为每次测量给出参数的后验分布，在模拟数据上比较 5 个临床生物标志物在不同测量模态下的可估计性，并用 MIMIC-III 波形讨论模拟与真实之间的差距。Hybrid 篇把脉搏波传播模拟器与数据驱动的修正模型融合，处理模拟器设定不准的问题。",
+   "shift": "苹果 2023 年后的“机理 + 学习”线由此开始：不靠大规模标签，而是用生理模拟器提供监督与可解释的参数。这条线延续到 2025 年的 PPG 混合建模和 2026 年的 PPG 光学组织推断，说明苹果并非在 2022 年后完全停止动力学/机理方向的公开工作。",
+   "links": [
+    {
+     "from": "p-miller2020",
+     "type": "继承",
+     "note": "同为机理模型与学习结合；Andrew C. Miller 是两篇共同作者（编者解读）"
+    }
+   ],
+   "era": "e0",
+   "sources": [
+    {
+     "label": "Apple ML Research：SBI",
+     "url": "https://machinelearning.apple.com/research/simulation-based-inference"
+    },
+    {
+     "label": "Apple ML Research：Hybrid Model Learning",
+     "url": "https://machinelearning.apple.com/research/hybrid-model-learning"
+    },
+    {
+     "label": "OpenReview：Hybrid Model Learning（NeurIPS 2023 DGM4H）",
+     "url": "https://openreview.net/forum?id=RP12BvHTnt"
+    }
+   ],
+   "prelude": true
+  },
+  {
+   "id": "biofame",
+   "date": "2023-09-12",
+   "dateLabel": "arXiv 2023-09-12；扩展版为 ICLR 2024 TS4H 研讨会论文",
+   "track": "signal",
+   "org": "apple",
+   "type": "paper",
+   "title": "Frequency-Aware Masked Autoencoders for Multimodal Pretraining on Biosignals (bioFAME)",
+   "short": "bioFAME：在频域做掩码预训练，任意模态组合可用",
+   "url": "https://arxiv.org/abs/2309.05927",
+   "q": "多模态生物信号在预训练和推理时的任务、模态组合常常不同（缺模态、换模态），怎样让一个预训练模型扛住这种分布偏移？",
+   "how": "频率感知 Transformer 用固定大小的傅里叶算子做全局 token 混合，与输入长度和采样率无关；通道独立、共享编码器权重；在潜空间做“保频”掩码自编码，再用模态融合 Transformer 合并任意数量的模态。在 SleepEDF 上预训练，迁移到 EEG、EOG、EMG、机电等单模态任务，分类准确率平均比此前最好方法高 5.5%，并在模态缺失或替换时保持稳健。代码开源（apple/ml-famae）。",
+   "shift": "和起点论文几乎同期，苹果另一组把问题定义为“架构能否不挑模态、不挑长度”。预训练数据是公开的 SleepEDF，不是 AHMS 大规模数据；它和 2024 年的跨模态研究构成苹果“多模态生物信号架构”这一支。",
+   "links": [
+    {
+     "from": "biot",
+     "type": "并行",
+     "note": "同年都在解决异构通道、任意模态组合的跨数据集预训练（编者解读）"
+    }
+   ],
+   "era": "e0",
+   "sources": [
+    {
+     "label": "Apple ML Research",
+     "url": "https://machinelearning.apple.com/research/frequency-aware-masked-autoencoders"
+    },
+    {
+     "label": "GitHub：apple/ml-famae",
+     "url": "https://github.com/apple/ml-famae"
+    }
+   ],
+   "prelude": true
+  },
+  {
+   "id": "p-whoopcoach",
+   "date": "2023-09-26",
+   "dateLabel": "产品上线 2023-09-26",
+   "track": "agent",
+   "org": "whoop",
+   "type": "product",
+   "title": "WHOOP Coach Powered by OpenAI（GPT-4）",
+   "short": "WHOOP Coach：GPT-4 驱动的教练",
+   "url": "https://www.whoop.com/us/en/press-center/whoop-unveils-the-new-whoop-coach-powered-by-openai/",
+   "q": "会员看得到恢复、负荷、睡眠分数，却难以回答“我为什么累”“该怎么练”。",
+   "how": "把会员的生物数据与 140 多项日志行为交给 GPT-4，生成个性化回答和训练计划，支持 50 多种语言。",
+   "shift": "Agent 线实际上比基础模型线更早出现。但此时的 LLM 只读汇总指标，背后没有生理基础模型；这个缺口到 2025–2026 年才由谷歌（SensorFM 接入 Agent）等开始补上，WHOOP 自己则到 2026 年才组建基础模型团队（编者解读）。",
+   "links": [],
+   "era": "e0",
+   "prelude": true,
+   "sources": []
+  },
+  {
+   "id": "p-timesfm",
+   "date": "2023-10-14",
+   "dateLabel": "arXiv 2023-10",
+   "track": "world",
+   "org": "google",
+   "type": "paper",
+   "prelude": true,
+   "title": "A decoder-only foundation model for time-series forecasting (TimesFM)",
+   "short": "TimesFM：通用时序预测基础模型",
+   "url": "https://arxiv.org/abs/2310.10688",
+   "q": "能否像 LLM 一样，用一个预训练模型对任意时序做零样本预测？",
+   "how": "在大规模时序语料上预训练分块的 decoder-only 注意力模型。",
+   "shift": "它不是生理模型，却是生理世界模型的对照基线：2026 年谷歌的 SensorWM 明确与 TimesFM 比较，并报告更好的生理轨迹预测。",
+   "links": [],
+   "era": "e0",
+   "sources": []
+  },
+  {
+   "id": "apple-iclr24",
+   "date": "2023-12-08",
+   "dateShort": "2023.12 / ICLR'24",
+   "dateLabel": "arXiv 2023-12-08；ICLR 2024 录用（OpenReview 2024-01-16）",
+   "track": "signal",
+   "org": "apple",
+   "type": "paper",
+   "start": true,
+   "title": "Large-scale Training of Foundation Models for Wearable Biosignals",
+   "short": "可穿戴生物信号基础模型的大规模训练",
+   "url": "https://openreview.net/forum?id=pC3WJHf51j",
+   "sources": [
+    {
+     "label": "arXiv",
+     "url": "https://arxiv.org/abs/2312.05409"
+    },
+    {
+     "label": "ICLR 会议录",
+     "url": "https://proceedings.iclr.cc/paper_files/paper/2024/hash/0d99a8c048befb6dd6e17d7684adacac-Abstract-Conference.html"
+    },
+    {
+     "label": "Apple ML Research",
+     "url": "https://machinelearning.apple.com/research/large-scale-training"
+    }
+   ],
+   "q": "医学标注稀缺，现有生物信号模型多建立在临床或实验室的小数据上。消费级手表每天采集的海量无标签信号能否直接用来学习？",
+   "how": "用 AHMS 约 14.1 万名参与者、约 3 年的 Apple Watch PPG 与 ECG，采用参与者级正样本、随机增强、带正则的对比损失和动量训练，分别训练两个基础模型。",
+   "shift": "作者称这是首个用消费级可穿戴设备大规模采集的 PPG/ECG 训练的基础模型。它把问题从“为每个病训练一个分类器”改成“先学一个人的通用生理表征”，嵌入中已编码人口学与健康状态。",
+   "links": [
+    {
+     "from": "p-cheng2021",
+     "type": "继承",
+     "note": "以被试为单位组织对比学习，在大数据上改为参与者级正样本"
+    },
+    {
+     "from": "p-spathis2021",
+     "type": "继承",
+     "note": "沿用自由生活数据的自监督思路，规模提高两个数量级"
+    },
+    {
+     "from": "p-ahms2019",
+     "type": "奠基",
+     "note": "约 14 万名 AHMS 参与者的手表 PPG/ECG 是预训练数据"
+    },
+    {
+     "from": "p-hannun2019",
+     "type": "转向",
+     "note": "从单任务监督转向无标签预训练"
+    },
+    {
+     "from": "oxford-ssl",
+     "type": "呼应",
+     "note": "同一判断先在加速度上成立：大规模无标签预训练可跨数据集泛化"
+    },
+    {
+     "from": "biofame",
+     "type": "并行",
+     "note": "同一时期、同一公司：一个在大规模私有数据上做对比学习，一个在公开数据上做多模态掩码架构"
+    },
+    {
+     "from": "clocs",
+     "type": "继承",
+     "note": "同样用“同一个人”的不同片段构造正样本，从临床心电搬到消费级手表（编者解读）"
+    }
+   ],
+   "era": "e1"
+  },
+  {
+   "id": "health-llm",
+   "date": "2024-01-12",
+   "dateLabel": "arXiv 2024-01",
+   "track": "agent",
+   "org": "mit",
+   "orgNote": "含谷歌作者",
+   "type": "paper",
+   "title": "Health-LLM: Large Language Models for Health Prediction via Wearable Sensor Data",
+   "short": "Health-LLM：让 LLM 直接读可穿戴指标",
+   "url": "https://arxiv.org/abs/2401.06866",
+   "q": "LLM 能否基于静息心率、睡眠时长等生理数据，加上用户背景，做出健康推断？",
+   "how": "在 4 个公开数据集、10 项任务上评测 12 个 LLM 的提示与微调效果；微调后的 HealthAlpaca 在 8 项上最好。",
+   "shift": "把“指标 + 上下文 → 语言模型推断”作为研究问题提出，并发现健康知识上下文的作用最大。这是谷歌 PH-LLM 之前的学术铺垫。",
+   "links": [
+    {
+     "from": "google-fewshot",
+     "type": "继承",
+     "note": "同一问题的系统化评测（McDuff 同为作者）"
+    }
+   ],
+   "era": "e1",
+   "sources": []
+  },
+  {
+   "id": "labram",
+   "date": "2024-01-16",
+   "dateLabel": "ICLR 2024 录用（OpenReview 2024-01-16）；arXiv 2024-05",
+   "track": "signal",
+   "org": "sjtu",
+   "type": "paper",
+   "title": "Large Brain Model for Learning Generic Representations with Tremendous EEG Data in BCI (LaBraM)",
+   "short": "LaBraM：EEG 的通用大模型",
+   "url": "https://arxiv.org/abs/2405.18765",
+   "q": "EEG 数据集小、格式各异（电极数、长度、任务都不同），模型难以跨数据集学习。",
+   "how": "把 EEG 切成通道块，用向量量化的“神经频谱”分词器编码，再做掩码预测预训练，约 2,500 小时数据。",
+   "shift": "说明“通用表征”的思路在脑电这类多通道、异构格式的信号上同样可行，并引入分词与掩码重建这条和对比学习不同的技术路线。",
+   "links": [
+    {
+     "from": "biot",
+     "type": "继承",
+     "note": "同样把多源 EEG 切成通道片段做跨数据集预训练，改用神经分词器与掩码预测（编者解读）"
+    }
+   ],
+   "era": "e1",
+   "sources": []
+  },
+  {
+   "id": "samsung-sleepapnea",
+   "date": "2024-02-06",
+   "dateLabel": "FDA De Novo DEN230041（2024-02）",
+   "track": "signal",
+   "org": "samsung",
+   "type": "product",
+   "title": "Samsung Health Monitor sleep apnea feature (FDA De Novo DEN230041)",
+   "short": "三星睡眠呼吸暂停功能：FDA De Novo 授权",
+   "url": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfPMN/denovo.cfm?knumber=DEN230041",
+   "q": "手表能否在家中提示睡眠呼吸暂停风险？",
+   "how": "FDA 以 De Novo 方式为“评估睡眠呼吸暂停风险的非处方设备”建立新分类，授权三星健康监测 App 的睡眠呼吸暂停功能（Galaxy Watch）。",
+   "shift": "同类功能的首个监管路径由三星打开，苹果同年 9 月的睡眠呼吸暂停提醒随后获 510(k) 许可。两者都是专门模型，不是基础模型（编者解读）。",
+   "links": [],
+   "sources": [],
+   "era": "e1"
+  },
+  {
+   "id": "meta-emg",
+   "date": "2024-02-28",
+   "dateLabel": "bioRxiv 2024-02-28；Nature 2025-07-23",
+   "track": "signal",
+   "org": "meta",
+   "type": "open",
+   "title": "A generic non-invasive neuromotor interface for human-computer interaction",
+   "short": "Meta 腕部 sEMG 的通用神经运动接口",
+   "url": "https://doi.org/10.1038/s41586-025-09255-w",
+   "sources": [
+    {
+     "label": "Meta 博客",
+     "url": "https://www.meta.com/blog/reality-labs-surface-emg-research-nature-publication-ar-glasses-orion/"
+    },
+    {
+     "label": "代码",
+     "url": "https://github.com/facebookresearch/generic-neuromotor-interface"
+    },
+    {
+     "label": "bioRxiv 预印本",
+     "url": "https://www.biorxiv.org/content/10.1101/2024.02.23.581779v1"
+    },
+    {
+     "label": "emg2qwerty / emg2pose 数据集（2024-12）",
+     "url": "https://ai.meta.com/blog/open-sourcing-surface-electromyography-datasets-neurips-2024/"
+    }
+   ],
+   "q": "肌电解码一直需要逐人校准，难以作为大众输入方式。",
+   "how": "用数千名知情同意参与者的数据训练腕部表面肌电模型，无需个人校准即可识别手势与手写；公开超过 300 人、100 多小时的数据。",
+   "shift": "这里的生理信号用于“意图”而非健康，但它在 EMG 上证明了同一判断：足够多的人就能换来免校准的通用模型。苹果随后也发表了 EMG 方向的跨模态工作。",
+   "links": [
+    {
+     "from": "apple-iclr24",
+     "type": "并行",
+     "note": "同期：“足够多的人换来跨人泛化”，但 Meta 用的是数千人的大规模监督，不是自监督"
+    }
+   ],
+   "era": "e1",
+   "dateShort": "2024.02 / Nature 2025"
+  },
+  {
+   "id": "hear",
+   "date": "2024-03-04",
+   "dateLabel": "arXiv 2024-03；后作为 HAI-DEF 开放模型发布",
+   "track": "signal",
+   "org": "google",
+   "type": "open",
+   "title": "HeAR – Health Acoustic Representations",
+   "short": "HeAR：咳嗽与呼吸声的基础模型",
+   "url": "https://arxiv.org/abs/2403.02522",
+   "sources": [
+    {
+     "label": "谷歌博客 2024-08",
+     "url": "https://blog.google/innovation-and-ai/technology/health/ai-model-cough-disease-detection/"
+    },
+    {
+     "label": "HAI-DEF 模型页",
+     "url": "https://developers.google.com/health-ai-developer-foundations/hear"
+    }
+   ],
+   "q": "咳嗽、呼吸声里有健康信号，但现有模型多是单任务、数据少。",
+   "how": "用掩码自编码器在 3.13 亿段 2 秒音频上自监督训练，在 6 个数据集、33 项健康声学任务上用线性探针评测；后来作为谷歌 Health AI Developer Foundations 的一员开放。",
+   "shift": "把“自监督 + 线性探针”的配方复制到声音这一模态。生理基础模型的边界从光学和电信号扩展到声学（编者解读）。",
+   "links": [
+    {
+     "from": "apple-iclr24",
+     "type": "并行",
+     "note": "同期在声学模态上的大规模自监督"
+    }
+   ],
+   "era": "e1"
+  },
+  {
+   "id": "stelo-otc",
+   "date": "2024-03-05",
+   "dateLabel": "FDA 新闻稿 2024-03-05",
+   "track": "param",
+   "org": "dexcom",
+   "type": "announce",
+   "title": "FDA Clears First Over-the-Counter Continuous Glucose Monitor (Dexcom Stelo)",
+   "short": "首个非处方 CGM 获 FDA 许可",
+   "url": "https://www.fda.gov/news-events/press-announcements/fda-clears-first-over-counter-continuous-glucose-monitor",
+   "q": "连续血糖数据能否从糖尿病患者扩展到普通人？",
+   "how": "FDA 许可 Dexcom Stelo 为首个非处方 CGM，面向不使用胰岛素的成人。",
+   "shift": "为血糖数据进入消费可穿戴与基础模型打开了数据来源：随后有 Oura × Dexcom、CGM-LSM、GlucoFM（编者解读）。",
+   "links": [],
+   "sources": [],
+   "era": "e1"
+  },
+  {
+   "id": "oura-cvage",
+   "date": "2024-05-10",
+   "dateLabel": "发布 2024-05-10",
+   "track": "param",
+   "org": "oura",
+   "type": "product",
+   "title": "ŌURA Announces Two New Heart Health Features: Cardiovascular Age and Cardio Capacity",
+   "short": "Oura 心血管年龄：PPG 估计的血管年龄",
+   "url": "https://ouraring.com/blog/heart-health-at-oura/",
+   "q": "怎样让用户理解自己的血管状态，并知道哪些行为能改善它？",
+   "how": "Cardiovascular Age 从 PPG 信号中与年龄相关的特征（含估计的脉搏波传导速度）推算心血管年龄，并与实际年龄比较；Cardio Capacity 估计 VO2max（官方称）。",
+   "shift": "“年龄差”作为产品指标在戒指上出现，比 WHOOP Age 早一年；它是 PPG 形态特征的产物，官方未说明使用基础模型（编者解读）。",
+   "links": [
+    {
+     "from": "apple-iclr24",
+     "type": "转向",
+     "note": "把 PPG 的生理信息直接做成“年龄差”指标（编者解读）"
+    }
+   ],
+   "sources": [],
+   "era": "e1"
+  },
+  {
+   "id": "sleepfm",
+   "date": "2024-05-28",
+   "dateLabel": "arXiv 2024-05；扩展版 Nature Medicine 2026-01-06",
+   "track": "signal",
+   "org": "stanford",
+   "type": "open",
+   "title": "SleepFM: Multi-modal Representation Learning for Sleep Across Brain Activity, ECG and Respiratory Signals",
+   "short": "SleepFM：多导睡眠图的多模态基础模型",
+   "url": "https://arxiv.org/abs/2405.17766",
+   "sources": [
+    {
+     "label": "Nature Medicine 2026",
+     "url": "https://doi.org/10.1038/s41591-025-04133-4"
+    },
+    {
+     "label": "GitHub",
+     "url": "https://github.com/rthapa84/sleepfm-codebase"
+    }
+   ],
+   "q": "多导睡眠图同时记录脑电、心电和呼吸，能否学到一个统一的睡眠表征？",
+   "how": "整理 1.4 万多名参与者、10 万多小时多导睡眠数据，用“留一模态”对比学习对齐各模态；论文报告其嵌入在睡眠分期与睡眠呼吸障碍检测上优于端到端 CNN。2026 年 Nature Medicine 版本（A multimodal sleep foundation model for disease prediction）转向疾病预测。",
+   "shift": "把跨模态对比从两两配对推广到“留一模态”，并把睡眠模型的目标从分期推到疾病预测（编者解读）。",
+   "links": [],
+   "era": "e1"
+  },
+  {
+   "id": "ph-llm",
+   "date": "2024-06-10",
+   "dateLabel": "arXiv 2024-06；Nature Medicine 2025-08",
+   "track": "agent",
+   "org": "google",
+   "type": "paper",
+   "title": "A personal health large language model for sleep and fitness coaching (PH-LLM)",
+   "short": "PH-LLM：面向睡眠与健身教练的 Gemini 微调",
+   "url": "https://doi.org/10.1038/s41591-025-03888-0",
+   "sources": [
+    {
+     "label": "arXiv",
+     "url": "https://arxiv.org/abs/2406.06474"
+    },
+    {
+     "label": "谷歌研究博客：Advancing personal health and wellness insights with AI",
+     "url": "https://research.google/blog/advancing-personal-health-and-wellness-insights-with-ai/"
+    }
+   ],
+   "q": "通用 LLM 能否理解日级可穿戴数值，给出专家级的睡眠与健身建议？",
+   "how": "在日级聚合传感器数据上微调 Gemini；构建知识考试、857 个真实案例和睡眠质量预测三类基准。",
+   "shift": "把“读指标的 LLM”从提示工程推进到领域微调与专家对照评测，并尝试用多模态编码直接接入传感器数据。",
+   "links": [
+    {
+     "from": "health-llm",
+     "type": "继承",
+     "note": "从评测转为微调专用模型"
+    }
+   ],
+   "era": "e2"
+  },
+  {
+   "id": "phia",
+   "date": "2024-06-10",
+   "dateLabel": "arXiv 2024-06；Nature Communications 2026-01",
+   "track": "agent",
+   "org": "google",
+   "type": "paper",
+   "title": "Transforming wearable data into personal health insights using large language model agents (PHIA)",
+   "short": "PHIA：用代码与检索分析个人数据的 Agent",
+   "url": "https://doi.org/10.1038/s41467-025-67922-y",
+   "sources": [
+    {
+     "label": "arXiv",
+     "url": "https://arxiv.org/abs/2406.06464"
+    }
+   ],
+   "q": "个性化洞察需要复杂的数值推理，标准 LLM 直接读数字容易出错。",
+   "how": "Agent 结合多步推理、代码生成与信息检索来分析行为健康数据；公开 4,000 多个问题的基准，经 650 小时专家评估。",
+   "shift": "从“让模型记住怎么读数”转向“让模型写代码去算”，即 Agent 范式。之后的 PHA 把它作为数据科学子智能体。",
+   "links": [
+    {
+     "from": "health-llm",
+     "type": "转向",
+     "note": "不再把数字塞进提示，而是交给代码工具"
+    }
+   ],
+   "era": "e2"
+  },
+  {
+   "id": "apple-vitals",
+   "date": "2024-06-10",
+   "dateLabel": "WWDC 2024 公布（watchOS 11）",
+   "track": "param",
+   "org": "apple",
+   "type": "product",
+   "title": "Vitals app（watchOS 11）",
+   "short": "Vitals：夜间个人基线与异常提示",
+   "url": "https://www.apple.com/newsroom/2024/06/watchos-11-brings-powerful-health-and-fitness-insights/",
+   "q": "单次读数意义有限。手表能否判断“今晚这个人和平时不一样”？",
+   "how": "汇总睡眠期间的心率、呼吸率、手腕温度、睡眠时长与血氧，与个人常规范围比较，两项以上超出时提醒；官方称分类与提醒算法基于 Apple Heart and Movement Study 的真实世界数据开发。",
+   "shift": "AHMS 第一次明确支撑参数层的个体基线产品。思路与 ICLR 2024 一致：先知道这个人平常什么样（编者解读）。",
+   "links": [
+    {
+     "from": "p-ahms2019",
+     "type": "奠基",
+     "note": "官方称算法基于 AHMS 真实世界数据开发"
+    }
+   ],
+   "sources": [],
+   "era": "e2"
+  },
+  {
+   "id": "oura-advisor",
+   "date": "2024-07-10",
+   "dateLabel": "Oura Labs 测试 2024-07；全面上线 2025-03-31",
+   "track": "agent",
+   "org": "oura",
+   "type": "product",
+   "title": "Oura Advisor（AI 个人健康助手）",
+   "short": "Oura Advisor：从 Labs 测试到全面上线",
+   "url": "https://ouraring.com/blog/oura-advisor/",
+   "sources": [
+    {
+     "label": "2024-07 Labs 公告",
+     "url": "https://ouraring.com/blog/made-for-members-july-2024/"
+    }
+   ],
+   "q": "会员需要的不只是分数，还要有人把睡眠、活动、准备度和韧性数据讲清楚。",
+   "how": "在 App 内提供基于个人 Oura 数据的对话式建议、长期趋势和图表；2024-07 进入 Oura Labs，2025-03-31 向全部会员开放。",
+   "shift": "戒指厂商的 Agent 路线：先上产品、再积累对话与反馈。后续的女性健康专用模型和收购 Counsel Health 都建立在这个入口上。",
+   "links": [],
+   "era": "e2"
+  },
+  {
+   "id": "oppo-embc2024",
+   "date": "2024-07-15",
+   "dateLabel": "IEEE EMBC 2024（会议录 2024-07）",
+   "track": "signal",
+   "org": "oppo",
+   "type": "paper",
+   "title": "Continuous Blood Pressure Monitoring and Hypertension Risk Screening Using Smart Watch",
+   "short": "手表 PPG 高血压风险筛查",
+   "url": "https://doi.org/10.1109/embc53108.2024.10782190",
+   "sources": [
+    {
+     "label": "相关 arXiv（2024-11）",
+     "url": "https://arxiv.org/abs/2411.11863"
+    }
+   ],
+   "q": "大量高血压患者不自知，能否用手表无感地发现风险？",
+   "how": "OPPO 健康实验室用手表 PPG 做连续血压估计与高血压风险筛查；后续工作分析长期腕部 PPG。",
+   "shift": "单任务模型先行落地。OPPO 官方称该研究 2024-07 在 EMBC 发布，风险评估模型 ROC-AUC 超过 0.8，此后成为手表上的高血压风险评估。",
+   "links": [],
+   "era": "e2"
+  },
+  {
+   "id": "ecg-fm",
+   "date": "2024-08-09",
+   "dateLabel": "arXiv 2024-08；JAMIA Open 2025-10",
+   "track": "signal",
+   "org": "uhn",
+   "type": "open",
+   "title": "ECG-FM: An Open Electrocardiogram Foundation Model",
+   "short": "ECG-FM：开源权重的心电基础模型",
+   "url": "https://arxiv.org/abs/2408.05178",
+   "sources": [
+    {
+     "label": "JAMIA Open",
+     "url": "https://doi.org/10.1093/jamiaopen/ooaf122"
+    },
+    {
+     "label": "GitHub",
+     "url": "https://github.com/bowang-lab/ECG-FM"
+    }
+   ],
+   "q": "开源权重的 ECG 基础模型很少，研究之间难以比较。",
+   "how": "用对比与生成混合的自监督，在 150 万份 ECG 上预训练 Transformer；公开代码、权重与 MIMIC-IV-ECG 基准任务。论文报告房颤 AUROC 0.996、LVEF≤40% AUROC 0.929。",
+   "shift": "ECG 一侧的开放基线。临床 ECG 的数据量远大于可穿戴，这类模型后来成为“ECG 教 PPG”路线的老师来源（编者解读）。",
+   "links": [],
+   "era": "e2"
+  },
+  {
+   "id": "gluformer",
+   "date": "2024-08-20",
+   "dateLabel": "arXiv 2024-08；Nature 2026-01-14",
+   "track": "world",
+   "org": "weizmann",
+   "type": "paper",
+   "title": "A foundation model for continuous glucose monitoring data (GluFormer)",
+   "short": "GluFormer：连续血糖的生成式基础模型",
+   "url": "https://doi.org/10.1038/s41586-025-09925-9",
+   "sources": [
+    {
+     "label": "arXiv",
+     "url": "https://arxiv.org/abs/2408.11876"
+    },
+    {
+     "label": "NVIDIA Research",
+     "url": "https://research.nvidia.com/labs/par/publication/cgm_foundation_model_nature/"
+    }
+   ],
+   "q": "CGM 数据丰富，但常用指标（如 GMI）只是统计摘要，难以预测更广的健康结局。",
+   "how": "在 10,812 名成人、超过 1,000 万个 CGM 读数上做自回归 token 预测，外部验证 19 个队列、8 种 CGM 设备。",
+   "shift": "参数层（血糖）第一次出现生成式基础模型：用“预测下一个读数”学习血糖动力学。论文称其表征对糖尿病和心血管死亡风险的分层优于 HbA1c。注意它是无动作条件的生成式预训练，干预推演要到 2026 年的 HealthFormer。",
+   "links": [
+    {
+     "from": "p-miller2020",
+     "type": "转向",
+     "note": "同为血糖动力学，从机理混合模型转为纯生成式预训练"
+    }
+   ],
+   "era": "e2"
+  },
+  {
+   "id": "huawei-trusense",
+   "date": "2024-08-28",
+   "dateLabel": "发布 2024-08-28",
+   "track": "param",
+   "org": "huawei",
+   "type": "product",
+   "title": "华为玄玑感知系统（HUAWEI TruSense System）",
+   "short": "华为玄玑感知系统",
+   "url": "https://www.huawei.com/cn/news/2024/8/wearable-healthandfitness-trusense-system",
+   "q": "单点监测功能越来越多，怎样把光学、电学等传感与算法整合成一个体系？",
+   "how": "把单点监测技术整合为多维感知系统，作为华为运动健康的核心技术品牌，覆盖心率、血氧、血压等指标。",
+   "shift": "代表“参数层”的工程路线：先把指标测准、测全，形成稳定的参数底座。华为尚未公开可核实的生理基础模型论文，见研究笔记。",
+   "links": [],
+   "era": "e2",
+   "sources": []
+  },
+  {
+   "id": "apple-sleepapnea",
+   "date": "2024-09-09",
+   "dateLabel": "发布 2024-09-09（随后获 FDA 许可）",
+   "track": "signal",
+   "org": "apple",
+   "type": "product",
+   "title": "Sleep apnea notifications（Breathing Disturbances，Apple Watch）",
+   "short": "睡眠呼吸暂停提醒：加速度 + 30 天汇总",
+   "url": "https://www.apple.com/newsroom/2024/09/apple-introduces-groundbreaking-health-features/",
+   "sources": [
+    {
+     "label": "验证文件",
+     "url": "https://www.apple.com/health/pdf/sleep-apnea/Sleep_Apnea_Notifications_on_Apple_Watch_September_2024.pdf"
+    },
+    {
+     "label": "FDA 510(k) K240929",
+     "url": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K240929"
+    }
+   ],
+   "q": "睡眠呼吸暂停大多未被诊断。手表能否只靠加速度提示风险？",
+   "how": "新指标 Breathing Disturbances 用加速度计捕捉睡眠中与呼吸中断相关的手腕微动；每 30 天分析一次，持续出现中重度迹象时提醒用户就医。",
+   "shift": "苹果此时的监管级功能仍是专门模型：单一传感器、单一病种、长窗口汇总。一年后的高血压提醒保留了“30 天汇总 + 提醒”的形态，但把特征提取换成了自监督基础模型（编者对比）。",
+   "links": [
+    {
+     "from": "samsung-sleepapnea",
+     "type": "并行",
+     "note": "同年先后获 FDA 授权的手表睡眠呼吸暂停功能"
+    }
+   ],
+   "era": "e2"
+  },
+  {
+   "id": "ecgfounder",
+   "date": "2024-10-05",
+   "dateLabel": "arXiv 2024-10；NEJM AI 2025-09",
+   "track": "signal",
+   "org": "pku",
+   "orgNote": "训练数据为 Harvard-Emory ECG Database",
+   "type": "open",
+   "title": "An Electrocardiogram Foundation Model Built on over 10 Million Recordings (ECGFounder)",
+   "short": "ECGFounder：千万级专家标注心电",
+   "url": "https://doi.org/10.1056/aix2500913",
+   "sources": [
+    {
+     "label": "arXiv",
+     "url": "https://arxiv.org/abs/2410.04133"
+    },
+    {
+     "label": "GitHub",
+     "url": "https://github.com/PKUDigitalHealth/ECGFounder"
+    }
+   ],
+   "q": "ECG 模型样本量不足、跨场景泛化差，单导联与多导联之间性能差距大。",
+   "how": "用心内科专家标注的 1,000 多万份 ECG（150 类标签）训练通用模型，并扩展到任意单导联；论文报告内部验证中 80 种诊断 AUROC 超过 0.95，面向移动监测场景。",
+   "shift": "与自监督路线不同，它用大规模专家标注训练“有监督的基础模型”，并把单导联（可穿戴形态）当作一等公民。同一北大团队随后做出 ECG 引导的 AnyPPG（编者据代码仓库归属判断）。",
+   "links": [
+    {
+     "from": "p-hannun2019",
+     "type": "继承",
+     "note": "同样依赖大规模专家标注，从单任务扩展到 150 类的通用模型"
+    }
+   ],
+   "era": "e2"
+  },
+  {
+   "id": "sensorllm",
+   "date": "2024-10-14",
+   "dateLabel": "arXiv 2024-10；EMNLP 2025",
+   "track": "signal",
+   "org": "unsw",
+   "type": "open",
+   "title": "SensorLLM: Aligning Large Language Models with Motion Sensors for Human Activity Recognition",
+   "short": "SensorLLM：运动传感器与 LLM 对齐",
+   "url": "https://arxiv.org/abs/2410.10624",
+   "sources": [
+    {
+     "label": "GitHub",
+     "url": "https://github.com/zechenli03/SensorLLM"
+    }
+   ],
+   "q": "LLM 不擅长读数值时序。能否不靠人工标注，让它读懂运动传感器？",
+   "how": "两阶段：先把传感器输入与自动生成的趋势描述对齐（用特殊标记分隔通道），再针对活动识别做任务微调。",
+   "shift": "“传感器—语言对齐”的早期学术版本，比谷歌 SensorLM 早约 8 个月；两者都用自动生成的文字描述代替人工标注（编者对比）。",
+   "links": [
+    {
+     "from": "health-llm",
+     "type": "转向",
+     "note": "从把数值写进提示词，改为先对齐表征"
+    }
+   ],
+   "era": "e2"
+  },
+  {
+   "id": "lsm",
+   "date": "2024-10-17",
+   "dateShort": "2024.10 / ICLR'25",
+   "dateLabel": "arXiv 2024-10；ICLR 2025",
+   "track": "param",
+   "org": "google",
+   "type": "paper",
+   "title": "Scaling Wearable Foundation Models (LSM)",
+   "short": "LSM：分钟级可穿戴数据的尺度律",
+   "url": "https://research.google/blog/scaling-wearable-foundation-models/",
+   "sources": [
+    {
+     "label": "arXiv",
+     "url": "https://arxiv.org/abs/2410.13638"
+    },
+    {
+     "label": "ICLR 会议录",
+     "url": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/94b25992757a549470c8f8dfe73d8df6-Abstract-Conference.html"
+    }
+   ],
+   "q": "语言和图像的尺度律，在多模态可穿戴数据上是否成立？",
+   "how": "用 16.5 万名 Fitbit / Pixel Watch 用户、4,000 万小时的分钟级数据（心率、HRV、加速度、皮电、皮温、高度计），以掩码重建训练 LSM。",
+   "shift": "两个转向：建模对象从原始波形上移到分钟级参数；目标从判别式对比改为掩码重建，模型因此能补全缺失、外推短程。掩码重建不含动作或干预，它为后来的预测任务铺路，但本身不是世界模型（编者解读）。",
+   "links": [
+    {
+     "from": "apple-iclr24",
+     "type": "转向",
+     "note": "从原始波形转到分钟级指标，从对比学习转到掩码重建"
+    },
+    {
+     "from": "p-timesfm",
+     "type": "呼应",
+     "note": "同为时序基础模型；LSM 是掩码重建的表征模型，不是 TimesFM 式零样本预测的特化"
+    },
+    {
+     "from": "fitbit-acq",
+     "type": "奠基",
+     "note": "预训练数据来自经同意的 Fitbit / Pixel Watch 用户"
+    }
+   ],
+   "era": "e2"
+  },
+  {
+   "id": "pulse-ecg",
+   "date": "2024-10-21",
+   "dateLabel": "arXiv 2024-10；npj Digital Medicine 2026",
+   "track": "agent",
+   "org": "osu",
+   "type": "open",
+   "title": "Teach Multimodal LLMs to Comprehend Electrocardiographic Images (PULSE)",
+   "short": "PULSE：教多模态大模型读心电图图像",
+   "url": "https://arxiv.org/abs/2410.19008",
+   "q": "只有打印或拍照心电图时，多模态大模型能否读懂？",
+   "how": "构建 100 多万条样本的心电图像指令微调数据集 ECGInstruct，训练 PULSE，并建立心电图像理解基准。",
+   "shift": "语言接口的另一入口：不从原始波形，而从“图像化的心电”接入大模型（编者解读）。",
+   "links": [
+    {
+     "from": "ecgfounder",
+     "type": "分岔",
+     "note": "同为心电通用模型，PULSE 走图像 + 语言"
+    }
+   ],
+   "sources": [],
+   "era": "e2"
+  },
+  {
+   "id": "papagei",
+   "date": "2024-10-27",
+   "dateShort": "2024.10 / ICLR'25",
+   "dateLabel": "arXiv 2024-10；ICLR 2025",
+   "track": "signal",
+   "org": "nokia",
+   "orgNote": "与达特茅斯学院合作",
+   "type": "open",
+   "title": "PaPaGei: Open Foundation Models for Optical Physiological Signals",
+   "short": "PaPaGei：首个开源 PPG 基础模型",
+   "url": "https://arxiv.org/abs/2410.20542",
+   "q": "PPG 模型大多针对单一任务、单一设备，且没有公开模型，难以复现。",
+   "how": "在公开数据集的 2,000 万段（5.7 万小时）无标签 PPG 上预训练，利用跨个体的 PPG 形态学知识组织表征，在 10 个数据集的 20 个任务上评测。",
+   "shift": "把苹果闭源的范式变成社区可用的公共基础设施，也让“PPG 形态学先验”成为后续工作的参照。",
+   "links": [
+    {
+     "from": "apple-iclr24",
+     "type": "分岔",
+     "note": "同一问题，从闭源私有数据转向开源与公开数据"
+    },
+    {
+     "from": "ecg-fm",
+     "type": "并行",
+     "note": "同期开放权重的心血管信号模型（PPG 与 ECG）"
+    }
+   ],
+   "era": "e2",
+   "sources": []
+  },
+  {
+   "id": "oura-dexcom",
+   "date": "2024-11-19",
+   "dateLabel": "宣布 2024-11-19；随后 Oura App 上线 Stelo 血糖集成（美国）",
+   "track": "param",
+   "org": "oura",
+   "orgNote": "与 Dexcom 合作，Dexcom 投资 7,500 万美元",
+   "type": "announce",
+   "title": "Dexcom and ŌURA Announce Strategic Partnership",
+   "short": "Oura × Dexcom：把血糖接进戒指",
+   "url": "https://investors.dexcom.com/news/news-details/2024/Dexcom-and-URA-Announce-Strategic-Partnership/default.aspx",
+   "sources": [
+    {
+     "label": "Oura 代谢健康博客",
+     "url": "https://ouraring.com/blog/introducing-metabolic-health/"
+    }
+   ],
+   "q": "戒指能测睡眠、压力和活动，却测不到代谢，怎样补上？",
+   "how": "Dexcom 投资 7,500 万美元并与 Oura 合作；双方数据互通，美国 Gen3 与 Ring 4 用户可在 Oura App 中查看 Stelo 血糖，与睡眠、压力、活动和饮食放在一起。",
+   "shift": "设备公司用合作补齐自己没有的传感模态，数据资产从“单设备”变成“多源拼合”。WHOOP（化验）、Ultrahuman（血检 + CGM）后来走了同一条路（编者解读）。",
+   "links": [
+    {
+     "from": "stelo-otc",
+     "type": "奠基",
+     "note": "非处方 CGM 提供数据来源"
+    }
+   ],
+   "era": "e2"
+  },
+  {
+   "id": "apple-relcon",
+   "date": "2024-11-27",
+   "dateShort": "2024.11 / ICLR'25",
+   "dateLabel": "arXiv 2024-11；ICLR 2025",
+   "track": "signal",
+   "org": "apple",
+   "orgNote": "与 UIUC 合作",
+   "type": "paper",
+   "title": "RelCon: Relative Contrastive Learning for a Motion Foundation Model for Wearable Data",
+   "short": "RelCon：相对对比学习的运动基础模型",
+   "url": "https://machinelearning.apple.com/research/relative-contrastive-learning",
+   "sources": [
+    {
+     "label": "arXiv",
+     "url": "https://arxiv.org/abs/2411.18822"
+    }
+   ],
+   "q": "正负样本的二分法太粗：两段运动数据往往是“更像”或“不太像”。",
+   "how": "先学一个可学习的运动片段距离，再用它衡量跨时间、跨个体的相对相似度来训练；数据为 87,376 名参与者的 10 亿个片段。",
+   "shift": "把“以人为锚”的对比学习改为“相对”的对比学习；同一思路随后被 Pulse-PPG 用到 PPG 上。",
+   "links": [
+    {
+     "from": "apple-iclr24",
+     "type": "继承",
+     "note": "同样以个体为锚，正负样本改为相对相似度"
+    }
+   ],
+   "era": "e2"
+  },
+  {
+   "id": "normwear",
+   "date": "2024-12-12",
+   "dateLabel": "arXiv 2024-12（附代码）",
+   "track": "signal",
+   "org": "ucsd",
+   "type": "open",
+   "title": "Toward Foundation Model for Multivariate Wearable Sensing of Physiological Signals (NormWear)",
+   "short": "NormWear：多传感器通用可穿戴模型",
+   "url": "https://arxiv.org/abs/2412.09758",
+   "q": "可穿戴设备的传感器组合千差万别，单模态模型难以跨配置迁移。",
+   "how": "通道感知注意力加共享的 [CLS] 连接 token，在 PPG、ECG、EEG、GSR、IMU 等公开数据上预训练，在 11 个数据集、18 项应用上评测。",
+   "shift": "把问题从“某个信号”改成“任意传感器组合”。同一团队 2026 年在此基础上做世界模型 NormWear-2。",
+   "links": [
+    {
+     "from": "papagei",
+     "type": "并行",
+     "note": "同为开放的学术模型，目标从单模态 PPG 扩到多传感器"
+    }
+   ],
+   "era": "e2",
+   "sources": []
+  },
+  {
+   "id": "cgm-lsm",
+   "date": "2024-12-12",
+   "dateLabel": "arXiv 2024-12",
+   "track": "world",
+   "org": "jhu",
+   "type": "paper",
+   "title": "A Large Sensor Foundation Model Pretrained on Continuous Glucose Monitor Data for Diabetes Management (CGM-LSM)",
+   "short": "CGM-LSM：160 万条血糖记录的自回归模型",
+   "url": "https://arxiv.org/abs/2412.09727",
+   "q": "血糖预测模型多为单任务，跨人群泛化差。",
+   "how": "仿照语言模型的自回归范式，在 160 万条 CGM 记录上预训练 Transformer 解码器，预测未来 2 小时血糖；论文报告 1 小时预测 RMSE 降低 48.51%，在留出人群上零样本表现稳定。",
+   "shift": "与 GluFormer 同期，把“预测下一个 token”用到血糖上。生成式时序模型成为代谢方向世界模型的第一步（编者解读）。",
+   "links": [
+    {
+     "from": "gluformer",
+     "type": "并行",
+     "note": "同期的 CGM 生成式预训练"
+    }
+   ],
+   "sources": [],
+   "era": "e2"
+  },
+  {
+   "id": "apple-accel",
+   "date": "2024-12-15",
+   "dateLabel": "arXiv 2024-12",
+   "track": "signal",
+   "org": "apple",
+   "type": "paper",
+   "title": "Wearable Accelerometer Foundation Models for Health via Knowledge Distillation",
+   "short": "把 PPG 表征蒸馏进加速度",
+   "url": "https://machinelearning.apple.com/research/wearable-accelerometer-foundation-models",
+   "sources": [
+    {
+     "label": "arXiv",
+     "url": "https://arxiv.org/abs/2412.11276"
+    }
+   ],
+   "q": "PPG 信息多但耗电，加速度省电、几乎所有设备都有，却很少用于健康诊断。",
+   "how": "用 AHMS 约 17.2 万人、2,000 万分钟无标签数据，把 PPG 编码器的表征蒸馏到加速度编码器；从加速度嵌入检索 PPG 嵌入的 top-1 准确率为 99.2%。",
+   "shift": "基础模型第一次被用来“迁移传感器”：贵模态在训练期当老师，便宜模态在推理期单独工作。论文报告心率、HRV 预测比直接在加速度上训练的模型好 23%–49%。",
+   "links": [
+    {
+     "from": "apple-iclr24",
+     "type": "继承",
+     "note": "以 ICLR 2024 的 PPG 编码器为教师"
+    },
+    {
+     "from": "p-spathis2021",
+     "type": "继承",
+     "note": "同为生理模态监督加速度，改为表征蒸馏"
+    }
+   ],
+   "era": "e2"
+  },
+  {
+   "id": "dexcom-genai",
+   "date": "2024-12-17",
+   "dateLabel": "发布 2024-12-17",
+   "track": "agent",
+   "org": "dexcom",
+   "type": "product",
+   "title": "Dexcom Launches the First Generative AI Platform in Glucose Biosensing",
+   "short": "Dexcom Stelo：生成式 AI 周报",
+   "url": "https://investors.dexcom.com/news/news-details/2024/Dexcom-Launches-the-First-Generative-AI-Platform-in-Glucose-Biosensing/default.aspx",
+   "q": "非处方 CGM 用户需要的是能看懂的建议，而不只是血糖曲线。",
+   "how": "基于 Google Cloud Vertex AI 与 Gemini 构建自有生成式 AI 平台，先用于 Stelo 的 Weekly Insights，结合血糖、活动与睡眠给出个性化内容。",
+   "shift": "生物传感器厂商把 LLM 当作参数数据的解释层，这和 WHOOP、Oura 的路线一致，只是对象换成了血糖。",
+   "links": [
+    {
+     "from": "stelo-otc",
+     "type": "奠基",
+     "note": "非处方 CGM 提供数据来源"
+    },
+    {
+     "from": "oura-dexcom",
+     "type": "并行",
+     "note": "同期，Dexcom 一边与 Oura 互通数据，一边在 Stelo 上做生成式 AI"
+    }
+   ],
+   "era": "e2",
+   "sources": []
+  },
+  {
+   "id": "pulse-ppg",
+   "date": "2025-02-03",
+   "dateLabel": "arXiv 2025-02；IMWUT 2025-09",
+   "track": "signal",
+   "org": "memphis",
+   "type": "open",
+   "title": "Pulse-PPG: An Open-Source Field-Trained PPG Foundation Model for Wearable Applications across Lab and Field Settings",
+   "short": "Pulse-PPG：只用野外数据训练的开源 PPG 模型",
+   "url": "https://doi.org/10.1145/3749494",
+   "sources": [
+    {
+     "label": "arXiv",
+     "url": "https://arxiv.org/abs/2502.01108"
+    }
+   ],
+   "q": "开源 PPG 模型多用临床数据训练，闭源的又无法使用，真实佩戴场景缺少可用模型。",
+   "how": "仅用 120 人、100 天野外研究的原始 PPG 训练，与临床数据训练的模型对比。",
+   "shift": "反直觉的结论：在许多任务上，野外数据预训练优于临床数据预训练。数据的“真实变异性”被当作一种资源。",
+   "links": [
+    {
+     "from": "apple-relcon",
+     "type": "继承",
+     "note": "直接沿用 RelCon 的相对对比学习（Maxwell A. Xu 为两篇共同作者）"
+    },
+    {
+     "from": "papagei",
+     "type": "分岔",
+     "note": "同为开源，数据来源从临床转向野外"
+    }
+   ],
+   "era": "e2"
+  },
+  {
+   "id": "har-scaling",
+   "date": "2025-02-05",
+   "dateLabel": "arXiv 2025-02",
+   "track": "signal",
+   "org": "google",
+   "orgNote": "Google DeepMind",
+   "type": "paper",
+   "title": "Scaling laws in wearable human activity recognition",
+   "short": "可穿戴活动识别的尺度律（DeepMind）",
+   "url": "https://arxiv.org/abs/2502.03364",
+   "q": "活动识别的预训练能否像语言、视觉一样建立尺度律？",
+   "how": "对预训练数据量与 Transformer 规模做网格搜索，发现预训练损失与数据量、参数量呈幂律；增加用户数比增加每人数据量收益更大。",
+   "shift": "“人的多样性比单人数据量更重要”，从尺度律角度支持了“以人为锚”的直觉（编者解读）。",
+   "links": [
+    {
+     "from": "apple-iclr24",
+     "type": "检验",
+     "note": "从尺度律角度检验“以人为锚”：人的多样性比单人数据量更重要（编者解读）"
+    }
+   ],
+   "sources": [],
+   "era": "e2"
+  },
+  {
+   "id": "google-lop",
+   "date": "2025-02-26",
+   "dateLabel": "Nature 2025-02-26；Pixel Watch 3 功能",
+   "track": "signal",
+   "org": "google",
+   "type": "product",
+   "title": "Automated loss of pulse detection on a consumer smartwatch（Pixel Watch 3）",
+   "short": "Pixel Watch 3：脉搏丢失检测",
+   "url": "https://doi.org/10.1038/s41586-025-08810-9",
+   "sources": [
+    {
+     "label": "谷歌博客 2025-03-20",
+     "url": "https://research.google/blog/loss-of-pulse-detection-on-the-google-pixel-watch-3/"
+    },
+    {
+     "label": "FDA 许可（谷歌 2025-02-26）",
+     "url": "https://blog.google/feed/pixel-watch-3-loss-of-pulse-detection-fda/"
+    },
+    {
+     "label": "谷歌博客 2024-08-13：Pixel Watch 3 introduces Loss of Pulse Detection",
+     "url": "https://blog.google/products-and-platforms/devices/pixel/pixel-watch-3-loss-of-pulse-detection/"
+    }
+   ],
+   "q": "无人目击的心脏骤停几乎无法存活，手表能否“替人目击”？",
+   "how": "多级门控：PPG 交流分量骤降且加速度静止 → 机器学习模型判断有脉到无脉的转变 → 用额外 LED 与光电管复核 → 两次无响应后自动呼叫急救，全部在手表端运行。训练数据用止血带阻断手腕血流来模拟无脉；博客称日常佩戴测试中 21 人年以上仅 1 次误呼叫。",
+   "shift": "单任务路线的高峰：数据靠巧妙的实验设计而非大规模预训练获得，强调可审计的多级门控与极低误报。今天的监管级与安全功能，大多仍由这类专门模型完成（编者解读）。",
+   "links": [],
+   "era": "e2"
+  },
+  {
+   "id": "ir-wearme",
+   "date": "2025-04-30",
+   "dateLabel": "arXiv 2025-04；Nature 2026-03-16",
+   "track": "param",
+   "org": "google",
+   "type": "paper",
+   "title": "Insulin resistance prediction from wearables and routine blood biomarkers (WEAR-ME)",
+   "short": "可穿戴 + 常规血检预测胰岛素抵抗",
+   "url": "https://doi.org/10.1038/s41586-026-10179-2",
+   "sources": [
+    {
+     "label": "arXiv",
+     "url": "https://arxiv.org/abs/2505.03784"
+    },
+    {
+     "label": "谷歌博客",
+     "url": "https://research.google/blog/insulin-resistance-prediction-from-wearables-and-routine-blood-biomarkers/"
+    }
+   ],
+   "q": "胰岛素抵抗是 2 型糖尿病的前兆，但金标准测量昂贵、难以普及。",
+   "how": "远程招募 1,165 人，结合可穿戴时序与常规血检预测 HOMA-IR；auROC 0.80，并在 72 人独立队列中复现。",
+   "shift": "参数层开始和化验数据融合，问题从“可穿戴能测什么”转为“可穿戴加少量化验能补全什么”。谷歌称这项工作是 Fitbit 健康教练的研究基础之一。",
+   "links": [
+    {
+     "from": "lsm",
+     "type": "并行",
+     "note": "同属谷歌的参数层，从表征学习走向具体代谢终点"
+    },
+    {
+     "from": "fitbit-acq",
+     "type": "奠基",
+     "note": "Fitbit 设备与用户提供研究数据"
+    }
+   ],
+   "era": "e2"
+  },
+  {
+   "id": "whoop-5",
+   "date": "2025-05-08",
+   "dateLabel": "发布 2025-05-08",
+   "track": "param",
+   "org": "whoop",
+   "type": "product",
+   "title": "WHOOP 5.0 / MG：Healthspan（WHOOP Age）与血压洞察",
+   "short": "WHOOP Age 与血压洞察",
+   "url": "https://www.whoop.com/us/en/press-center/whoop-unveils-5.0-MG/",
+   "q": "怎样把日常行为和长期健康结局联系起来，让会员看得到“衰老速度”？",
+   "how": "Healthspan 用 9 项与长期健康相关的指标计算 WHOOP Age 与衰老速度（与巴克研究所合作开发）；同时推出 FDA 许可的心电筛查和每日血压洞察。",
+   "shift": "参数层的产品形态从“单项分数”走向“生理年龄”这类综合指标。2026 年苹果在健康 App 中推出 Health Age，谷歌在研究中提出可教练健康年龄（CHA），OPPO 发表手表心脏年龄（编者对比）。",
+   "links": [
+    {
+     "from": "oura-cvage",
+     "type": "继承",
+     "note": "“年龄差”类指标从单项（心血管）扩展到综合（编者解读）"
+    }
+   ],
+   "era": "e2",
+   "sources": [
+    {
+     "label": "FDA 2026-06-17 致函：对修改后的血压洞察不再执法",
+     "url": "https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/whoop-inc-709755-06172026"
+    },
+    {
+     "label": "FDA 警告信 2025-07-14（Blood Pressure Insights）",
+     "url": "https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/whoop-inc-709755-07142025"
+    },
+    {
+     "label": "MedTech Dive 2026-06-23：FDA 撤回对 WHOOP 的警告信",
+     "url": "https://www.medtechdive.com/news/fda-drops-whoop-warning-letter-over-blood-pressure-feature/823652/"
+    }
+   ]
+  },
+  {
+   "id": "lsm2",
+   "date": "2025-06-05",
+   "dateLabel": "arXiv 2025-06；博客 2025-07-22",
+   "track": "param",
+   "org": "google",
+   "type": "paper",
+   "title": "LSM-2: Learning from Incomplete Wearable Sensor Data",
+   "short": "LSM-2：把缺失当作信息",
+   "url": "https://research.google/blog/lsm-2-learning-from-incomplete-wearable-sensor-data/",
+   "sources": [
+    {
+     "label": "arXiv",
+     "url": "https://arxiv.org/abs/2506.05321"
+    }
+   ],
+   "q": "真实可穿戴数据常因摘下、省电、传感器开关而残缺，传统自监督要么插补、要么丢弃。",
+   "how": "提出自适应与继承掩码（AIM）：把真实缺失与人为掩码一视同仁地纳入重建目标，在 6 万人、4,000 万小时数据上训练。",
+   "shift": "缺失从“噪声”变成“模型的一部分”。模型能在传感器失效时保持性能，也能生成缺失段，这为之后的 SensorFM 和世界模型打下基础。",
+   "links": [
+    {
+     "from": "lsm",
+     "type": "继承",
+     "note": "LSM-1 的直接后继"
+    }
+   ],
+   "era": "e2"
+  },
+  {
+   "id": "apple-workout-buddy",
+   "date": "2025-06-09",
+   "dateLabel": "WWDC 2025 公布（watchOS 26）",
+   "track": "agent",
+   "org": "apple",
+   "type": "product",
+   "title": "Workout Buddy with Apple Intelligence",
+   "short": "Workout Buddy：运动中的生成式语音教练",
+   "url": "https://www.apple.com/newsroom/2025/06/watchos-26-delivers-more-personalized-ways-to-stay-active-and-connected/",
+   "q": "运动中的实时数据很多，用户很难边跑边解读。",
+   "how": "用 Apple Intelligence 结合本次运动数据与健身历史生成个性化提示，再由以 Fitness+ 教练声音数据训练的生成式语音播报；2026 年起可脱离 iPhone 使用，并支持西班牙语。",
+   "shift": "苹果第一个生成式“教练”只做运动场景、只讲事实型数据，体现它在 Agent 上的克制：嵌入系统、窄场景、隐私优先（编者解读）。",
+   "sources": [],
+   "links": [],
+   "era": "e2"
+  },
+  {
+   "id": "sensorlm",
+   "date": "2025-06-10",
+   "dateLabel": "arXiv 2025-06；博客 2025-07-28",
+   "track": "param",
+   "org": "google",
+   "type": "paper",
+   "title": "SensorLM: Learning the Language of Wearable Sensors",
+   "short": "SensorLM：传感器与语言对齐",
+   "url": "https://research.google/blog/sensorlm-learning-the-language-of-wearable-sensors/",
+   "sources": [
+    {
+     "label": "arXiv",
+     "url": "https://arxiv.org/abs/2506.09108"
+    }
+   ],
+   "q": "真实可穿戴数据几乎没有配对的文字描述，传感器和语言难以对齐。",
+   "how": "用分层描述生成管线，构建来自 10.3 万人、5,970 万小时的传感器–文本数据集，并在通用架构下覆盖 CLIP、CoCa 等预训练方式。",
+   "shift": "参数层表征有了语言接口，支持零样本识别、检索和传感器描述，为 Agent 直接“看”数据而不只是读摘要铺路。",
+   "links": [
+    {
+     "from": "lsm",
+     "type": "继承",
+     "note": "同一数据与团队，加入语言对齐"
+    },
+    {
+     "from": "ph-llm",
+     "type": "分岔",
+     "note": "从“LLM 读数字”转为“传感器与文本共享表征”"
+    }
+   ],
+   "era": "e2"
+  },
+  {
+   "id": "samsung-oneui8",
+   "date": "2025-06-16",
+   "dateLabel": "公布 2025-06-16（One UI 8 Watch，测试计划）",
+   "track": "world",
+   "org": "samsung",
+   "type": "product",
+   "title": "One UI 8 Watch：Bedtime Guidance、Vascular Load、Antioxidant Index",
+   "short": "三星就寝建议：睡眠压力 × 昼夜节律",
+   "url": "https://news.samsung.com/global/new-features-on-one-ui-8-watch-help-users-build-healthier-habits",
+   "q": "怎样给出“今晚几点睡，明天最清醒”这类前瞻性建议？",
+   "how": "Bedtime Guidance 根据过去三天的睡眠，评估睡眠压力与昼夜节律后推荐就寝时间；另有睡眠中血管负荷与抗氧化指数等新指标。",
+   "shift": "产品中的“小型世界模型”：用经典的睡眠压力与昼夜节律思路做前瞻推演，而不是只回顾昨晚。它是机理式的，不是大规模学习式的。",
+   "links": [
+    {
+     "from": "p-miller2020",
+     "type": "呼应",
+     "note": "机理式的个体前瞻推演进入产品：睡眠压力 × 昼夜节律（编者解读）"
+    }
+   ],
+   "era": "e2",
+   "sources": []
+  },
+  {
+   "id": "csfm",
+   "date": "2025-06-23",
+   "dateLabel": "arXiv 2025-06",
+   "track": "signal",
+   "org": "oxford",
+   "type": "paper",
+   "title": "Sensing Cardiac Health Across Scenarios and Devices: A Multi-Modal Foundation Model Pretrained on Heterogeneous Data from 1.7 Million Individuals (CSFM)",
+   "short": "CSFM：170 万人的心脏多模态模型",
+   "url": "https://arxiv.org/abs/2507.01045",
+   "q": "临床 ECG、监护 PPG 与文字报告格式各异，模型能否跨场景、跨设备通用？",
+   "how": "用生成式掩码预训练，在 MIMIC-III-WDB、MIMIC-IV-ECG、CODE 等约 170 万人的心脏信号及对应临床或机器生成文字报告上学习统一表征；可随输入配置与传感模态迁移。",
+   "shift": "“跨模态脚手架”的临床大数据版本：ECG、PPG 与文字在同一个模型里共享表征（编者解读）。",
+   "links": [
+    {
+     "from": "apple-accel",
+     "type": "并行",
+     "note": "同为跨模态脚手架：苹果用 PPG 教加速度，CSFM 在临床大数据上让 ECG、PPG、文字共享表征"
+    }
+   ],
+   "sources": [],
+   "era": "e2"
+  },
+  {
+   "id": "wbm",
+   "date": "2025-06-30",
+   "dateShort": "2025.06 / ICML'25",
+   "dateLabel": "arXiv 2025-06-30；ICML 2025",
+   "track": "param",
+   "org": "apple",
+   "type": "paper",
+   "title": "Beyond Sensor Data: Foundation Models of Behavioral Data from Wearables Improve Health Predictions (WBM)",
+   "short": "WBM：行为数据的基础模型",
+   "url": "https://machinelearning.apple.com/research/beyond-sensor",
+   "sources": [
+    {
+     "label": "arXiv",
+     "url": "https://arxiv.org/abs/2507.00191"
+    }
+   ],
+   "q": "基础模型多建在低层传感器数据上，但行为数据的时间尺度与生理更对齐，可能更有信息量。",
+   "how": "用 AHMS 16.2 万人、超过 25 亿小时的小时级行为指标，系统比较架构与分词方式，在 57 项健康任务上评测。",
+   "shift": "苹果在自家框架里回答了“表征该建在哪一层”：行为模型擅长睡眠等行为驱动任务，与原始 PPG 模型结合效果更好。两层互补，不必二选一。",
+   "links": [
+    {
+     "from": "apple-iclr24",
+     "type": "继承",
+     "note": "同一队列；与 PPG 基础模型组合使用"
+    }
+   ],
+   "era": "e2"
+  },
+  {
+   "id": "oppo-healthagent",
+   "date": "2025-07",
+   "dateLabel": "WAIC 2025 发布（新华网 2025-07-29 报道）",
+   "track": "agent",
+   "org": "oppo",
+   "type": "product",
+   "title": "OPPO AI 健康档案与 AI 健康管家",
+   "short": "OPPO AI 健康管家与健康档案",
+   "url": "https://www.news.cn/tech/20250729/dd108772aaa44e7988ff06742e1c3cd7/c.html",
+   "q": "体检报告、手表数据、症状记录分散各处，用户看不懂也串不起来。",
+   "how": "据新华网报道，OPPO 健康实验室在 WAIC 2025 发布 AI 健康档案与 AI 健康管家：依托设备监测与大模型，提供医疗报告解读、档案管理、症状自查、健康问答、趋势预警与个性化改善计划。",
+   "shift": "OPPO 的 Agent 层与 PPG 基础模型研究（心脏年龄、HiPPT）同年推进，但公开材料尚未说明两者如何衔接（编者解读）。",
+   "sources": [],
+   "links": [
+    {
+     "from": "oppo-embc2024",
+     "type": "继承",
+     "note": "同一公司从单项 PPG 功能走到 Agent 层（编者解读）"
+    }
+   ],
+   "era": "e3"
+  },
+  {
+   "id": "samsung-xealth",
+   "date": "2025-07-08",
+   "dateLabel": "宣布 2025-07-08",
+   "track": "agent",
+   "org": "samsung",
+   "type": "announce",
+   "title": "Samsung Electronics Acquires Xealth",
+   "short": "三星收购 Xealth：通往医院的管道",
+   "url": "https://news.samsung.com/global/samsung-electronics-acquires-xealth-bridging-the-gap-between-wellness-and-medical-care",
+   "q": "手表上的健康数据怎样进入医生与医院的工作流？",
+   "how": "三星宣布收购数字健康平台 Xealth；官方称其健康生态将扩展到 500 多家医院与 70 多种数字健康方案。",
+   "shift": "设备公司开始买下“通往临床的管道”。一年后三星 Health Assistant 写明将通过 Xealth 连接临床照护；Oura 收购 Counsel Health 是同一方向（编者解读）。",
+   "sources": [],
+   "links": [],
+   "era": "e3"
+  },
+  {
+   "id": "pha",
+   "date": "2025-08-27",
+   "dateLabel": "arXiv 2025-08；Nature 2026-10-21",
+   "track": "agent",
+   "org": "google",
+   "type": "paper",
+   "title": "The anatomy of a personal health agent (PHA)",
+   "short": "PHA：数据科学家、领域专家与教练的多智能体",
+   "url": "https://doi.org/10.1038/s41586-026-11161-8",
+   "sources": [
+    {
+     "label": "arXiv",
+     "url": "https://arxiv.org/abs/2508.20148"
+    },
+    {
+     "label": "谷歌研究博客：The anatomy of a personal health agent",
+     "url": "https://research.google/blog/the-anatomy-of-a-personal-health-agent/"
+    }
+   ],
+   "q": "日常（非临床）场景的健康需求多样，单一 Agent 难以兼顾数据分析、医学判断和行为改变。",
+   "how": "从搜索与论坛查询中归纳三类需求，对应数据科学、领域专家、健康教练三个子智能体，组成多智能体框架，可读取可穿戴数据和个人健康记录。",
+   "shift": "Agent 的结构从“一个会聊天的模型”变成“分工明确的团队”。2026 年谷歌把 SensorFM 定位为它的数据接地工具。",
+   "links": [
+    {
+     "from": "phia",
+     "type": "继承",
+     "note": "PHIA 成为数据科学子智能体的前身"
+    },
+    {
+     "from": "ph-llm",
+     "type": "继承",
+     "note": "领域知识与教练能力"
+    }
+   ],
+   "era": "e3"
+  },
+  {
+   "id": "apple-htn",
+   "date": "2025-09-09",
+   "dateLabel": "发布 2025-09-09；验证文件 2025-09",
+   "track": "signal",
+   "org": "apple",
+   "type": "product",
+   "title": "Hypertension Notifications（Apple Watch Series 11 / watchOS 26）",
+   "short": "高血压提醒：自监督 PPG 特征上线",
+   "url": "https://www.apple.com/health/pdf/Hypertension_Notifications_Validation_Paper_September_2025.pdf",
+   "sources": [
+    {
+     "label": "Apple 新闻稿",
+     "url": "https://www.apple.com/newsroom/2025/09/apple-debuts-apple-watch-series-11-featuring-groundbreaking-health-insights/"
+    },
+    {
+     "label": "FDA 510(k) K250507（2025-09-11 许可）",
+     "url": "https://www.accessdata.fda.gov/cdrh_docs/pdf25/K250507.pdf"
+    }
+   ],
+   "q": "高血压常被漏诊，手表能否在不测血压的情况下提示风险？",
+   "how": "验证文件写明三步：先用在 AHMS 无标签数据上自监督训练的深度网络提取 PPG 特征（预训练不含任何血压数据），再用线性模型打分，最后在 30 天窗口内平均后决定是否提醒。",
+   "shift": "这是该领域最清晰的“基础模型 → 获许可产品”路径之一：表征一次学好，具体病种只需线性头和少量标注。官方文件没有点名 ICLR 2024 论文，但数据来源与自监督范式一致。",
+   "links": [
+    {
+     "from": "apple-iclr24",
+     "type": "落地",
+     "note": "同一队列、同一自监督范式的 PPG 特征提取器（官方未点名论文）"
+    },
+    {
+     "from": "apple-sleepapnea",
+     "type": "继承",
+     "note": "沿用“长窗口汇总 + 风险提醒”的产品形态，特征提取换成自监督 PPG 模型（编者解读）"
+    }
+   ],
+   "era": "e3"
+  },
+  {
+   "id": "delphi",
+   "date": "2025-09-17",
+   "dateLabel": "Nature 2025-09-17",
+   "track": "world",
+   "org": "embl",
+   "type": "paper",
+   "title": "Learning the natural history of human disease with generative transformers (Delphi-2M)",
+   "short": "Delphi-2M：疾病自然史的生成式模型",
+   "url": "https://doi.org/10.1038/s41586-025-09529-3",
+   "q": "能否像生成文本一样，生成一个人未来的疾病轨迹？",
+   "how": "改造 GPT 架构，在 40 万 UK Biobank 参与者上训练，在 190 万丹麦人数据上原样验证；可预测 1,000 多种疾病的发生率，并采样最长 20 年的合成轨迹。",
+   "shift": "它建模的是病历事件而不是可穿戴信号，但给出了“健康轨迹生成模型”的范本。生理世界模型可以理解为把这种生成能力下沉到日常生理尺度。",
+   "links": [
+    {
+     "from": "gluformer",
+     "type": "呼应",
+     "note": "同为生成式健康轨迹，对象不同（病历事件 vs 血糖）"
+    }
+   ],
+   "era": "e3",
+   "sources": []
+  },
+  {
+   "id": "meta-neuralband",
+   "date": "2025-09-17",
+   "dateLabel": "发布 2025-09-17（美国 2025-09-30 上市）",
+   "track": "signal",
+   "org": "meta",
+   "type": "product",
+   "title": "Meta Ray-Ban Display with Meta Neural Band",
+   "short": "Meta Neural Band：sEMG 腕带量产",
+   "url": "https://about.fb.com/news/2025/09/meta-ray-ban-display-ai-glasses-emg-wristband/",
+   "q": "跨人泛化的 sEMG 模型，能否成为量产的交互设备？",
+   "how": "Meta Ray-Ban Display 眼镜随附 Meta Neural Band，用表面肌电把手腕与手指的细微动作转成滚动、点击等指令。",
+   "shift": "生理信号模型最干净的一次“研究 → 产品”：预印本 2024-02 公开，Nature 论文 2025-07 发表，约两个月后随量产腕带上市（产品研发显然并行进行）。用途是交互而不是健康（编者解读）。",
+   "links": [
+    {
+     "from": "meta-emg",
+     "type": "落地",
+     "note": "跨人泛化的 sEMG 解码进入量产腕带"
+    }
+   ],
+   "sources": [],
+   "era": "e3"
+  },
+  {
+   "id": "whoop-labs",
+   "date": "2025-09-30",
+   "dateLabel": "上线 2025-09-30（美国）；2025-11-12 化验单上传向全体会员开放",
+   "track": "agent",
+   "org": "whoop",
+   "type": "product",
+   "title": "WHOOP Advanced Labs",
+   "short": "WHOOP Advanced Labs：化验接入教练",
+   "url": "https://www.whoop.com/us/en/press-center/whoop-launches-clinician-reviewed-advanced-labs/",
+   "sources": [
+    {
+     "label": "化验单上传 2025-11-12",
+     "url": "https://www.whoop.com/us/en/press-center/whoop-launches-advanced-labs-uploads-us/"
+    }
+   ],
+   "q": "一年一次的抽血报告缺少语境，怎样把它和 24 小时连续数据放在一起？",
+   "how": "会员可上传既往化验单，或通过 Quest Diagnostics 预约检测（官方称覆盖 65 项生物标志物）；结果经临床医生审核，再由 WHOOP Coach 结合连续生理数据给出 AI 指导。",
+   "shift": "Agent 的输入从可穿戴指标扩展到血液化验。“化验 + 连续监测”随后成为谷歌、Oura、Ultrahuman、微软等健康 Agent 的共同配置（编者解读）。",
+   "links": [
+    {
+     "from": "p-whoopcoach",
+     "type": "继承",
+     "note": "教练开始读化验结果"
+    }
+   ],
+   "era": "e3"
+  },
+  {
+   "id": "samsung-lvsd",
+   "date": "2025-10",
+   "dateLabel": "三星新闻稿 2025-10（韩国 MFDS 批准）",
+   "track": "signal",
+   "org": "samsung",
+   "type": "product",
+   "title": "Samsung's LVSD detection on Galaxy Watch (with Medical AI)",
+   "short": "三星手表左心室收缩功能障碍（LVSD）检测",
+   "url": "https://news.samsung.com/global/samsungs-breakthrough-wearable-technologies-driven-by-innovation-and-collaboration",
+   "q": "心衰的主要前兆 LVSD 能否在手表上提前发现？",
+   "how": "与韩国医疗 AI 公司 Medical AI 合作，把其在 100 多家医院使用的 12 导联心电 AI 算法迁移到 Galaxy Watch 的单导联心电上（官方称为“全球首个”手表 LVSD 检测）。",
+   "shift": "监管级功能的另一种来源：不是自研基础模型，而是把医院里的临床 AI 模型搬到手表上（编者解读）。",
+   "links": [
+    {
+     "from": "p-hannun2019",
+     "type": "继承",
+     "note": "把医院里的专门心电 AI 搬到手表单导联上"
+    }
+   ],
+   "sources": [],
+   "era": "e3"
+  },
+  {
+   "id": "opentslm",
+   "date": "2025-10-02",
+   "dateLabel": "arXiv 2025-10-02",
+   "track": "signal",
+   "org": "stanford",
+   "type": "open",
+   "title": "OpenTSLM: Time-Series Language Models for Reasoning over Multivariate Medical Text- and Time-Series Data",
+   "short": "OpenTSLM：把时序作为原生模态接入 LLM（开源）",
+   "url": "https://arxiv.org/abs/2510.02410",
+   "q": "LLM 读 ECG、睡眠、活动信号时，只能把数值当文本或画成图，效果很差。",
+   "how": "两种接法：SoftPrompt（可学习的时序 token 与文本拼接）和 Flamingo 式交叉注意力；发布 HAR-CoT、Sleep-CoT、ECG-QA-CoT 三个思维链数据集。睡眠分期 F1 69.9、活动识别 65.4，微调后的纯文本模型只有 9.05 和 52.2；1B 参数的模型也超过 GPT-4o（15.47 和 2.95）。Flamingo 版显存稳定（ECG-QA 上约 40 GB，SoftPrompt 约 110 GB）。临床医生评估了 ECG-QA 上的推理。代码、数据、模型全部开源。",
+   "shift": "“传感器 + 语言”这条线出现了开源、可复现的时序语言模型，作为 SensorLM 一类闭源工作的开放对照。",
+   "links": [
+    {
+     "from": "sensorllm",
+     "type": "继承",
+     "note": "同为传感器对齐 LLM，扩展到 ECG、睡眠和思维链推理"
+    },
+    {
+     "from": "sensorlm",
+     "type": "并行",
+     "note": "同期的传感器—语言模型，一个开源、一个闭源"
+    }
+   ],
+   "era": "e3",
+   "sources": [
+    {
+     "label": "GitHub",
+     "url": "https://github.com/OpenTSLM/OpenTSLM"
+    }
+   ],
+   "orgNote": "斯坦福、ETH 等合作"
+  },
+  {
+   "id": "apple-ppgage",
+   "date": "2025-10-20",
+   "dateLabel": "Nature Communications 2025-10-20",
+   "track": "signal",
+   "org": "apple",
+   "type": "paper",
+   "title": "A wearable-based aging clock associates with disease and behavior (PpgAge)",
+   "short": "苹果 PpgAge：手腕 PPG 的衰老时钟",
+   "url": "https://www.nature.com/articles/s41467-025-64275-4",
+   "q": "手表 PPG 能否给出可反复测量的“生理年龄”，并与疾病和行为相关？",
+   "how": "在 Apple Heart & Movement Study（213,593 名参与者、超过 1.49 亿参与者日）上构建 PpgAge，使其在健康人群中预测实际年龄；“PpgAge 差”与心脏病事件、吸烟、运动、睡眠相关，孕期与部分心脏事件时明显上升（论文称；观察性分析）。",
+   "shift": "健康年龄一线的学术源头之一：同一队列、同一 PPG 信号，从“表征”走到“年龄差”这一可解释指标。论文作者与起点论文团队有重叠（编者解读）。",
+   "links": [
+    {
+     "from": "apple-iclr24",
+     "type": "继承",
+     "note": "同一队列的手腕 PPG 与同一团队成员"
+    },
+    {
+     "from": "oura-cvage",
+     "type": "呼应",
+     "note": "同为从 PPG 推算的“年龄”指标"
+    }
+   ],
+   "sources": [
+    {
+     "label": "DOI 10.1038/s41467-025-64275-4",
+     "url": "https://doi.org/10.1038/s41467-025-64275-4"
+    }
+   ],
+   "era": "e3"
+  },
+  {
+   "id": "fitbit-coach",
+   "date": "2025-10-27",
+   "dateLabel": "公开预览 2025-10-28 起（美国 Android）",
+   "track": "agent",
+   "org": "google",
+   "type": "product",
+   "title": "Fitbit personal health coach（Gemini）公开预览",
+   "short": "Fitbit 个人健康教练公开预览",
+   "url": "https://blog.google/products-and-platforms/devices/fitbit/personal-health-coach-public-preview/",
+   "sources": [
+    {
+     "label": "2026-04 扩展到 37 国",
+     "url": "https://blog.google/products-and-platforms/devices/fitbit/fitbit-personal-health-coach-expansion/"
+    },
+    {
+     "label": "谷歌研究博客：How we are building the personal health coach",
+     "url": "https://research.google/blog/how-we-are-building-the-personal-health-coach/"
+    },
+    {
+     "label": "谷歌博客：Pixel Watch 4（宣布教练预览）",
+     "url": "https://blog.google/products-and-platforms/devices/pixel/pixel-watch-4/"
+    }
+   ],
+   "q": "怎样把健身教练、睡眠教练和健康顾问合成一个日常可用的产品？",
+   "how": "基于 Gemini 的教练先通过对话了解目标，再生成多周计划并按周调整；支持随时提问。先面向美国 Fitbit Premium Android 用户；2026-04 扩展到 37 个国家、32 种语言，覆盖 iOS 与 Android、免费与付费用户。",
+   "shift": "谷歌把 PH-LLM、PHIA、PHA 这条研究线做成了产品。研究与产品之间有公开、明确的承接关系，这在各家中少见。",
+   "links": [
+    {
+     "from": "pha",
+     "type": "落地",
+     "note": "多智能体研究进入消费产品"
+    }
+   ],
+   "era": "e3"
+  },
+  {
+   "id": "himae",
+   "date": "2025-10-28",
+   "dateShort": "2025.10 / ICLR'26",
+   "dateLabel": "arXiv 2025-10；ICLR 2026",
+   "track": "signal",
+   "org": "samsung",
+   "type": "paper",
+   "title": "HiMAE: Hierarchical Masked Autoencoders Discover Resolution-Specific Structure in Wearable Time Series",
+   "short": "HiMAE：多分辨率表征，手表端亚毫秒推理",
+   "url": "https://research.samsung.com/research-papers/HiMAE-Hierarchical-Masked-Autoencoders-Discover-Resolution-Specific-Structure-in-Wearable-Time-Series",
+   "sources": [
+    {
+     "label": "arXiv",
+     "url": "https://arxiv.org/abs/2510.25785"
+    },
+    {
+     "label": "三星新闻 2026-08",
+     "url": "https://news.samsung.com/global/from-biosignals-to-health-insights-samsung-researchs-work-on-health-foundation-models"
+    },
+    {
+     "label": "三星新闻稿 2026-08-14（健康基础模型）",
+     "url": "https://samsungmobilepress.com/articles/samsung-research-biosignals-health-insights-foundation-models"
+    },
+    {
+     "label": "三星研究博客：The Resolution Hypothesis",
+     "url": "https://research.samsung.com/blog/The-Resolution-Hypothesis-Discovering-how-Time-Scale-Maps-to-Health-Outcomes"
+    }
+   ],
+   "q": "不同健康结局依赖不同时间尺度的结构，把尺度压平的模型会丢信息，而且模型往往太大，上不了手表。",
+   "how": "层级卷积编解码器加掩码自编码，输出多分辨率嵌入，并把分辨率作为可解释性的探针；在手表级 CPU 上推理不到 1 毫秒。",
+   "shift": "三星的切入点是“小而准、能在端上跑”。它把“表征该用哪一层”从信号/参数之争，细化为时间分辨率的问题。",
+   "links": [
+    {
+     "from": "lsm",
+     "type": "分岔",
+     "note": "把“建在哪一层”细化为“用哪个时间分辨率”"
+    }
+   ],
+   "era": "e3"
+  },
+  {
+   "id": "anyppg",
+   "date": "2025-11-03",
+   "dateShort": "2025.11 / KDD'26",
+   "dateLabel": "arXiv 2025-11；KDD 2026",
+   "track": "signal",
+   "org": "pku",
+   "type": "open",
+   "title": "AnyPPG: An ECG-Guided PPG Foundation Model Trained on Over 100,000 Hours of Recordings for Holistic Health Profiling",
+   "short": "AnyPPG：ECG 引导的 PPG 与全表型筛查",
+   "url": "https://doi.org/10.1145/3770855.3818911",
+   "sources": [
+    {
+     "label": "arXiv",
+     "url": "https://arxiv.org/abs/2511.01747"
+    },
+    {
+     "label": "代码与权重",
+     "url": "https://github.com/PKUDigitalHealth/AnyPPG"
+    }
+   ],
+   "q": "PPG 的研究大多局限在心血管任务。它到底能反映多大范围的健康状况？",
+   "how": "在 6 个来源、超过 10 万小时同步 PPG–ECG 上用 ECG 引导预训练；做首个 PPG 全表型（1,468 种表型）疾病检测研究。",
+   "shift": "把问题从“PPG 能测哪些心血管指标”扩大到“PPG 携带多少全身健康信息”：307 种表型 AUC≥0.70，其中 230 种是非循环系统疾病。",
+   "links": [
+    {
+     "from": "ecgfounder",
+     "type": "继承",
+     "note": "同一北大团队，用 ECG 侧能力引导 PPG 表征"
+    }
+   ],
+   "era": "e3"
+  },
+  {
+   "id": "apple-ppg-hybrid",
+   "date": "2025-11-18",
+   "dateLabel": "ML4H 2025 · arXiv 2025-11-18",
+   "track": "world",
+   "org": "apple",
+   "type": "paper",
+   "title": "Hybrid Modeling of Photoplethysmography for Non-Invasive Monitoring of Cardiovascular Parameters",
+   "short": "PPG 混合建模：用血流动力学模拟估计心输出量",
+   "url": "https://arxiv.org/abs/2511.14452",
+   "q": "每搏量、心输出量通常需要有创的动脉压波形才能测，能否只用 PPG？带标注的 PPG 又很少。",
+   "how": "两部分组合：在 33,690 段配对 PPG–动脉压数据（UCIBP）上训练条件 VAE，把 PPG 映射到动脉压波形；在 80,000 段带参数标签的模拟动脉压（OpenBF）上训练心血管参数的条件密度估计器。在未见过的 128 名 VitalDB 受试者上验证，能追踪心输出量和每搏量的波动，在监测时间变化上优于监督基线。",
+   "shift": "苹果“机理 + 学习”线进入 PPG：模拟器提供标签，真实数据只用来跨越 PPG 与动脉压之间的差距。这条线还包括 2025-10 的 PPG 光学组织参数推断（PPGen + 混合摊销推断）。",
+   "links": [
+    {
+     "from": "apple-hybrid-cv",
+     "type": "继承",
+     "note": "同一团队（Wehenkel、Behrmann、Miller、Sapiro）的心血管混合建模，从模拟研究走到 PPG"
+    },
+    {
+     "from": "anyppg",
+     "type": "并行",
+     "note": "同一时期另一种让 PPG“知道更多”的做法：AnyPPG 用 ECG 当老师，本文用模拟器当老师（编者解读）"
+    }
+   ],
+   "era": "e3",
+   "sources": [
+    {
+     "label": "Apple ML Research",
+     "url": "https://machinelearning.apple.com/research/photoplethysmography"
+    },
+    {
+     "label": "相关：Inferring Optical Tissue Properties from PPG using Hybrid Amortized Inference（arXiv 2025-10-02）",
+     "url": "https://arxiv.org/abs/2510.02073"
+    }
+   ]
+  },
+  {
+   "id": "fda-wellness-2026",
+   "date": "2026-01-06",
+   "dateLabel": "FDA 修订指南 2026-01-06",
+   "track": "param",
+   "org": "fda",
+   "type": "announce",
+   "title": "FDA：General Wellness: Policy for Low Risk Devices（2026 修订版）",
+   "short": "FDA 修订一般健康指南：无创可穿戴的血压估计可归入一般健康",
+   "url": "https://www.fda.gov/media/90652/download",
+   "sources": [
+    {
+     "label": "Covington 解读",
+     "url": "https://www.cov.com/en/news-and-insights/insights/2026/01/fda-issues-revised-guidance-on-general-wellness-products"
+    },
+    {
+     "label": "FDA 对 WHOOP 的不执法函（2026-06-17）",
+     "url": "https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/whoop-inc-709755-06172026"
+    }
+   ],
+   "q": "2025 年中 FDA 还认为“测量或估计血压”的产品就是医疗器械（WHOOP 因此收到警告信），参数层功能该走哪条监管路径？",
+   "how": "修订版把重点放在传感器类可穿戴上：无创产品在严格的一般健康用途下估计或输出血压等生理参数，可以归入一般健康；但数值需要经过验证，不能声称临床等效，不能针对具体疾病提示或引导临床处置。2026-06-17 FDA 据此致函 WHOOP，对修改后的 Blood Pressure Insights 不再执法。",
+   "shift": "这是参数层产品形态的外部条件。2026 年 Google Health Guardian 的“血压趋势”、Oura 的 Blood Pressure Signals、WHOOP 的血压洞察都选择了“趋势 + 一般健康”的表述（三者与指南的因果关系为编者解读）。",
+   "links": [
+    {
+     "from": "whoop-5",
+     "type": "转向",
+     "note": "2025 年对 WHOOP 血压洞察的警告信在 2026 年转为不执法"
+    },
+    {
+     "from": "apple-htn",
+     "type": "并行",
+     "note": "苹果走 FDA 许可路径，与一般健康路径并存"
+    }
+   ],
+   "era": "e4"
+  },
+  {
+   "id": "chatgpt-health",
+   "date": "2026-01-07",
+   "dateLabel": "发布 2026-01-07；2026-07 面向美国成人开放",
+   "track": "agent",
+   "org": "openai",
+   "type": "product",
+   "title": "Introducing ChatGPT Health",
+   "short": "ChatGPT Health：通用助手接入 Apple Health 与病历",
+   "url": "https://openai.com/index/introducing-chatgpt-health/",
+   "q": "每周有大量用户在 ChatGPT 里问健康问题，但它看不到用户自己的数据。",
+   "how": "设立独立、隔离的健康空间，可连接病历（经 b.well）、Apple Health 等应用；模型经 260 多名医生反馈，并用 HealthBench 评估。",
+   "shift": "通用大模型公司直接站到了可穿戴 Agent 的位置上。可穿戴厂商的护城河，从“有没有 LLM”变成“有没有生理模型和连续数据”（编者解读）。",
+   "links": [
+    {
+     "from": "p-whoopcoach",
+     "type": "转向",
+     "note": "2023 年 OpenAI 为 WHOOP 提供模型；2026 年自己做面向用户的健康入口"
+    }
+   ],
+   "era": "e4",
+   "sources": [
+    {
+     "label": "OpenAI 2026-07-23：Health in ChatGPT（美国全面推送）",
+     "url": "https://openai.com/index/health-in-chatgpt/"
+    }
+   ]
+  },
+  {
+   "id": "claude-health",
+   "date": "2026-01-11",
+   "dateLabel": "发布 2026-01-11（美国，测试版）",
+   "track": "agent",
+   "org": "anthropic",
+   "type": "product",
+   "title": "Claude for Healthcare：personal health data integrations",
+   "short": "Claude 接入 Apple Health 与病历",
+   "url": "https://www.anthropic.com/news/healthcare-life-sciences",
+   "q": "个人的化验、病历和可穿戴数据，能否交给通用助手统一解读？",
+   "how": "美国 Claude Pro / Max 用户可授权访问化验与病历（HealthEx、Function 连接器），Apple Health 与 Android Health Connect 集成同周以测试版推出；用于总结病史、解释化验、发现健身与健康指标中的模式、准备就诊问题。官方称不用健康数据训练模型。",
+   "shift": "与 ChatGPT Health 相隔四天发布。通用 AI 公司把“个人健康数据入口”做成标准连接器，设备公司的数据开始被别家的 Agent 读取（编者解读）。",
+   "links": [
+    {
+     "from": "chatgpt-health",
+     "type": "并行",
+     "note": "同一周、同一形态"
+    }
+   ],
+   "sources": [
+    {
+     "label": "Claude 帮助中心：与 iOS 健康数据集成",
+     "url": "https://support.claude.com/en/articles/11869619-use-claude-with-ios-apps"
+    }
+   ],
+   "era": "e4"
+  },
+  {
+   "id": "sleep2vec",
+   "date": "2026-02-14",
+   "dateLabel": "arXiv 2026-02-14；ICLR 2026",
+   "track": "signal",
+   "org": "fiveseasons",
+   "type": "paper",
+   "title": "sleep2vec: Unified Cross-Modal Alignment for Heterogeneous Nocturnal Biosignals",
+   "short": "sleep2vec：九种夜间模态任意子集可用的睡眠基础模型",
+   "url": "https://arxiv.org/abs/2602.13857",
+   "q": "多导睡眠仪、床旁监护和可穿戴设备采到的夜间信号组合各不相同，传感器还常常掉线，怎样用一个模型统一处理？",
+   "how": "在 5 个 NSRR 队列（SHHS、WSC、MrOS、MESA、HSP）的 42,249 晚、30,852 名受试者、九种模态（EEG、EOG、EMG、ECG、IBI、SpO2、气流、胸腹呼吸等）上做跨模态对比对齐；DASH-InfoNCE 按人口学、年龄、采集中心和历史信息给负样本加权，减少队列捷径。SHHS 全通道睡眠分期准确率 88.6%、κ 0.84（SleepFM 86.7%、0.81）；只用 IBI 与呼吸时 83.0%（SleepFM 79.7%，SleepFounder 80.9%）；在未参与训练的 APPLES 队列上同样领先。模型 63.5M–238.2M 参数，首次给出夜间生理信号随模态数量和模型规模的尺度规律。",
+   "shift": "睡眠模型从“固定通道组合”走向“任意子集可用”，直接对应只有心搏和呼吸的低负担设备；同时把“负样本里的混杂因素”显式写进对比目标。",
+   "links": [
+    {
+     "from": "sleepfm",
+     "type": "继承",
+     "note": "沿用跨模态对比对齐，并在全部通道组合上直接对比 SleepFM"
+    }
+   ],
+   "era": "e4",
+   "sources": [
+    {
+     "label": "ICLR 2026 论文集",
+     "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/bbbd6d915cb90be21c1254a82d45cedd-Abstract-Conference.html"
+    }
+   ],
+   "orgNote": "第一单位五季医学，与清华大学、睡眠呼吸障碍北京市重点实验室合作"
+  },
+  {
+   "id": "oura-womens",
+   "date": "2026-02-24",
+   "dateLabel": "Oura Labs 首发（TechCrunch 2026-02-24 报道）；官方博客 2026-04-08",
+   "track": "agent",
+   "org": "oura",
+   "type": "product",
+   "title": "Oura：首个自研的女性健康大语言模型（Oura Advisor 内）",
+   "short": "Oura 女性健康专用 LLM",
+   "url": "https://ouraring.com/blog/womens-health-ai-model/",
+   "q": "通用模型在月经周期、孕期、更年期等女性健康问题上常常不够贴切。",
+   "how": "在 Advisor 中加入自研的女性健康 LLM，引用临床团队筛选的资料，并结合周期、孕期、睡眠、压力等生物指标与长期趋势。",
+   "shift": "从“调用通用模型”走向“为特定生理人群定制模型”。Agent 层也开始分专科。",
+   "links": [
+    {
+     "from": "oura-advisor",
+     "type": "继承",
+     "note": "在 Advisor 中加入专用模型"
+    }
+   ],
+   "era": "e4",
+   "sources": [
+    {
+     "label": "TechCrunch 2026-02-24",
+     "url": "https://techcrunch.com/2026/02/24/oura-launches-a-proprietary-ai-model-focused-on-womens-health/"
+    },
+    {
+     "label": "Oura 博客 2026-03-02：Designing Trustworthy Health AI",
+     "url": "https://ouraring.com/blog/designing-trustworthy-health-ai/"
+    }
+   ]
+  },
+  {
+   "id": "hearts",
+   "date": "2026-02-25",
+   "dateLabel": "arXiv 2026-02",
+   "track": "agent",
+   "org": "ucla",
+   "orgNote": "与谷歌研究院合作",
+   "type": "open",
+   "title": "HEARTS: Benchmarking LLM Reasoning on Health Time Series",
+   "short": "HEARTS：LLM 在健康时序上的推理基准",
+   "url": "https://arxiv.org/abs/2603.06638",
+   "q": "LLM 读健康时序到底行不行？",
+   "how": "整合 16 个数据集、12 个健康领域、20 种信号模态，定义感知、推断、生成、演绎四类共 110 项任务，评测 16 个大模型、2 万多个样本。",
+   "shift": "结论直接：LLM 明显不如专门模型，且多步时间推理薄弱，“只靠扩大模型”不够。这为“Agent 调用基础模型”的架构提供了证据（编者解读）。",
+   "links": [
+    {
+     "from": "health-llm",
+     "type": "检验",
+     "note": "系统检验 LLM 读生理数据的能力"
+    },
+    {
+     "from": "opentslm",
+     "type": "检验",
+     "note": "时序原生 LLM 也在被测之列的路线"
+    }
+   ],
+   "sources": [],
+   "era": "e4"
+  },
+  {
+   "id": "apple-embridge",
+   "date": "2026-03-03",
+   "dateLabel": "ICLR 2026（苹果页面 2026-03-03）",
+   "track": "signal",
+   "org": "apple",
+   "type": "paper",
+   "title": "EMBridge: Enhancing Gesture Generalization from EMG Signals through Cross-Modal Representation Learning",
+   "short": "EMBridge：肌电与姿态的跨模态桥接（ICLR 2026）",
+   "url": "https://openreview.net/forum?id=LqrWNdceum",
+   "q": "苹果此前的肌电–姿态直接对齐（CPEP，见全部来源）还不够，肌电和姿态之间的模态鸿沟怎样进一步缩小？",
+   "how": "在此前直接对齐（CPEP）的基础上加入 Q-Former、掩码姿态重建损失，以及对齐两个嵌入空间相对几何的“社群感知软对比”目标；在分布内和未见手势分类上均优于所有基线。论文自称是首个从可穿戴肌电实现零样本手势分类的跨模态表征学习框架。",
+   "shift": "苹果肌电线从研讨会论文进入主会；“软对比、对齐相对几何”与 RelCon 的相对对比思路相通。",
+   "links": [
+    {
+     "from": "meta-neuralband",
+     "type": "并行",
+     "note": "同一时期肌电腕带进入量产产品，苹果仍停在研究阶段"
+    },
+    {
+     "from": "meta-emg",
+     "type": "转向",
+     "note": "肌电从“数千人监督”转向跨模态对齐与零样本手势（编者解读）"
+    }
+   ],
+   "era": "e4",
+   "sources": [
+    {
+     "label": "Apple ML Research",
+     "url": "https://machinelearning.apple.com/research/embridge"
+    }
+   ]
+  },
+  {
+   "id": "ms-copilot-health",
+   "date": "2026-03-12",
+   "dateLabel": "发布 2026-03-12（美国，分阶段推出）",
+   "track": "agent",
+   "org": "microsoft",
+   "type": "product",
+   "title": "Introducing Copilot Health",
+   "short": "微软 Copilot Health",
+   "url": "https://microsoft.ai/news/introducing-copilot-health/",
+   "q": "通用助手每天回答大量健康问题，但看不到用户自己的数据。",
+   "how": "在 Copilot 中开辟独立空间，汇总 50 多种可穿戴设备（含 Apple Health、Oura、Fitbit）的活动、睡眠与生命体征，经 HealthEx 接入 5 万多家美国医疗机构的病历，以及 Function 的化验结果；官方称数据不用于模型训练。",
+   "shift": "到 2026 年一季度，通用 AI 公司的健康 Agent 已经长得差不多：读可穿戴、病历、化验三类数据，由医生把关。区别在于有没有自己的设备和生理模型（编者解读）。",
+   "links": [
+    {
+     "from": "chatgpt-health",
+     "type": "并行",
+     "note": "同类的通用助手健康空间"
+    },
+    {
+     "from": "claude-health",
+     "type": "并行",
+     "note": "同样经 HealthEx、Function 接入病历与化验"
+    }
+   ],
+   "sources": [],
+   "era": "e4"
+  },
+  {
+   "id": "fitbit-2026",
+   "date": "2026-03-17",
+   "dateLabel": "发布 2026-03-17（The Check Up）",
+   "track": "agent",
+   "org": "google",
+   "type": "product",
+   "title": "Fitbit personal health coach：链接病历、新睡眠评分与代谢研究",
+   "short": "Fitbit 教练接入病历",
+   "url": "https://blog.google/products-and-platforms/devices/fitbit/fitbit-personal-health-coach-updates-2026/",
+   "q": "教练只看可穿戴数据，无法给出与病史相符、更安全的建议。",
+   "how": "公开预览用户可链接病历（化验、用药、就诊史）；睡眠分期准确率再提升 15%，并推出新的睡眠评分；把胰岛素抵抗研究列为教练的研究基础。",
+   "shift": "Agent 的上下文从“设备数据”扩展到“设备数据 + 临床史”，并开始与医疗服务方合作（Included Health 研究）。",
+   "links": [
+    {
+     "from": "fitbit-coach",
+     "type": "继承",
+     "note": "同一产品的下一步"
+    },
+    {
+     "from": "ir-wearme",
+     "type": "落地",
+     "note": "官方称该研究支撑教练的代谢洞察"
+    }
+   ],
+   "era": "e4",
+   "sources": []
+  },
+  {
+   "id": "sleepjepa",
+   "date": "2026-04-03",
+   "dateLabel": "medRxiv 2026-04-03（v3）",
+   "track": "signal",
+   "org": "mountsinai",
+   "type": "paper",
+   "era": "e4",
+   "title": "SleepJEPA: Learning the latent world of sleep with at-home sleep data to estimate disease risk",
+   "short": "SleepJEPA：在潜空间预测整夜睡眠，估计 15 年疾病风险",
+   "url": "https://doi.org/10.64898/2026.03.20.26348834",
+   "sources": [],
+   "q": "居家多导睡眠数据量大但与远期疾病的关系不清楚，换成潜空间预测目标能否学到更有预后价值的整夜表征？",
+   "how": "用联合嵌入预测架构（JEPA）在潜空间学习整夜多通道居家睡眠表征；训练、验证与测试共用 55,518 次睡眠研究、422,035 小时信号。论文称可估计 1–15 年内 10 种疾病的累计风险（如心血管死亡 iAUC15 = 0.83、充血性心衰 0.85），在独立队列上复现，并在所有结局上优于 SleepFM 等睡眠基础模型。",
+   "shift": "预训练目标从对比与重建转向潜空间预测，并且直接以远期疾病风险检验表征（编者解读）。对象是居家多导睡眠而非消费级手表。",
+   "links": [
+    {
+     "from": "sleepfm",
+     "type": "转向",
+     "note": "同为睡眠多导基础模型；目标从“留一模态”对比换成 JEPA 潜空间预测，论文称各项结局优于 SleepFM"
+    }
+   ]
+  },
+  {
+   "id": "ac-jepa",
+   "date": "2026-04-24",
+   "dateLabel": "arXiv 2026-04（附代码）",
+   "track": "world",
+   "org": "ufmg",
+   "type": "paper",
+   "title": "Beyond Patient Invariance: Learning Cardiac Dynamics via Action-Conditioned JEPAs",
+   "short": "超越病人不变性：动作条件的心电动力学",
+   "url": "https://arxiv.org/abs/2604.22618",
+   "q": "“同一病人的不同视图应当相似”这一目标，会不会压制模型本该发现的病理变化？",
+   "how": "论证不变性目标会抹去短暂的病理变化；改用动作条件的 JEPA 世界模型，把疾病发生视为作用在病人潜状态上的转移向量，在 MIMIC-IV-ECG 上预测发病后的心电状态。论文报告低资源下比监督学习高 0.05 以上 AUROC。",
+   "shift": "对“以人为锚”的直接反思：不变性擅长刻画稳定的个体特征，却会把变化本身当作噪声。这为“从表征转向动力学”给出了一个技术理由（编者解读）。",
+   "links": [
+    {
+     "from": "clocs",
+     "type": "检验",
+     "note": "直接批评“病人不变性”目标：它会抹掉短暂的病理变化"
+    },
+    {
+     "from": "apple-iclr24",
+     "type": "检验",
+     "note": "同一批评适用于参与者级正样本（编者解读）"
+    },
+    {
+     "from": "sleepjepa",
+     "type": "并行",
+     "note": "同月出现的 JEPA 潜空间预测：一个用于居家睡眠的疾病风险，一个用来反思“以人为锚”的不变性"
+    }
+   ],
+   "sources": [],
+   "era": "e4"
+  },
+  {
+   "id": "healthformer",
+   "date": "2026-04-30",
+   "dateLabel": "arXiv 2026-04",
+   "track": "world",
+   "org": "weizmann",
+   "orgNote": "含 Pheno.AI、哥本哈根大学、MBZUAI",
+   "type": "paper",
+   "title": "Simulating clinical interventions with a generative multimodal model of human physiology (HealthFormer)",
+   "short": "HealthFormer：生成式多模态生理轨迹与干预模拟",
+   "url": "https://arxiv.org/abs/2604.27899",
+   "q": "人的健康如何随时间变化？为什么不同的人对同一干预反应不同？",
+   "how": "在 1.5 万名深度表型参与者、7 个领域 667 项测量（含 CGM、睡眠、可穿戴生理）上训练 decoder-only 模型，预测个体轨迹；在营养干预试验中以干预为条件预测 6 个月的生物标志物变化。",
+   "shift": "从 GluFormer 的单一参数，扩展到多系统的联合生成，并明确提出“在电脑里模拟干预”。世界模型纲在这里有了清晰的形态。",
+   "links": [
+    {
+     "from": "gluformer",
+     "type": "继承",
+     "note": "同一团队，从单一 CGM 扩展到多领域联合生成"
+    }
+   ],
+   "era": "e4",
+   "sources": []
+  },
+  {
+   "id": "xmae",
+   "date": "2026-05-01",
+   "dateShort": "2026.05 / ICML'26",
+   "dateLabel": "arXiv 2026-05；ICML 2026",
+   "track": "signal",
+   "org": "samsung",
+   "type": "open",
+   "title": "Physiology-Aware Masked Cross-Modal Reconstruction for Biosignal Representation Learning (xMAE)",
+   "short": "xMAE：利用 ECG→PPG 时序关系的预训练",
+   "url": "https://research.samsung.com/blog/Respecting-Underlying-Biosignal-Structure-Cross-Biosignal-Pretraining-for-Wearable-Health-AI",
+   "sources": [
+    {
+     "label": "arXiv",
+     "url": "https://arxiv.org/abs/2605.00973"
+    },
+    {
+     "label": "代码",
+     "url": "https://github.com/hzhou3/xMAE"
+    },
+    {
+     "label": "三星新闻稿 2026-08-14（健康基础模型）",
+     "url": "https://samsungmobilepress.com/articles/samsung-research-biosignals-health-insights-foundation-models"
+    },
+    {
+     "label": "三星新闻稿 2026-08-14：From Biosignals to Health Insights",
+     "url": "https://news.samsung.com/global/from-biosignals-to-health-insights-samsung-researchs-work-on-health-foundation-models"
+    }
+   ],
+   "q": "多数多模态自监督把 ECG 和 PPG 当作可互换的视图，忽略了“电活动在前、外周脉搏在后”的方向性。",
+   "how": "用同步的 ECG–PPG 做掩码跨模态重建，把两者的时序关系作为训练期约束；约 340 万段、9.4k 小时，推理时只用 PPG。",
+   "shift": "跨模态脚手架开始尊重生理机制：不是简单对齐，而是学“谁先谁后”。论文报告在 19 项任务中的 15 项优于单模态与多模态基线。",
+   "links": [
+    {
+     "from": "anyppg",
+     "type": "继承",
+     "note": "同为 ECG 当老师，加入方向性的时序约束"
+    }
+   ],
+   "era": "e4"
+  },
+  {
+   "id": "google-health-app",
+   "date": "2026-05-07",
+   "dateLabel": "发布 2026-05-07；Coach 正式版 2026-05-19 起推送",
+   "track": "agent",
+   "org": "google",
+   "type": "product",
+   "title": "Google Health app、Google Health Coach（正式版）与 Fitbit Air",
+   "short": "Fitbit 应用升级为 Google Health；Gemini 教练结束预览",
+   "url": "https://blog.google/products-and-platforms/products/google-health/google-health-fitbit/",
+   "sources": [
+    {
+     "label": "Google Health Coach 正式版",
+     "url": "https://blog.google/products-and-platforms/products/google-health/google-health-coach/"
+    },
+    {
+     "label": "雅培新闻稿 2026-08-11：Lingo 血糖数据进入 Google Health Coach",
+     "url": "https://abbott.mediaroom.com/2026-08-11-Abbott-and-Google-launch-first-of-its-kind-partnership-to-transform-everyday-health-through-glucose-insights-and-AI"
+    }
+   ],
+   "q": "可穿戴、Health Connect、Apple Health 和病历数据分散在不同入口，个人健康教练又一直停在预览阶段。",
+   "how": "Fitbit 应用改名升级为 Google Health app，把可穿戴、Health Connect、Apple Health 和美国病历汇到一处；基于 Gemini 的 Google Health Coach 5 月 19 日起结束预览，纳入 Google Health Premium（每月 9.99 美元，Google AI Pro/Ultra 附赠），同时推出为教练设计的无屏手环 Fitbit Air（99 美元）。",
+   "shift": "谷歌的 Agent 线从“Fitbit 里的实验功能”变成整个健康入口的主界面：品牌从 Fitbit 换成 Google Health，硬件反过来按“教练需要什么数据”来设计（博客原话：designed with the Google Health Coach in mind）。",
+   "links": [
+    {
+     "from": "fitbit-coach",
+     "type": "继承",
+     "note": "2025-10 公开预览转为全球正式版"
+    },
+    {
+     "from": "fitbit-2026",
+     "type": "继承",
+     "note": "3 月的病历链接与睡眠更新并入新应用"
+    },
+    {
+     "from": "pha",
+     "type": "落地",
+     "note": "PHA 多智能体研究的产品化延续（编者解读，博客未点名 PHA）"
+    }
+   ],
+   "era": "e4"
+  },
+  {
+   "id": "whoop-2026",
+   "date": "2026-05-08",
+   "dateLabel": "发布 2026-05-08",
+   "track": "agent",
+   "org": "whoop",
+   "type": "product",
+   "title": "WHOOP：医生在线问诊、病历同步与 AI 记忆、主动关怀",
+   "short": "WHOOP AI：记忆、主动关怀与医生",
+   "url": "https://www.whoop.com/us/en/press-center/whoop-expands-health-platform-with-on-demand-clinician-access-and-new-ai-features/",
+   "q": "AI 教练每次对话都从零开始，也无法替会员走完就医这一步。",
+   "how": "已上线：My Memory 让会员查看和编辑 AI 的个人上下文，Proactive Check-Ins 主动推送建议。已宣布：App 内按需的临床医生视频问诊（官方称 2026 年夏季在美国上线），以及经 HealthEx 同步电子病历（官方用语为 will support）。",
+   "shift": "WHOOP 的 Agent 从“被动答疑”变成“有记忆、会主动、能转诊”，最早做 LLM 教练的公司开始把 Agent 接到医疗服务上。",
+   "links": [
+    {
+     "from": "p-whoopcoach",
+     "type": "继承",
+     "note": "WHOOP Coach 的演进"
+    },
+    {
+     "from": "whoop-labs",
+     "type": "奠基",
+     "note": "化验与临床审核流程为医生问诊打下基础"
+    }
+   ],
+   "era": "e4",
+   "sources": [
+    {
+     "label": "WHOOP：How WHOOP AI guidance turns your health data into personalized coaching",
+     "url": "https://www.whoop.com/us/en/thelocker/new-ai-guidance-from-whoop/"
+    },
+    {
+     "label": "WHOOP：2026 What’s New",
+     "url": "https://www.whoop.com/us/en/thelocker/2026-whats-new/"
+    }
+   ]
+  },
+  {
+   "id": "wavesfm",
+   "date": "2026-05-09",
+   "dateLabel": "arXiv 2026-05",
+   "track": "signal",
+   "org": "google",
+   "type": "paper",
+   "title": "WavesFM: Hierarchical Representation Learning for Longitudinal Wearable Sensor Waveforms",
+   "short": "WavesFM：多日原始波形的层级模型",
+   "url": "https://arxiv.org/abs/2605.09173",
+   "q": "波形模型只看短片段，行为模型只看粗特征。能否兼得波形细节与多日动态？",
+   "how": "两阶段自监督：先在 32.4 万人、680 万小时 PPG 与加速度上训练短波形编码器，再在 1 万人、530 万小时数据上训练跨多日的时序编码器；在 58 项人口学、生活方式、疾病与用药任务上评测。",
+   "shift": "谷歌从分钟级指标回到原始波形，用层级结构保留多日动态，补上 LSM 系列放弃的波形细节。苹果从波形走向行为（WBM），谷歌从指标回到波形，两家在“两层兼得”上会合（编者解读）。",
+   "links": [
+    {
+     "from": "lsm2",
+     "type": "转向",
+     "note": "从分钟级特征回到原始波形"
+    }
+   ],
+   "sources": [],
+   "era": "e4"
+  },
+  {
+   "id": "normwear-wm",
+   "date": "2026-05-14",
+   "dateLabel": "arXiv 2026-05",
+   "track": "world",
+   "org": "ucsd",
+   "type": "paper",
+   "title": "Toward World Modeling of Physiological Signals with Chaos-Theoretic Balancing and Latent Dynamics (NormWear-2)",
+   "short": "NormWear-2：信号级的生理世界模型",
+   "url": "https://arxiv.org/abs/2605.15465",
+   "q": "现有生理模型多做静态分类或短时预测，长时程、受干预影响的信号级预测几乎空白。",
+   "how": "把多变量生理信号和临床干预变量编码到同一潜空间，作为动力学系统联合演化；按动力学状态多样性平衡预训练语料；在健身规划、透析、糖尿病管理、术中监测等场景评测。",
+   "shift": "世界模型的思路落到原始信号层，而不只是分钟、天级参数，并且显式建模干预变量。",
+   "links": [
+    {
+     "from": "normwear",
+     "type": "继承",
+     "note": "同一团队，从表征模型到世界模型"
+    }
+   ],
+   "era": "e4",
+   "sources": []
+  },
+  {
+   "id": "ecg-wm",
+   "date": "2026-05-17",
+   "dateLabel": "arXiv 2026-05",
+   "track": "world",
+   "org": "oxford",
+   "type": "paper",
+   "title": "ECG-WM: A Physiology-Informed ECG World Model for Clinical Intervention Simulation",
+   "short": "ECG-WM：给药后心电的世界模型",
+   "url": "https://arxiv.org/abs/2605.17580",
+   "q": "ECG 模型擅长诊断，却不会回答“用了这个药，心电会怎样变”。",
+   "how": "把生理常微分方程先验经能量正则融入潜扩散动力学，模拟给药等干预后的 ECG 轨迹，并利用扩散采样的随机性评估干预风险及其不确定性。",
+   "shift": "世界模型落到单一器官信号上：动作是药物，状态是心电，机理先验用来抑制生成幻觉。思路上接近苹果 2020 年“机理模型 + 学习”的混合路线（编者解读）。",
+   "links": [
+    {
+     "from": "p-miller2020",
+     "type": "呼应",
+     "note": "同为机理先验约束学习到的动力学；无引用承接（编者解读）"
+    },
+    {
+     "from": "ac-jepa",
+     "type": "并行",
+     "note": "同期的动作条件心电动力学"
+    }
+   ],
+   "sources": [],
+   "era": "e4",
+   "orgNote": "与清华大学、南方科技大学合作"
+  },
+  {
+   "id": "ecg-scaling",
+   "date": "2026-05-17",
+   "dateLabel": "arXiv 2026-05",
+   "track": "signal",
+   "org": "uppsala",
+   "type": "paper",
+   "title": "How Do Electrocardiogram Models Scale?",
+   "short": "心电模型怎样随规模变好？",
+   "url": "https://arxiv.org/abs/2605.17276",
+   "q": "ECG 模型加大参数或数据并不总能带来下游提升，尺度律在心电上成立吗？",
+   "how": "在 230 万份 CODE 心电上预训练 120 多个模型（2 万到 2 亿参数），分开考察架构（ResNet 与 Transformer）与范式（监督与自监督）。结论：监督模型受数据瓶颈，自监督随模型与数据稳健扩展；分布外泛化时 ResNet 的参数效率高 1.3–2.5 倍，自监督的数据效率最高达 16 倍。",
+   "shift": "尺度律在心电上被系统检验，答案不是“越大越好”，而是范式与归纳偏置决定收益（编者解读）。",
+   "links": [
+    {
+     "from": "lsm",
+     "type": "检验",
+     "note": "把“规模越大越好”放到临床心电上系统检验，并拆开架构与范式"
+    }
+   ],
+   "sources": [],
+   "era": "e4"
+  },
+  {
+   "id": "oura-health-radar",
+   "date": "2026-05-28",
+   "dateLabel": "发布 2026-05-28（随 Oura Ring 5）；2026-10 扩展到 30 多个市场",
+   "track": "param",
+   "org": "oura",
+   "type": "product",
+   "title": "Oura Health Radar：Blood Pressure Signals 与 Nighttime Breathing",
+   "short": "Health Radar：Oura 把夜间 PPG 做成血压与呼吸趋势",
+   "url": "https://ouraring.com/blog/introducing-health-radar/",
+   "sources": [
+    {
+     "label": "WIRED：Oura Ring 5",
+     "url": "https://www.wired.com/story/oura-ring-5/"
+    }
+   ],
+   "q": "戒指只在夜里信号最干净，能否从夜间数据里提前看出心血管负荷和睡眠呼吸的问题？",
+   "how": "在 Symptom Radar 基础上新增两项：Blood Pressure Signals 用 30 天的夜间 PPG 识别可能提示心血管负荷的模式（不显示收缩压/舒张压数值），附夜间血压下降（dipping）趋势和袖带读数录入；Nighttime Breathing 给出 30 天滚动的睡眠呼吸紊乱视图，并与 Resmed 合作导流。同时在 Oura Labs 中测试 Counsel Health 医生问诊接入 Oura Advisor。",
+   "shift": "Oura 的路线从“读数 + Advisor 对话”推进到“背景监测 → 提示 → Advisor → 真人医生”的闭环；5 月的 Counsel 试点在 11 月变成收购。",
+   "links": [
+    {
+     "from": "oura-advisor",
+     "type": "继承",
+     "note": "Advisor 成为提示后的承接入口"
+    },
+    {
+     "from": "fda-wellness-2026",
+     "type": "并行",
+     "note": "同样采用一般健康表述（编者解读）"
+    }
+   ],
+   "era": "e4"
+  },
+  {
+   "id": "glucofm",
+   "date": "2026-05-29",
+   "dateLabel": "arXiv 2026-05-29；谷歌研究博客 2026-08-26",
+   "track": "world",
+   "org": "google",
+   "type": "paper",
+   "title": "GlucoFM: A Dual-Stream Foundation Model for Continuous Glucose Monitoring",
+   "short": "GlucoFM：双流 CGM 基础模型，分开慢趋势与短时波动",
+   "url": "https://arxiv.org/abs/2605.30865",
+   "q": "CGMformer、GluFormer、CGM-JEPA 都把血糖当单一数据流，但血糖其实是“慢基线 + 餐后、运动等短时偏离”。",
+   "how": "把每天对齐到 24 小时、5 分钟网格并保留缺失掩码；双流编码器把慢变的血糖趋势和短时偏离分开；在潜空间做掩码上下文预测和逐小时动态预测，不重建原始读数。在 477 名受试者、109,066 小时 CGM 上预训练；4 个队列、7 项表型任务（共 14 组评测）中，平均 PR-AUC 比最好的 CGM 专用基础模型高 4.1 个点（54.7 → 58.8）；博客另称比同语料训练的最佳 GluFormer 变体高 5.8 个点。餐后 2 小时血糖轨迹预测 MAE 21.88 mg/dL（最佳基线 22.90）。",
+   "shift": "血糖模型从“预测下一个读数”（GluFormer）转向 JEPA 式潜空间预测加显式的多时间尺度结构；同一团队 2026-05-01 先发表了 CGM-JEPA。",
+   "links": [
+    {
+     "from": "gluformer",
+     "type": "转向",
+     "note": "从自回归 token 预测转为双流潜空间预测，并直接对比"
+    }
+   ],
+   "era": "e4",
+   "sources": [
+    {
+     "label": "谷歌研究博客 2026-08-26",
+     "url": "https://research.google/blog/glucofm-foundation-model-for-continuous-glucose-monitoring/"
+    },
+    {
+     "label": "前作：CGM-JEPA（arXiv 2026-05-01）",
+     "url": "https://arxiv.org/abs/2605.00933"
+    },
+    {
+     "label": "arXiv 2605.30865",
+     "url": "https://arxiv.org/abs/2605.30865"
+    }
+   ],
+   "orgNote": "与新南威尔士大学合作"
+  },
+  {
+   "id": "openmhc",
+   "date": "2026-06-25",
+   "dateLabel": "arXiv 2026-06（数据向合格研究者开放，代码与权重开源）",
+   "track": "param",
+   "org": "stanford",
+   "orgNote": "与帝国理工等合作",
+   "type": "open",
+   "title": "OpenMHC: Accelerating the Science of Wearable Foundation Models",
+   "short": "OpenMHC：十年 MyHeart Counts 数据开放",
+   "url": "https://arxiv.org/abs/2607.16235",
+   "sources": [
+    {
+     "label": "项目页",
+     "url": "https://myheartcounts.stanford.edu/openmhc"
+    }
+   ],
+   "q": "最大的可穿戴数据集和最好的可穿戴基础模型都不公开，学术界怎么跟进？",
+   "how": "发布 MyHeart Counts 研究 App 十年数据：11,894 名参与者、6,000 多万小时、19 个传感通道、最多 169 个关联变量；同时开源近期可穿戴基础模型的实现，建立下游预测、缺失插补、未来预测三类基准。",
+   "shift": "参数层第一次有了接近企业规模的公开数据与可复现基线，直接回应“私有数据垄断”的问题（编者解读）。",
+   "links": [
+    {
+     "from": "lsm",
+     "type": "分岔",
+     "note": "把分钟级可穿戴基础模型的研究带到公开数据上"
+    },
+    {
+     "from": "p-ahms2019",
+     "type": "呼应",
+     "note": "公开的长期心脏研究队列，对照苹果的私有队列（编者解读）"
+    }
+   ],
+   "era": "e4"
+  },
+  {
+   "id": "apple-passport",
+   "date": "2026-06-30",
+   "dateShort": "2026.07 / ICML'26",
+   "dateLabel": "ICML 2026（苹果页面 2026-07）",
+   "track": "signal",
+   "org": "apple",
+   "type": "paper",
+   "title": "Device Passport: Enabling Spatio-Temporal Pretrained Models to Generalize Across Input Layouts",
+   "short": "Device Passport：跨设备布局迁移",
+   "url": "https://machinelearning.apple.com/research/device-passport-input-layouts",
+   "q": "新设备的传感器布局不同，每种布局都缺少大数据，预训练模型怎样迁移？",
+   "how": "研究预训练与下游布局差异很大时各种通道嵌入的表现，提出学习专家和混合方式的新通道嵌入。",
+   "shift": "“基础模型能否跨设备”从数据问题变成架构问题。对拥有多代硬件的厂商来说，这决定了一次预训练能用多久。",
+   "links": [
+    {
+     "from": "apple-accel",
+     "type": "继承",
+     "note": "同一苹果可穿戴模型线"
+    },
+    {
+     "from": "biot",
+     "type": "继承",
+     "note": "通道异构问题的设备版：同一模型适配不同传感器布局（编者解读）"
+    },
+    {
+     "from": "biofame",
+     "type": "继承",
+     "note": "苹果内部延续：任意模态组合的生理信号预训练 → 跨设备、跨通道的表征"
+    }
+   ],
+   "era": "e4",
+   "sources": [
+    {
+     "label": "arXiv 2607.00249",
+     "url": "https://arxiv.org/abs/2607.00249"
+    }
+   ]
+  },
+  {
+   "id": "stepfm",
+   "date": "2026-07-08",
+   "dateLabel": "arXiv 2026-07",
+   "track": "param",
+   "org": "polyu",
+   "type": "paper",
+   "title": "Physical activities enable scalable foundation modelling for broad-spectrum health prediction (StepFM)",
+   "short": "StepFM：只用步数的基础模型",
+   "url": "https://arxiv.org/abs/2607.06954",
+   "q": "基础模型一定要高频原始信号吗？最普及、最隐私友好的步数够不够？",
+   "how": "只用步数：在 1.41 亿个分钟级步数观测上预训练 340 万参数的模型，迁移到 20 多项健康风险预测任务，并跨设备、跨地区、跨新病种评测。",
+   "shift": "“层级上移”的极端情形：连心率都不用。它检验的是基础模型的收益来自信号细节，还是来自规模与时序结构（编者解读）。",
+   "links": [
+    {
+     "from": "lsm",
+     "type": "分岔",
+     "note": "分钟级路线的极简版本：只保留步数"
+    }
+   ],
+   "sources": [],
+   "era": "e4"
+  },
+  {
+   "id": "sensorfm",
+   "date": "2026-07-09",
+   "dateLabel": "谷歌博客 2026-07-09",
+   "track": "param",
+   "org": "google",
+   "type": "paper",
+   "title": "SensorFM: Towards a general intelligence and interface for wearable health data",
+   "short": "SensorFM：500 万人、万亿分钟",
+   "url": "https://research.google/blog/sensorfm-towards-a-general-intelligence-and-interface-for-wearable-health-data/",
+   "q": "分钟级可穿戴基础模型继续扩大规模，下游健康任务还会继续变好吗？",
+   "how": "在 500 万人、超过一万亿分钟的 Fitbit / Pixel Watch 数据上，以 34 个分钟级特征做自监督重建（沿用 LSM-2 的 AIM），同时扩大模型和数据规模。",
+   "shift": "参数纲规模最大的一次扩展：最大模型下游分类平均提升 9%（AUC），回归提升 21%。谷歌同时把它定位为个人健康 Agent 的接地工具，参数模型由此成为 Agent 的组件。",
+   "links": [
+    {
+     "from": "lsm2",
+     "type": "继承",
+     "note": "沿用 AIM，规模扩大约两个数量级"
+    },
+    {
+     "from": "pha",
+     "type": "接入",
+     "note": "官方把 SensorFM 定位为个人健康 Agent 的数据接地工具"
+    }
+   ],
+   "era": "e4",
+   "sources": [
+    {
+     "label": "arXiv 2605.22759",
+     "url": "https://arxiv.org/abs/2605.22759"
+    }
+   ]
+  },
+  {
+   "id": "samsung-ha",
+   "date": "2026-07-21",
+   "dateLabel": "测试版 2026-07-21（美国）",
+   "track": "agent",
+   "org": "samsung",
+   "type": "product",
+   "title": "Samsung Health Assistant（Beta）",
+   "short": "三星 Health Assistant 测试版",
+   "url": "https://www.samsungmobilepress.com/articles/health-assistant-beta-ai-powered-wellness",
+   "q": "睡眠、活动、营养、正念、体征五类数据彼此影响，用户难以把它们串起来理解。",
+   "how": "在 Samsung Health 内整合睡眠、活动、营养、正念、体征五类数据，建议经医生与认证健康教练团队验证；未来将结合 Personal Data Engine 做个性化，并通过收购的 Xealth 连接临床照护。",
+   "shift": "三星的研究（HiMAE、xMAE）和产品（Health Assistant）同年推进，但公开材料中尚未说明二者的直接接口。",
+   "links": [
+    {
+     "from": "samsung-xealth",
+     "type": "奠基",
+     "note": "官方称将通过 Xealth 连接临床照护"
+    }
+   ],
+   "era": "e4",
+   "sources": []
+  },
+  {
+   "id": "oppo-heartage",
+   "date": "2026-08-03",
+   "dateLabel": "arXiv 2026-08",
+   "track": "signal",
+   "org": "oppo",
+   "orgNote": "与北京大学合作",
+   "type": "paper",
+   "title": "Smartwatch Photoplethysmography-Derived Heart Age via ECG-Guided Cross-Modal Pretraining as a Digital Biomarker of Vascular Aging",
+   "short": "手表 PPG 心脏年龄：ECG 引导的预训练",
+   "url": "https://arxiv.org/abs/2608.01620",
+   "q": "血管老化的生物标志物多依赖静息心电、影像或专门的血管检查，手表上很少。",
+   "how": "在 OPPO 中国队列（58 万余人、745 万条记录）上，用被试感知自监督加 ECG–PPG 对比对齐预训练，部署时只用 PPG；在外部 PWV 与家庭血压队列中检验心脏年龄差。",
+   "shift": "OPPO 从单任务风险评估走向基础模型式预训练，并把输出定义为“心脏年龄”这类可长期追踪的生物标志物。",
+   "links": [
+    {
+     "from": "oppo-embc2024",
+     "type": "转向",
+     "note": "从专门模型转向跨模态预训练"
+    },
+    {
+     "from": "anyppg",
+     "type": "继承",
+     "note": "同一北大团队参与，ECG 引导 PPG"
+    },
+    {
+     "from": "apple-iclr24",
+     "type": "继承",
+     "note": "以被试为锚的自监督"
+    },
+    {
+     "from": "apple-ppgage",
+     "type": "并行",
+     "note": "同为从手表 PPG 推算可追踪的“年龄”"
+    }
+   ],
+   "era": "e4",
+   "sources": []
+  },
+  {
+   "id": "google-health-guardian",
+   "date": "2026-08-12",
+   "dateLabel": "Pixel Watch 5 发布 2026-08-12；2026-10-12 扩展到 Fitbit Air / Edge",
+   "track": "param",
+   "org": "google",
+   "type": "product",
+   "title": "Health Guardian：血压趋势、胰岛素抵抗趋势、睡眠呼吸质量趋势（Pixel Watch 5）",
+   "short": "Health Guardian：谷歌把健康基础模型做成月度趋势功能",
+   "url": "https://blog.google/products-and-platforms/devices/pixel/pixel-watch-5/",
+   "sources": [
+    {
+     "label": "Google Health 帮助中心：Health Guardian",
+     "url": "https://support.google.com/googlehealth/answer/18538590?hl=en"
+    },
+    {
+     "label": "2026-10-12 扩展到 Fitbit Air/Edge",
+     "url": "https://blog.google/products-and-platforms/products/google-health/fitbit-google-health-updates/"
+    },
+    {
+     "label": "谷歌博客：Health Guardian features on Pixel and Fitbit",
+     "url": "https://blog.google/products-and-platforms/products/google-health/pixel-watch-health-guardian/"
+    }
+   ],
+   "q": "手表能否在没有袖带、没有抽血的情况下，长期提示血压、代谢和睡眠呼吸的变化？",
+   "how": "官方称这三项月度趋势“基于在数十亿分钟用户授权传感器数据上训练的健康基础模型（Health Foundation Models），并对照金标准临床测量验证”，佩戴约一个月后给出首份报告；同时新增呼吸急症检测（PPG、加速度、气压计加端侧 AI，先在欧洲上线）。这些功能以月度趋势而非诊断的形式呈现。",
+   "shift": "谷歌第一次在产品文案里直接说功能“建在健康基础模型上”：参数层表征（LSM → SensorFM）和胰岛素抵抗研究从论文走进月度报告；和苹果高血压通知相比，谷歌选择“趋势 + 一般健康”而不是“通知 + 医疗器械许可”。",
+   "links": [
+    {
+     "from": "sensorfm",
+     "type": "落地",
+     "note": "官方称基于健康基础模型；未点名具体是哪个模型，对应关系为编者解读"
+    },
+    {
+     "from": "ir-wearme",
+     "type": "落地",
+     "note": "胰岛素抵抗研究线进入产品"
+    },
+    {
+     "from": "google-lop",
+     "type": "继承",
+     "note": "同属 Health Guardian 安全功能系列"
+    },
+    {
+     "from": "fda-wellness-2026",
+     "type": "落地",
+     "note": "同上"
+    }
+   ],
+   "era": "e4"
+  },
+  {
+   "id": "sensori",
+   "date": "2026-08-30",
+   "dateLabel": "arXiv 2026-08",
+   "track": "signal",
+   "org": "oxford",
+   "type": "paper",
+   "title": "Learning Human Health and Diseases from 24-hour Wrist Movement (Sensori)",
+   "short": "Sensori：一天的腕部运动 → 全表型疾病",
+   "url": "https://arxiv.org/abs/2608.29494",
+   "q": "腕部加速度通常被压缩成几个行为指标，原始的 24 小时运动里还藏着多少健康信息？",
+   "how": "在英国、中国、美国四个人群队列（122,640 人、683,617 人日）的 24 小时原始三轴腕部加速度上自监督训练；与常见临床协变量合用时，102 种现患疾病中 52 种、87 种新发疾病中 26 种的预测显著改善，神经与精神疾病收益最大。",
+   "shift": "牛津大数据研究所从 2024 年的活动识别预训练，走到“一天的运动 → 全表型疾病风险”，加速度模型的目标从识别动作变成刻画健康（编者解读）。",
+   "links": [
+    {
+     "from": "oxford-ssl",
+     "type": "继承",
+     "note": "同一机构的加速度预训练路线，从活动识别转向疾病预测"
+    }
+   ],
+   "sources": [],
+   "era": "e4"
+  },
+  {
+   "id": "huawei-watch6",
+   "date": "2026-09-02",
+   "dateLabel": "全球发布 2026-09-02（慕尼黑）；中国发布 2026-09-07（据报道）",
+   "track": "agent",
+   "org": "huawei",
+   "type": "product",
+   "title": "HUAWEI WATCH 6：腕上小艺与 AI 健康洞察",
+   "short": "华为 WATCH 6：AI 健康洞察",
+   "url": "https://consumer.huawei.com/cn/wearables/watch-6/",
+   "q": "手表能测的指标越来越多（官方称 60 秒微体检最多 20 项），用户难以理解它们之间的关系。",
+   "how": "官方产品页介绍了腕上小艺、AI 健康洞察，以及经华为创新研究 App 参与的冠心病风险等研究功能（冠心病研究由复旦大学附属中山医院与四川大学华西医院联合发起，非医疗器械）。",
+   "shift": "中国厂商的 Agent 形态：大模型助手加大规模健康研究，指标层与解释层在同一块表上合一。底层生理模型尚无公开论文可核。",
+   "links": [
+    {
+     "from": "huawei-trusense",
+     "type": "继承",
+     "note": "在感知系统之上加入大模型解释层"
+    }
+   ],
+   "era": "e4",
+   "sources": []
+  },
+  {
+   "id": "sleepfm2",
+   "date": "2026-09-06",
+   "dateLabel": "arXiv 2026-09",
+   "track": "signal",
+   "org": "stanford",
+   "type": "paper",
+   "title": "Learning transferable human physiology from two million hours of sleep with SleepFM-2",
+   "short": "SleepFM-2：200 万小时睡眠迁移到腕部",
+   "url": "https://arxiv.org/abs/2609.06849",
+   "q": "在临床多导睡眠图上学到的生理表征，能否迁移到更便宜的可穿戴传感器？",
+   "how": "在 26 个队列的 282,511 份多导睡眠图（235,865 份用于预训练，超过 200 万小时）上训练；冻结编码器可迁移到清醒 EEG、头带与耳内 EEG、腕部 PPG 和加速度。结合年龄、性别、BMI，188 个后续病历表型达到预设标准。",
+   "shift": "睡眠模型反过来服务可穿戴：临床信号上学到的表征迁移到腕部 PPG 和加速度，是“贵模态教便宜模态”的另一种形态（编者解读）。",
+   "links": [
+    {
+     "from": "sleepfm",
+     "type": "继承",
+     "note": "同一斯坦福团队，规模扩大约 20 倍并迁移到可穿戴"
+    }
+   ],
+   "sources": [],
+   "era": "e4"
+  },
+  {
+   "id": "apple-health-app",
+   "date": "2026-09-09",
+   "dateLabel": "发布 2026-09-09；iOS 27.3 测试版 2026-11-03",
+   "track": "agent",
+   "org": "apple",
+   "type": "product",
+   "title": "Redesigned Health app with Apple Intelligence（Insights、For You、Longevity / Health Age、Readiness）",
+   "short": "苹果健康 App：以 Apple Intelligence 为核心",
+   "url": "https://www.apple.com/newsroom/2026/09/apple-advances-health-and-fitness-capabilities-using-apple-intelligence/",
+   "sources": [
+    {
+     "label": "2026-11-03 语言扩展（含简体中文）",
+     "url": "https://www.apple.com/newsroom/2026/11/redesigned-health-app-expands-language-support/"
+    }
+   ],
+   "q": "数据很全，但用户需要知道今天该怎么做，以及长期在往哪个方向走。",
+   "how": "Insights 实时汇总，For You 给出建议；Longevity 页的 Health Age 综合 VO2max、静息心率、睡眠、HRV，可加入 A1c、LDL 等化验；手表新增 Readiness 评分（基于 AHMS 开发）。",
+   "shift": "苹果没有推出独立的 AI 教练，而是把 Apple Intelligence 放进健康 App 的核心。它的 Agent 形态是“嵌在系统里的解释与建议”。",
+   "links": [
+    {
+     "from": "apple-workout-buddy",
+     "type": "继承",
+     "note": "从运动场景的生成式提示扩展到整个健康 App"
+    },
+    {
+     "from": "apple-vitals",
+     "type": "继承",
+     "note": "夜间个人基线与 AHMS 开发的评分逻辑延续到 Readiness"
+    },
+    {
+     "from": "whoop-5",
+     "type": "呼应",
+     "note": "“生理年龄”类综合指标进入两家产品"
+    }
+   ],
+   "era": "e4"
+  },
+  {
+   "id": "withings-mcp",
+   "date": "2026-10",
+   "dateLabel": "2026-10 向 Withings+ 会员推出",
+   "track": "agent",
+   "org": "withings",
+   "type": "product",
+   "title": "Withings AI Connector for Claude, ChatGPT, Vibe and Grok",
+   "short": "Withings AI 连接器：把体重、血压数据开放给通用助手",
+   "url": "https://static.withings.com/content/v2/app/mcp/en/index.html",
+   "q": "设备公司的数据，应该自己做 Agent，还是交给别家的 Agent 读？",
+   "how": "以 MCP 连接器的形式，让 Withings+ 会员把 Withings 设备数据接入 Claude、ChatGPT、Vibe 与 Grok（官方页面称在各助手目录中上架尚待批准）。",
+   "shift": "与 Oura、WHOOP 自研 Agent 相反，Withings 选择做通用助手的数据源：设备公司在“入口”之争中的另一种站位（编者解读）。",
+   "links": [
+    {
+     "from": "claude-health",
+     "type": "接入",
+     "note": "通用助手通过连接器读取设备数据"
+    }
+   ],
+   "sources": [],
+   "era": "e4"
+  },
+  {
+   "id": "aether-scaling",
+   "date": "2026-10-05",
+   "dateLabel": "arXiv 2026-10-05",
+   "track": "signal",
+   "org": "unc",
+   "type": "paper",
+   "title": "Training and Scaling Compute-Optimal Physiological Waveform Foundation Models（Aether）",
+   "short": "Aether：生理波形基础模型的算力最优尺度律",
+   "url": "https://arxiv.org/abs/2610.05649",
+   "q": "给定预训练算力和标注病人预算，模型规模和波形小时数应该怎样分配？",
+   "how": "在 MIMIC-III 波形（398,204 小时，125 Hz、62 通道）上用掩码重建训练一百多个 2,000 万到 21 亿参数的模型（双向 Gated DeltaNet 与全注意力 3:1 混合），通过重复数据把预训练量推到最多 3,630 万“波形小时”；在 8 项 MIMIC-III 临床任务上线性探测，720M 模型全部超过 TimesFM、Chronos-Bolt、MOMENT、SOTER、NormWear 1/2 等基线。拟合包含模型规模、预训练小时和标注病人数的尺度律：算力增加 10 倍时，模型约扩大 1.2 倍、数据约增加 8.2 倍；720M 模型把预训练从 12 万小时延长到 3,630 万小时，达到同样误差所需的标注病人减少 61%。",
+   "shift": "尺度律问题从可穿戴分钟级数据（LSM）和心电延伸到多通道临床波形，并第一次把“标注病人数”作为显式资源。数据是 ICU 数据，不是可穿戴数据；3,630 万小时含重复。",
+   "links": [
+    {
+     "from": "lsm",
+     "type": "继承",
+     "note": "论文引用 LSM 的尺度律分析，迁移到原始生理波形"
+    },
+    {
+     "from": "ecg-scaling",
+     "type": "并行",
+     "note": "同期的心电尺度研究"
+    },
+    {
+     "from": "normwear-wm",
+     "type": "检验",
+     "note": "NormWear 1/2 是被比较的基线"
+    }
+   ],
+   "era": "e4",
+   "sources": [],
+   "orgNote": "与 Foci Labs 合作"
+  },
+  {
+   "id": "oppo-bp2026",
+   "date": "2026-10-08",
+   "dateLabel": "发布 2026-10-08（Watch X3 于 2026-03 发布）",
+   "track": "signal",
+   "org": "oppo",
+   "type": "product",
+   "title": "《OPPO 血压健康研究年度报告 2026》与 Watch X3 的高血压风险评估",
+   "short": "OPPO：65 万人参与的手表血压研究",
+   "url": "https://www.oppo.com/cn/newsroom/stories/518/",
+   "sources": [
+    {
+     "label": "报告 PDF",
+     "url": "https://www.oppo.com/content/dam/oppo_com/cn/mkt/newsroom/stories/518/OPPO_Blood_Pressure_Health_Research_Report_2026.pdf"
+    }
+   ],
+   "q": "无感的高血压风险评估，能否在大众人群中长期运行，并真正推动改善？",
+   "how": "与阜外医院联合研究三年多；截至 2026-08 参与者超过 65 万，已向 15 万多名用户发出高血压风险预警；Watch X3 号称从发现风险到改善的闭环。",
+   "shift": "与苹果同期的平行路线：苹果靠基础模型加线性头，OPPO 靠专门模型加大规模研究，最后都落到手表的高血压提醒上。",
+   "links": [
+    {
+     "from": "oppo-embc2024",
+     "type": "落地",
+     "note": "EMBC 2024 模型进入大规模研究与产品"
+    }
+   ],
+   "era": "e4"
+  },
+  {
+   "id": "ppg-bench",
+   "date": "2026-10-09",
+   "dateLabel": "arXiv 2026-10（开源基准）",
+   "track": "signal",
+   "org": "mannas",
+   "type": "open",
+   "title": "PPG-Bench: A Unified Benchmark for PPG Foundation Models",
+   "short": "PPG-Bench：公平比较下的开源 PPG 模型",
+   "url": "https://arxiv.org/abs/2610.13435",
+   "q": "各家 PPG 基础模型用的数据、任务、下游头和基线都不同，它们到底有多好？",
+   "how": "在 9 个开放数据集、26 项任务上统一评测 5 个公开 PPG 基础模型（AnyPPG、PaPaGei-S、PaPaGei-P、Pulse-PPG、SigmaPPG），对照随机/常数基线、确定性的脉率变异性（PRV）特征和通用时序模型 MOMENT。68 个任务—适配方式组合中，35.3% 里基础模型相对随机/常数基线都没有实质优势；83.8% 里没有任何 PPG 专用模型能同时胜过 PRV 与 MOMENT。",
+   "shift": "作者的结论是：当前公开的 PPG 基础模型还不能宣称学到了通用、可迁移的表征。这与企业在私有大数据上的强结果形成张力，提示数据规模与评测口径仍是关键未知数（编者解读）。",
+   "links": [
+    {
+     "from": "papagei",
+     "type": "检验",
+     "note": "在统一口径下重新评测已发布的开源 PPG 模型"
+    },
+    {
+     "from": "pulse-ppg",
+     "type": "检验",
+     "note": "Pulse-PPG 是 5 个被测模型之一"
+    },
+    {
+     "from": "anyppg",
+     "type": "检验",
+     "note": "AnyPPG 是 5 个被测模型之一"
+    }
+   ],
+   "sources": [],
+   "era": "e4"
+  },
+  {
+   "id": "hippt",
+   "date": "2026-10-10",
+   "dateLabel": "arXiv 2026-10",
+   "track": "signal",
+   "org": "oppo",
+   "orgNote": "与东南大学、深圳技术大学、北京大学合作",
+   "type": "paper",
+   "title": "HiPPT: Physiology-Grounded Wearable PPG Representation Learning via Multi-Scope Text Alignment",
+   "short": "HiPPT：按证据范围对齐的 PPG–文本表征",
+   "url": "https://arxiv.org/abs/2610.14489",
+   "q": "不同概念需要的波形证据范围不同（单条记录的形态 vs. 多条记录共有的背景），按记录或配对一刀切的监督不够。",
+   "how": "构建来自 20.2 万用户、400 多万条腕部 PPG 的 PPG–文本语料；结合单条记录的形态对齐、跨记录的背景对齐与波形引导的文本建模。",
+   "shift": "把语言当作“分层监督”而不只是接口，并支持年龄组、性别、BMI 的零样本画像。手表厂商的私有大数据开始与语言对齐结合。",
+   "links": [
+    {
+     "from": "sensorlm",
+     "type": "继承",
+     "note": "传感器–语言对齐，从分钟级指标下沉到 PPG 波形"
+    },
+    {
+     "from": "oppo-heartage",
+     "type": "继承",
+     "note": "同一厂商的 PPG 表征线"
+    }
+   ],
+   "era": "e4",
+   "sources": []
+  },
+  {
+   "id": "rethink-wm",
+   "date": "2026-10-13",
+   "dateLabel": "arXiv 2026-10",
+   "track": "world",
+   "org": "griffith",
+   "orgNote": "与 UCLA、埃默里大学合作",
+   "type": "paper",
+   "title": "Rethinking World Models for Biosignals",
+   "short": "反思生物信号世界模型：预测 ≠ 干预",
+   "url": "https://arxiv.org/abs/2610.17510",
+   "q": "能准确预测生理记录的模型，就能用来评估干预吗？",
+   "how": "用“真实的动作”与“因果效应证据”两条要求检视现有生物信号世界模型，指出三个源于生理的瓶颈：动作到效果的可变时滞、模型之外的驱动因素、无干预时的内生演化；提出干预效应验证清单。",
+   "shift": "世界模型一年之内从概念走到被批判性检查，门槛从“预测得准”抬高到“因果上站得住”（编者解读）。",
+   "links": [
+    {
+     "from": "normwear-wm",
+     "type": "检验",
+     "note": "用“真实动作 + 因果证据”两条要求检视已有生物信号世界模型（编者解读）"
+    },
+    {
+     "from": "ecg-wm",
+     "type": "检验",
+     "note": "同上"
+    }
+   ],
+   "sources": [],
+   "era": "e4"
+  },
+  {
+   "id": "oura-plans",
+   "date": "2026-11-03",
+   "dateLabel": "2026-11-03 起逐步推出（英文）；官方博客 2026-11-10",
+   "track": "agent",
+   "org": "oura",
+   "type": "product",
+   "title": "Personalized plans with Oura Advisor",
+   "short": "Oura Advisor 个性化计划：小步实验",
+   "url": "https://ouraring.com/blog/personalized-plans-with-oura-advisor/",
+   "sources": [
+    {
+     "label": "Oura 帮助中心",
+     "url": "https://support.ouraring.com/hc/en-us/articles/39512345699219-Oura-Advisor"
+    }
+   ],
+   "q": "知道了自己的数据，怎样变成能坚持的行动？",
+   "how": "Advisor 先用睡眠、恢复与活动数据，再追问最多三个生活习惯问题，从最多三个建议选项中选定一个计划（一次一个，最长 7 天）；每日打卡，结束时回顾指标变化。官方称睡眠与准备度相关问题改由 Oura 用自身科学与数据训练的模型作答。",
+   "shift": "Agent 从“解释过去”变成“小步实验”：计划、打卡、看数据变化，形成可度量的行为闭环。谷歌 SensorWM 用模拟推演未来，Oura 用真实打卡检验结果（编者对比）。",
+   "links": [
+    {
+     "from": "oura-advisor",
+     "type": "继承",
+     "note": "同一 Advisor，从问答扩展到计划与打卡"
+    }
+   ],
+   "era": "e4"
+  },
+  {
+   "id": "sensorwm",
+   "date": "2026-11-05",
+   "dateLabel": "arXiv 2026-11-05；谷歌研究博客 2026-11-11；世界模型部分先以 NeurIPS 2026 workshop 论文在 OpenReview 公开（2026-10-02，两位谷歌作者）",
+   "track": "world",
+   "org": "google",
+   "type": "paper",
+   "title": "Personalized health coaching via coachable health age and counterfactual wearable trajectories (SensorWM)",
+   "short": "SensorWM：以行为为动作的可穿戴世界模型",
+   "url": "https://research.google/blog/using-wearables-to-enable-cardiovascular-kidney-metabolic-ckm-risk-profiling-for-personalized-coaching/",
+   "sources": [
+    {
+     "label": "arXiv",
+     "url": "https://arxiv.org/abs/2611.08568"
+    },
+    {
+     "label": "配套研究：CKM 健康年龄（arXiv 2603.27787）",
+     "url": "https://arxiv.org/abs/2603.27787"
+    },
+    {
+     "label": "NeurIPS 2026 世界模型（CWM）workshop 论文，已录用：Developing World Models from Wearable Sensors（Lee & Heydari，谷歌；OpenReview 2026-10-02 发布）；在潜空间建模周级可穿戴指标，不重建原始信号",
+     "url": "https://openreview.net/forum?id=8SH3daIGHz"
+    }
+   ],
+   "q": "手表只记录了昨天做了什么。如果我多睡 30 分钟、每天快走，三个月后身体会怎样？",
+   "how": "先构建“可教练健康年龄”（CHA）：只用静息心率、步数、睡眠时长、活跃区间分钟等可改变的指标，在 WEAR-ME（2,780 人）、All of Us（22,748 人）、纵向 Fitbit（1,464 人）三个队列中与心代谢健康评分一致，并在年龄、性别、BMI 之外提升心血管与代谢疾病的预后区分。再在约 10 万名 Fitbit 用户、超过 220 万人周的数据上预训练动作条件世界模型 SensorWM：给定两周基线，按步数、睡眠、有氧安排预测 20 项指标未来 12 周的轨迹（R²=0.664），优于通用时序基础模型；最后由优化器与语言模型 Agent 写成 12 周计划。",
+   "shift": "参数层表征、动作条件的动力学、一个可改变的目标（CHA）和语言模型 Agent，第一次在同一个公开系统里串起来（编者所见）；信号纲没有进入，因为输入是周级指标而非波形。盲评中，持证生活方式教练在 71.4% 的配对里更偏好基于反事实推演的计划，医生判定 99.2% 的这类计划符合安全标准。局限同样清楚：反事实来自观察数据训练的模型，评测的是计划质量而非健康结局；《Rethinking World Models》要求的干预效应验证尚未完成（编者解读）。",
+   "links": [
+    {
+     "from": "sensorfm",
+     "type": "继承",
+     "note": "同一谷歌可穿戴研究线；论文未说明是否以 SensorFM 为编码器（编者解读）"
+    },
+    {
+     "from": "ir-wearme",
+     "type": "奠基",
+     "note": "健康年龄与 CKM 扩展在 WEAR-ME 研究中验证"
+    },
+    {
+     "from": "p-nazaret2022",
+     "type": "呼应",
+     "note": "苹果 2022 年的个体“运动→心率”响应模型，是动作条件生理模型的早期形态；两者无引用承接（编者解读）"
+    },
+    {
+     "from": "pha",
+     "type": "接入",
+     "note": "世界模型的推演交给语言模型教练 Agent 生成计划"
+    },
+    {
+     "from": "p-timesfm",
+     "type": "转向",
+     "note": "从通用预测改为以动作为条件"
+    },
+    {
+     "from": "whoop-5",
+     "type": "呼应",
+     "note": "“生理年龄”从展示用的综合分数，变成可以优化的目标"
+    },
+    {
+     "from": "healthformer",
+     "type": "并行",
+     "note": "都以干预为条件模拟个体轨迹；HealthFormer 用深度表型与营养试验，SensorWM 用可穿戴行为"
+    },
+    {
+     "from": "oura-plans",
+     "type": "并行",
+     "note": "同一周：Oura 用真实打卡检验计划，谷歌用反事实模拟挑选计划"
+    }
+   ],
+   "era": "e4"
+  },
+  {
+   "id": "google-htn-nature",
+   "date": "2026-11-05",
+   "dateLabel": "Nature 2026-11-05；谷歌研究博客同日",
+   "track": "signal",
+   "org": "google",
+   "type": "paper",
+   "title": "Opportunistically Detecting Signs of Hypertension on a Consumer Smartwatch（AI-PPG-ACC-HTN）",
+   "short": "AI-PPG-ACC-HTN：免校准腕表高血压筛查（Nature）",
+   "url": "https://www.nature.com/articles/s41586-026-11336-3",
+   "sources": [
+    {
+     "label": "谷歌研究博客",
+     "url": "https://research.google/blog/detecting-signs-of-hypertension-using-wearable-sensors/"
+    }
+   ],
+   "q": "无袖带手表大多只追踪相对变化、需要定期用袖带校准，能否不校准就识别持续性高血压状态？",
+   "how": "先用自监督对比学习在 2,109 名参与者、492,347 小时的 PPG 与加速度（含 BCG）波形上训练编码器，同一人的 15 秒片段相互拉近；再把多日嵌入平均成个人表征，加身高做逻辑回归。在 5 个美国中心、196 人的前瞻研究中以 24 小时动态血压为金标准：初筛灵敏度 65.8%、特异度 90.0%、PPV 80.6%，诊室初测灵敏度为 55.3%。",
+   "shift": "苹果 2023 年“以人为锚”的自监督配方，在谷歌这里以 Nature 论文和金标准前瞻验证的形式用到高血压上；博客说这项研究“帮助形成了 Google Health 应用里 Health Guardian 的血压趋势功能”，同时强调它本身是探索性研究，不代表现有或将来的产品能力。",
+   "links": [
+    {
+     "from": "apple-iclr24",
+     "type": "继承",
+     "note": "同一受试者片段做正样本的对比预训练"
+    },
+    {
+     "from": "google-health-guardian",
+     "type": "奠基",
+     "note": "博客称该研究为血压趋势功能提供了依据"
+    },
+    {
+     "from": "apple-htn",
+     "type": "并行",
+     "note": "同为自监督 PPG 表征 + 少量标注的高血压筛查；苹果走 FDA 许可的提醒，谷歌发表 Nature 论文"
+    }
+   ],
+   "era": "e4"
+  },
+  {
+   "id": "oura-counsel",
+   "date": "2026-11-10",
+   "dateLabel": "宣布收购 2026-11-10（预计年底前完成）",
+   "track": "agent",
+   "org": "oura",
+   "type": "announce",
+   "title": "Oura to acquire Counsel Health（AI 原生初级保健）",
+   "short": "Oura 收购 Counsel Health",
+   "url": "https://www.counselhealth.com/newsroom/oura-to-acquire-counsel-health-advancing-vision-for-more-connected-personalized-healthcare",
+   "sources": [
+    {
+     "label": "Oura 博客",
+     "url": "https://ouraring.com/blog/"
+    }
+   ],
+   "q": "用户从洞察出发，最后往往需要的是诊断、处方和转诊。",
+   "how": "Counsel 的“临床 AI harness”调度病史采集、指南检索、病历审阅、急症识别等专门智能体，用户可随时加入真人医生；结合 Oura 的连续生物数据。",
+   "shift": "可穿戴 Agent 的终点被重新定义为医疗照护：从“解释我的数据”到“基于我的数据接受诊疗”。",
+   "links": [
+    {
+     "from": "oura-advisor",
+     "type": "继承",
+     "note": "从健康助手延伸到医疗服务"
+    },
+    {
+     "from": "whoop-2026",
+     "type": "并行",
+     "note": "同年 WHOOP 也引入医生问诊"
+    }
+   ],
+   "era": "e4"
+  }
+ ]
+}
