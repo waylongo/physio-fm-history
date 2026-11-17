@@ -80,7 +80,7 @@ if os.path.exists(XP):
     print('补充来源', len(X['items']))
 starts = [e['id'] for e in E if e.get('start')]
 if len(starts) != 1: err.append(f"起点条目应恰好 1 个：{starts}")
-# 私有关键词检查：词表放在仓库之外（默认 ../physio-fm-private-terms.txt，或环境变量 PRIVATE_TERMS），不随仓库发布
+# 私有关键词检查：词表只放在仓库外，通过 PRIVATE_TERMS 指向它，不随仓库发布
 terms_path = os.environ.get('PRIVATE_TERMS', os.path.join(os.path.dirname(root), 'physio-fm-private-terms.txt'))
 if os.path.exists(terms_path):
     terms = [t.strip() for t in open(terms_path) if t.strip()]

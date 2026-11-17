@@ -2138,7 +2138,7 @@
    "title": "EMBridge: Enhancing Gesture Generalization from EMG Signals through Cross-Modal Representation Learning",
    "short": "EMBridge：肌电与姿态的跨模态桥接（ICLR 2026）",
    "url": "https://openreview.net/forum?id=LqrWNdceum",
-   "q": "苹果此前的肌电–姿态直接对齐（CPEP，见全部来源）还不够，肌电和姿态之间的模态鸿沟怎样进一步缩小？",
+   "q": "苹果此前的肌电–姿态直接对齐（CPEP）还不够，肌电和姿态之间的模态鸿沟怎样进一步缩小？",
    "how": "在此前直接对齐（CPEP）的基础上加入 Q-Former、掩码姿态重建损失，以及对齐两个嵌入空间相对几何的“社群感知软对比”目标；在分布内和未见手势分类上均优于所有基线。论文自称是首个从可穿戴肌电实现零样本手势分类的跨模态表征学习框架。",
    "shift": "苹果肌电线从研讨会论文进入主会；“软对比、对齐相对几何”与 RelCon 的相对对比思路相通。",
    "links": [
