@@ -8,10 +8,29 @@
   let META = null;
   let selected = null;
 
+  function loadJson(url) {
+    return fetch(url).then(r => {
+      if (!r.ok) throw new Error(r.status + ' ' + r.url);
+      return r.json().then(null, err => {
+        throw new Error('JSON 无法解析 ' + r.url + ' (' + err.message + ')');
+      });
+    });
+  }
+
+  function showLoadError(err) {
+    console.error(err);
+    const p = document.createElement('p');
+    p.className = 'error';
+    p.textContent = '条目没有载入。' + (err && err.message ? err.message : '未知错误');
+    if (main) main.replaceChildren(p);
+  }
+
   Promise.all([
-    fetch('data/meta.json').then(r => r.json()),
-    fetch('data/entries.json').then(r => r.json())
+    loadJson('data/meta.json'),
+    loadJson('data/entries.json')
   ]).then(([meta, data]) => {
+    if (!meta || !Array.isArray(meta.tracks) || !Array.isArray(meta.eras)) throw new Error('meta.json 缺少 tracks 或 eras');
+    if (!data || !Array.isArray(data.entries)) throw new Error('entries.json 缺少 entries');
     META = meta;
     data.entries.forEach(e => { BY[e.id] = e; });
     data.entries.forEach(e => (e.links || []).forEach(l => {
@@ -20,9 +39,7 @@
     render(data.entries);
     const id = decodeURIComponent(location.hash.replace(/^#/, ''));
     if (BY[id]) openEntry(id, { toggle: false, focus: false });
-  }).catch(() => {
-    main.innerHTML = '<p class="error">无法读取数据。请用本地 HTTP 服务打开本页，不要直接双击文件。</p>';
-  });
+  }).catch(showLoadError);
 
   function track(id) { return META.tracks.find(t => t.id === id) || { short: id, color: '#555' }; }
   function org(id) { return (META.orgs[id] || { label: id }).label; }
@@ -44,8 +61,14 @@
     parent.append(text.slice(last));
   }
 
+  function requireEl(id) {
+    const el = document.getElementById(id);
+    if (!el) throw new Error('页面缺少 #' + id);
+    return el;
+  }
+
   function render(entries) {
-    const tracks = document.getElementById('tracks');
+    const tracks = requireEl('tracks');
     META.tracks.forEach(t => {
       const s = document.createElement('span');
       s.textContent = t.short;
@@ -53,7 +76,7 @@
       tracks.append(s);
     });
 
-    const jumps = document.getElementById('jumps');
+    const jumps = requireEl('jumps');
     META.eras.forEach(era => {
       const a = document.createElement('a');
       a.href = '#era-' + era.id;
@@ -101,7 +124,7 @@
       main.append(sec);
     });
 
-    const foot = document.getElementById('foot');
+    const foot = requireEl('foot');
     foot.textContent = '共 ' + entries.length + ' 项，核对至 ' + META.updated + '。关系与“意义”含编者解读。点开一条后，相关论文会留在页面上，直到换一条或关闭。';
 
     document.addEventListener('keydown', onKey);

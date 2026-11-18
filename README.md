@@ -27,7 +27,7 @@ scripts/validate.py 结构与引用校验
 python3 -m http.server 8000
 ```
 
-在浏览器打开 <http://localhost:8000/>。页面通过 `fetch` 读取 JSON，直接双击 `index.html` 无法加载数据。
+在浏览器打开 <http://localhost:8000/>。页面通过 `fetch` 读取 JSON，直接双击 `index.html` 无法加载数据。样式、脚本和数据都相对本页所在目录解析，所以放在 `/physio-fm-history/` 下、地址末尾没有斜杠时也能载入。
 
 ## 校验
 

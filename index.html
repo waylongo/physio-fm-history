@@ -3,10 +3,32 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script>
+(function () {
+  var path = location.pathname || '/';
+  var last = path.slice(path.lastIndexOf('/') + 1);
+  var dir = path.endsWith('/') ? path : (last.indexOf('.') === -1 ? path + '/' : path.slice(0, path.lastIndexOf('/') + 1));
+  var base = document.createElement('base');
+  base.href = dir;
+  document.head.insertBefore(base, document.currentScript);
+  function add(rel, file, type) {
+    var link = document.createElement('link');
+    link.rel = rel;
+    if (type) link.type = type;
+    link.href = new URL(file, location.origin + dir).href;
+    document.head.appendChild(link);
+  }
+  add('icon', 'assets/favicon.svg', 'image/svg+xml');
+  add('stylesheet', 'css/style.css');
+  window.addEventListener('error', function (ev) {
+    var n = document.getElementById('status');
+    if (!n || ev.target !== window) return;
+    n.textContent = '页面脚本没有运行。' + (ev.message || '');
+  });
+})();
+</script>
 <title>生理基础模型 · 思想年谱</title>
 <meta name="description" content="按时间阅读生理基础模型的公开进展：信号、参数、世界模型与 Agent，以及每条工作与前后工作的关系。">
-<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <header class="wrap">
@@ -23,6 +45,16 @@
   <p id="foot">关系与“意义”含编者解读。点开一条后，相关论文会留在页面上，直到换一条或关闭。</p>
 </footer>
 <noscript><p class="wrap">需要 JavaScript 读取条目数据。</p></noscript>
-<script src="js/app.js"></script>
+<script>
+(function () {
+  var s = document.createElement('script');
+  s.src = new URL('js/app.js', document.baseURI).href;
+  s.onerror = function () {
+    var n = document.getElementById('status');
+    if (n) n.textContent = '页面脚本没有载入。' + s.src;
+  };
+  document.body.appendChild(s);
+})();
+</script>
 </body>
 </html>
