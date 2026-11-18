@@ -1153,7 +1153,7 @@
     ]
    },
    "model": {
-    "text": "女性健康专用 LLM（首个自研模型）；Advisor 部分问题改由自训模型作答（官方称）。AHA 2025 海报提到“大规模基础模型”，只有题目可证，见全部来源。",
+    "text": "女性健康专用 LLM（首个自研模型）；Advisor 部分问题改由自训模型作答（官方称）。AHA 2025 海报提到“大规模基础模型”，只有题目可证。",
     "ids": [
      "oura-womens",
      "oura-plans"
@@ -1182,7 +1182,7 @@
     ]
    },
    "model": {
-    "text": "WHOOP Coach 使用 OpenAI 模型；2026 年招聘 Foundation AI 团队（只有招聘与访谈，见全部来源）。",
+    "text": "WHOOP Coach 使用 OpenAI 模型；2026 年招聘 Foundation AI 团队（只有招聘与访谈）。",
     "ids": [
      "p-whoopcoach"
     ]
