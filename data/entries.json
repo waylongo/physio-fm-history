@@ -46,21 +46,26 @@
   {
    "id": "p-ahms2019",
    "date": "2019-09-10",
-   "dateLabel": "研究启动 2019-09",
+   "dateLabel": "2019-09-10 宣布；2019-11-14 开放报名",
    "track": "param",
    "org": "apple",
    "orgNote": "与布莱根妇女医院、美国心脏协会合作",
    "type": "cohort",
    "title": "Apple Heart and Movement Study（Apple Research App 三项研究之一）",
-   "short": "Apple Heart and Movement Study 启动",
+   "short": "Apple Heart and Movement Study 宣布",
    "url": "https://www.apple.com/newsroom/2019/09/apple-announces-three-groundbreaking-health-studies/",
    "q": "心率与步速、爬楼等活动信号，和心脏健康之间有什么关系？",
-   "how": "通过 Research App 开展的大型纵向研究，持续收集参与者手表与手机的心脏和运动数据。",
+   "how": "2019-09-10 宣布通过 Research App 开展的大型纵向研究，持续收集参与者手表与手机的心脏和运动数据。2019-11-14 Research App 上线，这项研究开放报名。",
    "shift": "它本身不是模型，但后来苹果的 PPG/ECG、加速度和行为基础模型都在这个队列上训练。先有长期、知情同意的数据，才有后面的基础模型。",
    "links": [],
    "era": "e0",
    "prelude": true,
-   "sources": []
+   "sources": [
+    {
+     "label": "2019-11-14 开放报名",
+     "url": "https://www.apple.com/newsroom/2019/11/apple-launches-three-innovative-studies-today-in-the-new-research-app/"
+    }
+   ]
   },
   {
    "id": "fitbit-acq",
